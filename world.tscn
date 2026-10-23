@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d25sd2ew7yt63"]
 
 [ext_resource type="PackedScene" uid="uid://dejipl18cd7jk" path="res://player.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://rndk1r11mn5h" path="res://cauldron.tscn" id="2_fj7yv"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r300x"]
 
@@ -13,3 +14,6 @@ position = Vector2(96, 538)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=128889590]
 shape = SubResource("WorldBoundaryShape2D_r300x")
+
+[node name="Cauldron" parent="." unique_id=922759971 instance=ExtResource("2_fj7yv")]
+position = Vector2(928, 483)

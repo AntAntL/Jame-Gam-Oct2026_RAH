@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://1eejsmv3e2r5"]
+
+[ext_resource type="Texture2D" uid="uid://cw6hbuea137ux" path="res://icon.svg" id="1_tnite"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r300x"]
+radius = 63.126858
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=926881695]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1416847441]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tnite")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2022582849]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_r300x")
