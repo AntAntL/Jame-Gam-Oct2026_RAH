@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://dejipl18cd7jk"]
 
+[ext_resource type="Script" uid="uid://b7bwmdidqpsnt" path="res://player_movement.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://cvwujvs1c7knm" path="res://Objects/Sprites/Player/Justafish.png" id="2_onrkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r300x"]
+height = 112.0
+
 [node name="Player" type="CharacterBody2D" unique_id=789483730]
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1042798291]
+scale = Vector2(14.120001, 1)
+shape = SubResource("CapsuleShape2D_r300x")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1522373810]
+texture = ExtResource("2_onrkg")
