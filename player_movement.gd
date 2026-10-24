@@ -16,8 +16,10 @@ func _ready() -> void:
 		held_item_name = "itema"
 		held_item_texture = item_holding.texture
 		item_holding.visible = true
+		add_to_group("item")
 	elif item_holding:
 		item_holding.visible = false
+		remove_from_group("item")
 
 func set_held_item(item_name: String, texture: Texture2D) -> void:
 	held_item_name = item_name
@@ -66,16 +68,10 @@ func throw_item() -> void:
 	var speed = 500.0
 	var upward_arc = -200.0
 	
-	# 1. Add to scene tree first
 	get_parent().add_child(item_instance)
-	
-	# 2. Position it
 	item_instance.global_position = global_position + Vector2(throw_direction * 20, -100)
-	
-	# 3. Apply physics velocity
 	item_instance.linear_velocity = Vector2(throw_direction * speed, upward_arc)
 
-	# 4. Configure thrown item visuals and data
 	if item_instance.has_method("set_item"):
 		item_instance.set_item(held_item_name, held_item_texture)
 
