@@ -14,6 +14,8 @@ const WATER_LIGHT = preload("res://Objects/SFX/LWater.wav")
 const WATER_NORMAL = preload("res://Objects/SFX/NWater.wav")
 const WATER_HEAVY = preload("res://Objects/SFX/HWater.wav")
 
+const ERROR = preload("res://Objects/SFX/Error.wav")
+
 var item_name: String = "item"
 var item_texture: Texture2D = null
 
@@ -128,7 +130,7 @@ func _physics_process(delta: float) -> void:
 			trail_line.points = pts
 		
 		# Check if settled on the ground
-		if linear_velocity.length() < 15.0 and global_position.y > 440.0 and air_time > 0.4:
+		if linear_velocity.length() < 2.0 and angular_velocity < 2.0:
 			is_in_flight = false
 			if trail_line:
 				trail_line.visible = false
@@ -139,6 +141,8 @@ func _physics_process(delta: float) -> void:
 			# Fail text
 			TrickPopup.spawn(get_parent(), global_position, "FAIL!!!!!!!!", Color(0.816, 0.224, 0.0, 1.0))
 			trigger_fall_alert()
+			
+			play_sound(ERROR)
 	
 	# Proximity pickup: if player is close (< 80px) and presses E
 	var player = get_tree().get_first_node_in_group("player")

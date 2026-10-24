@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ddriveqpufurn" path="res://Objects/Sprites/World/Unorganized/Cauldron.png" id="1_5qdwy"]
 [ext_resource type="Script" uid="uid://du0pk08sa2f7j" path="res://item_area.gd" id="2_0t22i"]
 [ext_resource type="Texture2D" uid="uid://bfipb8mvdqvyh" path="res://Objects/Sprites/World/Unorganized/Water_Splash.png" id="3_q3ljf"]
+[ext_resource type="Texture2D" uid="uid://dsd0u0ukembid" path="res://Objects/Sprites/World/Unorganized/WaterCauld.png" id="4_a7jlv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r300x"]
 radius = 48.04165
@@ -78,12 +79,17 @@ z_index = 5
 position = Vector2(-2.524355e-29, -85)
 scale = Vector2(4.37, 4.37)
 sprite_frames = SubResource("SpriteFrames_r300x")
-frame = 1
-frame_progress = 0.3701743
+frame = 3
+frame_progress = 0.44989082
 
 [node name="Timer" type="Timer" parent="WaterSplash" unique_id=812258112]
 wait_time = 0.3
 one_shot = true
+
+[node name="WaterCauld" type="Sprite2D" parent="." unique_id=1381113595]
+position = Vector2(-1.000001, 21.999989)
+scale = Vector2(2.995, 4.35)
+texture = ExtResource("4_a7jlv")
 
 [connection signal="body_entered" from="ItemArea" to="ItemArea" method="_on_body_entered"]
 [connection signal="timeout" from="WaterSplash/Timer" to="ItemArea" method="_on_timer_timeout"]
