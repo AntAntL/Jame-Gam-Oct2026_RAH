@@ -17,3 +17,4 @@ shape = SubResource("WorldBoundaryShape2D_r300x")
 
 [node name="Cauldron" parent="." unique_id=922759971 instance=ExtResource("2_fj7yv")]
 position = Vector2(928, 483)
+scale = Vector2(2, 2)
