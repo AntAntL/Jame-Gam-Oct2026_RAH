@@ -3,7 +3,7 @@ extends CharacterBody2D
 const TrickPopup = preload("res://trick_popup.gd")
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -600.0
 
 const MIN_POWER: float = 320.0
 const MAX_POWER: float = 980.0
@@ -241,9 +241,13 @@ func launch_item(power_ratio: float) -> void:
 	if was_airborne and "is_jump_shot" in item_instance:
 		item_instance.is_jump_shot = true
 		TrickPopup.spawn(get_parent(), global_position, "no way jump shot?????", Color(0.3, 0.9, 1.0))
+		if item_instance.has_method("add_combo"):
+			item_instance.add_combo()
 		
 	if velocity.distance_to(Vector2(0, 0)) > 2:
 		TrickPopup.spawn(get_parent(), global_position, "omg running start", Color(0.0, 0.748, 0.307, 1.0))
+		if item_instance.has_method("add_combo"):
+			item_instance.add_combo()
 
 	# Lock camera onto the flying projectile!
 	var cam = get_tree().get_first_node_in_group("main_camera")

@@ -2,9 +2,53 @@
 
 [ext_resource type="Texture2D" uid="uid://ddriveqpufurn" path="res://Objects/Sprites/World/Unorganized/Cauldron.png" id="1_5qdwy"]
 [ext_resource type="Script" uid="uid://du0pk08sa2f7j" path="res://item_area.gd" id="2_0t22i"]
+[ext_resource type="Texture2D" uid="uid://bfipb8mvdqvyh" path="res://Objects/Sprites/World/Unorganized/Water_Splash.png" id="3_q3ljf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r300x"]
 radius = 48.04165
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7jlv"]
+atlas = ExtResource("3_q3ljf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju8ne"]
+atlas = ExtResource("3_q3ljf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kmeg"]
+atlas = ExtResource("3_q3ljf")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r337x"]
+atlas = ExtResource("3_q3ljf")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2b5b"]
+atlas = ExtResource("3_q3ljf")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r300x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7jlv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ju8ne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kmeg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r337x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2b5b")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Cauldron" type="StaticBody2D" unique_id=922759971]
 
@@ -27,5 +71,14 @@ script = ExtResource("2_0t22i")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ItemArea" unique_id=172171088]
 scale = Vector2(1, 1.0344832)
 shape = SubResource("CircleShape2D_r300x")
+
+[node name="WaterSplash" type="AnimatedSprite2D" parent="." unique_id=253614026]
+visible = false
+z_index = 5
+position = Vector2(-2.524355e-29, -85)
+scale = Vector2(4.37, 4.37)
+sprite_frames = SubResource("SpriteFrames_r300x")
+frame = 1
+frame_progress = 0.3701743
 
 [connection signal="body_entered" from="ItemArea" to="ItemArea" method="_on_body_entered"]

@@ -7,11 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://do4r5yxjuene1" path="res://game_hud.tscn" id="6_hud"]
 [ext_resource type="PackedScene" uid="uid://dfhh0wfxyfc2m" path="res://map.tscn" id="7_pkg7o"]
 [ext_resource type="Script" uid="uid://b0b13m006rpss" path="res://customer_spawner.gd" id="7_spawner"]
+[ext_resource type="Texture2D" uid="uid://dkdnjxrcaglby" path="res://Objects/Sprites/World/Unorganized/orange.png" id="8_gbfbk"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r300x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r300x"]
 size = Vector2(56, 566)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hv83"]
+size = Vector2(25.316462, 5.131447)
 
 [node name="Node2D" type="Node2D" unique_id=784977946]
 
@@ -44,11 +48,6 @@ script = ExtResource("7_spawner")
 
 [node name="GameHUD" parent="." unique_id=1901929353 instance=ExtResource("6_hud")]
 
-[node name="StaticBody2D2" parent="." unique_id=319056030 instance=ExtResource("7_pkg7o")]
-z_index = -2
-position = Vector2(562, 391)
-scale = Vector2(5.135, 5.135)
-
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1872989880]
 position = Vector2(-50, 240)
 
@@ -70,3 +69,17 @@ position = Vector2(1051, 240)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=2070837312]
 position = Vector2(19, 98)
 shape = SubResource("RectangleShape2D_r300x")
+
+[node name="StaticBody2D2" parent="." unique_id=319056030 instance=ExtResource("7_pkg7o")]
+z_index = -2
+position = Vector2(562, 391)
+scale = Vector2(5.135, 5.135)
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D2" unique_id=1082163005]
+position = Vector2(-53.94352, -5.452775)
+scale = Vector2(0.1, 0.02)
+texture = ExtResource("8_gbfbk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2073547703]
+position = Vector2(-53.943523, -5.4868774)
+shape = SubResource("RectangleShape2D_1hv83")

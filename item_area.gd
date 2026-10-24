@@ -23,6 +23,10 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("get_trick_data"):
 		trick_data = body.get_trick_data()
 	
+	# Play water splash SFX
+	if body.has_method("play_splash_sfx"):
+		body.play_splash_sfx()
+	
 	var bonus_loss: int = 0
 	var trick_titles: Array[String] = []
 	
@@ -33,15 +37,15 @@ func _on_body_entered(body: Node2D) -> void:
 	
 	if bool(trick_data.get("is_jump_shot", false)):
 		bonus_loss += 40
-		trick_titles.append("jump shot wow")
+		trick_titles.append("jump shot")
 		
 	if bool(trick_data.get("passed_over_witch", false)):
 		bonus_loss += 60
-		trick_titles.append("over the witch")
+		trick_titles.append("over the witch lol")
 		
 	if bool(trick_data.get("is_swish", false)):
 		bonus_loss += 50
-		trick_titles.append("oooooo")
+		trick_titles.append("swish clean")
 	
 	# Score bonus & trigger popups
 	var world_root = get_tree().current_scene

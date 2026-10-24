@@ -2,10 +2,23 @@ extends RigidBody2D
 
 const TrickPopup = preload("res://trick_popup.gd")
 
+const COMBO_1 = preload("res://Objects/SFX/Combo1.wav")
+const COMBO_2 = preload("res://Objects/SFX/Combo2.wav")
+const COMBO_3 = preload("res://Objects/SFX/Combo3.wav")
+const COMBO_4 = preload("res://Objects/SFX/Combo4.wav")
+const COMBO_5 = preload("res://Objects/SFX/Combo5.wav")
+
+const COMBO_SOUNDS = [COMBO_1, COMBO_2, COMBO_3, COMBO_4, COMBO_5]
+
+const WATER_LIGHT = preload("res://Objects/SFX/LWater.wav")
+const WATER_NORMAL = preload("res://Objects/SFX/NWater.wav")
+const WATER_HEAVY = preload("res://Objects/SFX/HWater.wav")
+
 var item_name: String = "item"
 var item_texture: Texture2D = null
 
-# Trick shot metrics
+# Trick shot & combo metrics
+var combo_count: int = 0
 var is_jump_shot: bool = false
 var bounce_count: int = 0
 var air_time: float = 0.0
@@ -55,6 +68,35 @@ func set_item(p_name: String, p_texture: Texture2D) -> void:
 		else:
 			spr.scale = Vector2(0.195, 0.195)
 
+func add_combo() -> void:
+	combo_count += 1
+	play_combo_sfx()
+
+func play_combo_sfx() -> void:
+	if COMBO_SOUNDS.is_empty():
+		return
+	var idx = clamp(combo_count - 1, 0, COMBO_SOUNDS.size() - 1)
+	play_sound(COMBO_SOUNDS[idx], 1.0, 1.0 + (combo_count - 1) * 0.04)
+
+func play_splash_sfx() -> void:
+	var sound = WATER_NORMAL
+	if combo_count >= 3 or item_name == "itemc":
+		sound = WATER_HEAVY
+	elif combo_count == 0 or item_name == "itema":
+		sound = WATER_LIGHT
+	play_sound(sound, 3.0, randf_range(0.95, 1.05))
+
+func play_sound(stream: AudioStream, volume_db: float = 0.0, pitch: float = 1.0) -> void:
+	if stream == null:
+		return
+	var asp = AudioStreamPlayer.new()
+	asp.stream = stream
+	asp.volume_db = volume_db
+	asp.pitch_scale = pitch
+	get_tree().current_scene.add_child(asp)
+	asp.play()
+	asp.finished.connect(asp.queue_free)
+
 func _physics_process(delta: float) -> void:
 	if is_in_group("inside_cauldron"):
 		if trail_line and trail_line.visible:
@@ -69,6 +111,7 @@ func _physics_process(delta: float) -> void:
 			if not passed_over_witch:
 				passed_over_witch = true
 				TrickPopup.spawn(get_parent(), global_position, "over omg", Color(0.8, 0.4, 1.0))
+				add_combo()
 		
 		# Update motion trail
 		if trail_line:
@@ -115,6 +158,8 @@ func _on_body_entered(body: Node) -> void:
 	# Check if like there is enough velocity cuz like then there will be 12 billion bounces
 	if (linear_velocity.length() < 100):
 		return
+	
+	add_combo()
 	
 	# Text on bounce
 	var bounce_text = "BOUNCE!"
@@ -183,5 +228,6 @@ func get_trick_data() -> Dictionary:
 		"bounce_count": bounce_count,
 		"air_time": air_time,
 		"passed_over_witch": passed_over_witch,
-		"is_swish": not has_touched_floor and bounce_count == 0
+		"is_swish": not has_touched_floor and bounce_count == 0,
+		"combo_count": combo_count
 	}
