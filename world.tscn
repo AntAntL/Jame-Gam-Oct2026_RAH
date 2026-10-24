@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://rndk1r11mn5h" path="res://cauldron.tscn" id="2_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://b6us20fif82hq" path="res://shelf.tscn" id="3_shelf"]
 [ext_resource type="PackedScene" uid="uid://ujbbpqxivfeb" path="res://witch.tscn" id="4_aqk2v"]
-[ext_resource type="Texture2D" uid="uid://c6sg3edaq73pv" path="res://Objects/Sprites/World/Background-Deco/Potionshopv1.png" id="5_036b0"]
-[ext_resource type="PackedScene" path="res://game_hud.tscn" id="6_hud"]
+[ext_resource type="PackedScene" uid="uid://do4r5yxjuene1" path="res://game_hud.tscn" id="6_hud"]
+[ext_resource type="PackedScene" uid="uid://dfhh0wfxyfc2m" path="res://map.tscn" id="7_pkg7o"]
 [ext_resource type="Script" uid="uid://b0b13m006rpss" path="res://customer_spawner.gd" id="7_spawner"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r300x"]
@@ -19,6 +19,7 @@ position = Vector2(488, 315)
 position = Vector2(96, 538)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=128889590]
+position = Vector2(0, 97)
 shape = SubResource("WorldBoundaryShape2D_r300x")
 
 [node name="Cauldron" parent="." unique_id=922759971 instance=ExtResource("2_fj7yv")]
@@ -26,22 +27,21 @@ position = Vector2(928, 483)
 scale = Vector2(2, 2)
 
 [node name="Shelf" parent="." unique_id=1933029903 instance=ExtResource("3_shelf")]
-offset_left = -64.0
-offset_top = 324.0
-offset_right = 116.0
-offset_bottom = 624.0
+offset_left = 281.0
+offset_top = 11.0
+offset_right = 461.0
+offset_bottom = 311.0
 
 [node name="Witch" parent="." unique_id=2099214223 instance=ExtResource("4_aqk2v")]
 position = Vector2(639, 432)
-
-[node name="Potionshopv1" type="Sprite2D" parent="." unique_id=1240124002]
-z_index = -1
-position = Vector2(599.00006, 341)
-scale = Vector2(4.496, 6)
-texture = ExtResource("5_036b0")
 
 [node name="CustomerSpawner" type="Node2D" parent="." unique_id=1086228455]
 position = Vector2(-20, 470)
 script = ExtResource("7_spawner")
 
 [node name="GameHUD" parent="." unique_id=1901929353 instance=ExtResource("6_hud")]
+
+[node name="StaticBody2D2" parent="." unique_id=319056030 instance=ExtResource("7_pkg7o")]
+z_index = -2
+position = Vector2(562, 391)
+scale = Vector2(5.135, 5.135)

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bk5veg4ru1mah"]
+
+[ext_resource type="Script" uid="uid://mcnf7eu76vh8" path="res://mainmenubutton.gd" id="1_cmhrf"]
+
+[node name="Control" type="Control" unique_id=905747437]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1675082349]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 57.0
+offset_right = 775.0
+offset_bottom = 245.0
+theme_override_font_sizes/font_size = 137
+text = "game"
+
+[node name="Button" type="Button" parent="." unique_id=1936500792]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 287.0
+offset_right = 596.0
+offset_bottom = 318.0
+text = "play game"
+script = ExtResource("1_cmhrf")
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

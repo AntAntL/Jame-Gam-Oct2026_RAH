@@ -71,6 +71,11 @@ theme_override_constants/margin_bottom = 8
 layout_mode = 2
 theme_override_constants/separation = 4
 
+[node name="Label" type="Label" parent="TopRight/ReviewPanel/MarginContainer/VBoxContainer" unique_id=129273106]
+layout_mode = 2
+text = "review"
+horizontal_alignment = 1
+
 [node name="StarsLabel" type="Label" parent="TopRight/ReviewPanel/MarginContainer/VBoxContainer" unique_id=1261316644]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20

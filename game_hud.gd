@@ -1,10 +1,9 @@
 extends CanvasLayer
 
-@onready var profit_label: Label = $TopLeft/MarginContainer/VBoxContainer/ProfitLabel
-@onready var detect_label: Label = $TopLeft/MarginContainer/VBoxContainer/DetectLabel
+@onready var profit_label: Label = $TopLeft/MarginContainer/ProfitLabel
 @onready var vignette_rect: TextureRect = $VignetteRect
 
-# Review notification elements (simplified: stars + loss)
+# Review notification elements
 @onready var review_panel: PanelContainer = $TopRight/ReviewPanel
 @onready var review_stars: Label = $TopRight/ReviewPanel/MarginContainer/VBoxContainer/StarsLabel
 @onready var review_loss: Label = $TopRight/ReviewPanel/MarginContainer/VBoxContainer/LossLabel
@@ -40,9 +39,10 @@ func add_profit_lost(amount: int) -> void:
 	update_profit_display()
 	
 	# Scale punch animation on profit label
-	var t = create_tween()
-	t.tween_property(profit_label, "scale", Vector2(1.2, 1.2), 0.1)
-	t.tween_property(profit_label, "scale", Vector2(1.0, 1.0), 0.15)
+	if profit_label:
+		var t = create_tween()
+		t.tween_property(profit_label, "scale", Vector2(1.2, 1.2), 0.1)
+		t.tween_property(profit_label, "scale", Vector2(1.0, 1.0), 0.15)
 
 func update_profit_display() -> void:
 	if profit_label:
@@ -57,11 +57,10 @@ func set_suspicion(score: float, is_active: bool) -> void:
 	var target_alpha = normalized * 0.75
 	if is_active and score > 0.1:
 		target_alpha += 0.25 * abs(sin(Time.get_ticks_msec() / 120.0))
-	vignette_rect.modulate.a = move_toward(vignette_rect.modulate.a, target_alpha, 0.06)
+	if vignette_rect:
+		vignette_rect.modulate.a = move_toward(vignette_rect.modulate.a, target_alpha, 0.06)
 
 func update_detect_display(score: float) -> void:
-	if !detect_label:
-		return
 	var star_count = int(ceil(score)) # 0 to 5
 	var stars_text = ""
 	for i in range(5):
@@ -70,7 +69,7 @@ func update_detect_display(score: float) -> void:
 		else:
 			stars_text += "☆"
 	
-	# Update Player's NoticeBar if present
+	# Update Player's NoticeBar
 	var player = get_tree().get_first_node_in_group("player")
 	if player and player.has_node("NoticeBar"):
 		var p_bar = player.get_node("NoticeBar")
