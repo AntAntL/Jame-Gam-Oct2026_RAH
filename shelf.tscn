@@ -23,6 +23,7 @@ theme_override_constants/separation = 10
 [node name="ItemA" type="Button" parent="VBoxContainer" unique_id=1579815460]
 custom_minimum_size = Vector2(0, 56)
 layout_mode = 2
+focus_mode = 0
 text = " Item A"
 icon = ExtResource("2_itema")
 expand_icon = true
@@ -30,6 +31,7 @@ expand_icon = true
 [node name="ItemB" type="Button" parent="VBoxContainer" unique_id=1001790055]
 custom_minimum_size = Vector2(0, 56)
 layout_mode = 2
+focus_mode = 0
 text = " Item B"
 icon = ExtResource("3_itemb")
 expand_icon = true
@@ -37,6 +39,7 @@ expand_icon = true
 [node name="ItemC" type="Button" parent="VBoxContainer" unique_id=1274951238]
 custom_minimum_size = Vector2(0, 56)
 layout_mode = 2
+focus_mode = 0
 text = " Item C"
 icon = ExtResource("4_itemc")
 expand_icon = true

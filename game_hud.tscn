@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://do4r5yxjuene1"]
+
+[ext_resource type="Script" uid="uid://d3i0ekx5llnra" path="res://game_hud.gd" id="1_hud"]
+
+[node name="GameHUD" type="CanvasLayer" unique_id=695055891]
+layer = 5
+script = ExtResource("1_hud")
+
+[node name="VignetteRect" type="TextureRect" parent="." unique_id=1904657784]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TopLeft" type="Control" parent="." unique_id=897273163]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 290.0
+offset_bottom = 110.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="PanelContainer" parent="TopLeft" unique_id=273743843]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ProfitLabel" type="Label" parent="TopLeft/MarginContainer" unique_id=568450793]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.3, 1)
+theme_override_font_sizes/font_size = 18
+text = "Profit Lost: -$0"
+
+[node name="TopRight" type="Control" parent="." unique_id=1851666236]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -260.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 105.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="ReviewPanel" type="PanelContainer" parent="TopRight" unique_id=1292328666]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TopRight/ReviewPanel" unique_id=704233529]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TopRight/ReviewPanel/MarginContainer" unique_id=1866776798]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="StarsLabel" type="Label" parent="TopRight/ReviewPanel/MarginContainer/VBoxContainer" unique_id=1261316644]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "⭐⭐☆☆☆"
+horizontal_alignment = 1
+
+[node name="LossLabel" type="Label" parent="TopRight/ReviewPanel/MarginContainer/VBoxContainer" unique_id=1308742179]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.35, 0.35, 1)
+theme_override_font_sizes/font_size = 15
+text = "-$45 Profit Lost"
+horizontal_alignment = 1

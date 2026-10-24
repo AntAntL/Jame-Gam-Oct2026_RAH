@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://b6us20fif82hq" path="res://shelf.tscn" id="3_shelf"]
 [ext_resource type="PackedScene" uid="uid://ujbbpqxivfeb" path="res://witch.tscn" id="4_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://c6sg3edaq73pv" path="res://Objects/Sprites/World/Background-Deco/Potionshopv1.png" id="5_036b0"]
+[ext_resource type="PackedScene" path="res://game_hud.tscn" id="6_hud"]
+[ext_resource type="Script" uid="uid://b0b13m006rpss" path="res://customer_spawner.gd" id="7_spawner"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r300x"]
 
@@ -37,3 +39,9 @@ z_index = -1
 position = Vector2(599.00006, 341)
 scale = Vector2(4.496, 6)
 texture = ExtResource("5_036b0")
+
+[node name="CustomerSpawner" type="Node2D" parent="." unique_id=1086228455]
+position = Vector2(-20, 470)
+script = ExtResource("7_spawner")
+
+[node name="GameHUD" parent="." unique_id=1901929353 instance=ExtResource("6_hud")]

@@ -26,7 +26,14 @@ func set_held_item(item_name: String, texture: Texture2D) -> void:
 	held_item_texture = texture
 	if item_holding:
 		item_holding.texture = texture
+		if item_name == "itemc":
+			item_holding.scale = Vector2(0.26, 0.26)
+		elif item_name == "itema":
+			item_holding.scale = Vector2(0.16, 0.16)
+		else:
+			item_holding.scale = Vector2(0.195, 0.195)
 		item_holding.visible = true
+	add_to_group("item")
 
 func clear_held_item() -> void:
 	held_item_name = ""
@@ -34,6 +41,7 @@ func clear_held_item() -> void:
 	if item_holding:
 		item_holding.texture = null
 		item_holding.visible = false
+	remove_from_group("item")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -75,5 +83,5 @@ func throw_item() -> void:
 	if item_instance.has_method("set_item"):
 		item_instance.set_item(held_item_name, held_item_texture)
 
-	# 5. Held item disappears!
+	# Held item disappears from player
 	clear_held_item()
