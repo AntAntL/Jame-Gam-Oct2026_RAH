@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b6us20fif82hq"]
+
+[ext_resource type="Script" uid="uid://dj25ehs2222jm" path="res://shelf.gd" id="1_shelf"]
+[ext_resource type="Texture2D" uid="uid://cs7di2q7cdnbe" path="res://Objects/Sprites/World/Unorganized/itema.png" id="2_itema"]
+[ext_resource type="Texture2D" uid="uid://d6gw7r4fgulx" path="res://Objects/Sprites/World/Unorganized/itemb.png" id="3_itemb"]
+[ext_resource type="Texture2D" uid="uid://chsmkpx32wvg6" path="res://Objects/Sprites/World/Unorganized/itemc.png" id="4_itemc"]
+
+[node name="MarginContainer" type="MarginContainer" unique_id=1211330278]
+offset_left = -73.0
+offset_top = -99.0
+offset_right = 107.0
+offset_bottom = 201.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+script = ExtResource("1_shelf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=479100406]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ItemA" type="Button" parent="VBoxContainer" unique_id=1579815460]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+text = " Item A"
+icon = ExtResource("2_itema")
+expand_icon = true
+
+[node name="ItemB" type="Button" parent="VBoxContainer" unique_id=1001790055]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+text = " Item B"
+icon = ExtResource("3_itemb")
+expand_icon = true
+
+[node name="ItemC" type="Button" parent="VBoxContainer" unique_id=1274951238]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+text = " Item C"
+icon = ExtResource("4_itemc")
+expand_icon = true

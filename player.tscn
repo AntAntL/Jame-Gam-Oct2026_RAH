@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b7bwmdidqpsnt" path="res://player_movement.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://b0qoo45pj83d0" path="res://Objects/Sprites/World/Unorganized/Littleman.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cs7di2q7cdnbe" path="res://Objects/Sprites/World/Unorganized/itema.png" id="3_i3pqv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kg5e7"]
 radius = 31.0
@@ -16,3 +17,18 @@ shape = SubResource("CapsuleShape2D_kg5e7")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1522373810]
 scale = Vector2(2.9893937, 3)
 texture = ExtResource("2_onrkg")
+
+[node name="ItemHolding" type="Sprite2D" parent="." unique_id=916026964]
+position = Vector2(0, -82)
+scale = Vector2(0.195, 0.195)
+texture = ExtResource("3_i3pqv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1065660191]
+
+[node name="NoticeBar" type="Label" parent="." unique_id=266159874]
+offset_left = 56.0
+offset_top = -312.0
+offset_right = 166.0
+offset_bottom = -289.0
+scale = Vector2(4.6422424, 4.650992)
+text = "⭐"

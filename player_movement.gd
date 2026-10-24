@@ -1,10 +1,37 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 @onready var THROWABLE = preload("res://item.tscn")
+@onready var item_holding: Sprite2D = $ItemHolding
+
+var held_item_name: String = ""
+var held_item_texture: Texture2D = null
+
+func _ready() -> void:
+	add_to_group("player")
+	# Start with item if already set in the editor, or hide if none
+	if item_holding and item_holding.texture:
+		held_item_name = "itema"
+		held_item_texture = item_holding.texture
+		item_holding.visible = true
+	elif item_holding:
+		item_holding.visible = false
+
+func set_held_item(item_name: String, texture: Texture2D) -> void:
+	held_item_name = item_name
+	held_item_texture = texture
+	if item_holding:
+		item_holding.texture = texture
+		item_holding.visible = true
+
+func clear_held_item() -> void:
+	held_item_name = ""
+	held_item_texture = null
+	if item_holding:
+		item_holding.texture = null
+		item_holding.visible = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -16,7 +43,6 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -29,6 +55,10 @@ func _physics_process(delta: float) -> void:
 		throw_item()
 
 func throw_item() -> void:
+	# Only throw if currently holding an item
+	if held_item_texture == null:
+		return
+
 	var item_instance = THROWABLE.instantiate()
 	
 	# Determine facing direction
@@ -44,3 +74,14 @@ func throw_item() -> void:
 	
 	# 3. Apply physics velocity
 	item_instance.linear_velocity = Vector2(throw_direction * speed, upward_arc)
+
+	# 4. Configure thrown item visuals and data
+	if item_instance.has_method("set_item"):
+		item_instance.set_item(held_item_name, held_item_texture)
+	elif item_instance.has_node("Sprite2D"):
+		var spr: Sprite2D = item_instance.get_node("Sprite2D")
+		spr.texture = held_item_texture
+		spr.scale = Vector2(0.195, 0.195)
+
+	# 5. Held item disappears!
+	clear_held_item()

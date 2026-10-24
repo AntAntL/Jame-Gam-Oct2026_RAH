@@ -2,12 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://dejipl18cd7jk" path="res://player.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://rndk1r11mn5h" path="res://cauldron.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://b6us20fif82hq" path="res://shelf.tscn" id="3_shelf"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r300x"]
 
 [node name="Node2D" type="Node2D" unique_id=784977946]
 
 [node name="Player" parent="." unique_id=789483730 instance=ExtResource("1_f3sb7")]
+position = Vector2(488, 315)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=900511250]
 position = Vector2(96, 538)
@@ -18,3 +20,9 @@ shape = SubResource("WorldBoundaryShape2D_r300x")
 [node name="Cauldron" parent="." unique_id=922759971 instance=ExtResource("2_fj7yv")]
 position = Vector2(928, 483)
 scale = Vector2(2, 2)
+
+[node name="Shelf" parent="." unique_id=1933029903 instance=ExtResource("3_shelf")]
+offset_left = -64.0
+offset_top = 324.0
+offset_right = 116.0
+offset_bottom = 624.0
