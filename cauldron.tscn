@@ -81,4 +81,9 @@ sprite_frames = SubResource("SpriteFrames_r300x")
 frame = 1
 frame_progress = 0.3701743
 
+[node name="Timer" type="Timer" parent="WaterSplash" unique_id=812258112]
+wait_time = 0.3
+one_shot = true
+
 [connection signal="body_entered" from="ItemArea" to="ItemArea" method="_on_body_entered"]
+[connection signal="timeout" from="WaterSplash/Timer" to="ItemArea" method="_on_timer_timeout"]

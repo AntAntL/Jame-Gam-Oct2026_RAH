@@ -2,6 +2,9 @@ extends Area2D
 
 const TrickPopup = preload("res://trick_popup.gd")
 
+@onready var WaterSplash: AnimatedSprite2D = $"../WaterSplash"
+@onready var WaterSplashTimer: Timer = $"../WaterSplash/Timer"
+
 signal ingredient_added(item_name: String)
 
 var ingredients: Array[String] = []
@@ -31,6 +34,11 @@ func _on_body_entered(body: Node2D) -> void:
 	# Play water splash SFX
 	if body.has_method("play_splash_sfx"):
 		body.play_splash_sfx()
+		
+	# Splash water thingy
+	WaterSplash.visible = true
+	WaterSplashTimer.start()
+	WaterSplash.play()
 	
 	var bonus_loss: int = 0
 	var trick_titles: Array[String] = []
@@ -104,3 +112,7 @@ func get_and_clear_ingredients() -> Array[String]:
 
 func get_ingredient_count() -> int:
 	return ingredients.size()
+
+
+func _on_timer_timeout() -> void:
+	WaterSplash.visible = false

@@ -80,10 +80,13 @@ func play_combo_sfx() -> void:
 
 func play_splash_sfx() -> void:
 	var sound = WATER_NORMAL
-	if combo_count >= 3 or item_name == "itemc":
-		sound = WATER_HEAVY
-	elif combo_count == 0 or item_name == "itema":
+	var soundR = randi_range(0, 2)
+	
+	if soundR == 1:
 		sound = WATER_LIGHT
+	elif soundR == 2:
+		sound = WATER_HEAVY
+	
 	play_sound(sound, 3.0, randf_range(0.95, 1.05))
 
 func play_sound(stream: AudioStream, volume_db: float = 0.0, pitch: float = 1.0) -> void:
