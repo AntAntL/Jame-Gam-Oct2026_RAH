@@ -1,20 +1,22 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://b5rdmkmxxjjvu"]
 
-[ext_resource type="Script" path="res://customer.gd" id="1_customer"]
-[ext_resource type="Texture2D" path="res://Objects/Sprites/World/Unorganized/Littleman.png" id="2_sprite"]
+[ext_resource type="Script" uid="uid://ddjpjooxnfp2n" path="res://customer.gd" id="1_customer"]
+[ext_resource type="Texture2D" uid="uid://b0qoo45pj83d0" path="res://Objects/Sprites/World/Unorganized/Littleman.png" id="2_sprite"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c"]
 radius = 20.0
 height = 60.0
 
-[node name="Customer" type="CharacterBody2D"]
+[node name="Customer" type="CharacterBody2D" unique_id=1063727133]
+position = Vector2(0, 100)
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_customer")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2.5, 2.5)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=514598894]
+scale = Vector2(6, 6)
 texture = ExtResource("2_sprite")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1805260964]
+scale = Vector2(3, 3)
 shape = SubResource("CapsuleShape2D_c")

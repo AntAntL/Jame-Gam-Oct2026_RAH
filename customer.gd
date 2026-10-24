@@ -52,10 +52,6 @@ func serve_potion() -> void:
 	if cauldron and cauldron.has_method("get_and_clear_ingredients"):
 		ingredients = cauldron.get_and_clear_ingredients()
 	
-	# Dynamic ingredient scoring:
-	# Item A: small impact (1 pt, -$15)
-	# Item B: medium impact (3 pts, -$45)
-	# Item C: insanely risky & large impact (8 pts, -$140)
 	var contamination_score: int = 0
 	var loss: int = 0
 	
@@ -79,11 +75,11 @@ func serve_potion() -> void:
 	if contamination_score == 0:
 		rating = 5
 		loss = 0
-	elif contamination_score <= 2:
-		rating = 4
 	elif contamination_score <= 4:
+		rating = 4
+	elif contamination_score <= 8:
 		rating = 3
-	elif contamination_score < 8:
+	elif contamination_score < 15:
 		rating = 2
 	else:
 		rating = 1

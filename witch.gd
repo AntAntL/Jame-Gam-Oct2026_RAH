@@ -9,6 +9,7 @@ var witch_looking: bool = false
 var suspicion: float = 0.0 # 0.0 to 5.0 (permanent, never decreases)
 const MAX_SUSPICION: float = 5.0
 const BASE_DETECTION_RATE: float = 0.4
+var floor_alert_timer: float = 0.0
 
 func _ready() -> void:
 	add_to_group("witch")
@@ -27,6 +28,11 @@ func _physics_process(delta: float) -> void:
 	var highest_risk: float = 0.0
 	var spotted_item_type = ""
 	
+	if floor_alert_timer > 0.0:
+		floor_alert_timer -= delta
+		if floor_alert_timer <= 0.0 and alert_label:
+			alert_label.visible = false
+	
 	var bodies = area.get_overlapping_bodies()
 	for body in bodies:
 		if body.is_in_group("item") and !body.is_in_group("inside_cauldron"):
@@ -39,7 +45,6 @@ func _physics_process(delta: float) -> void:
 			
 			if cur_item != "":
 				item_spotted = true
-				# Item C is insanely risky (3.5x speed!), A is small (0.5x), B is standard (1.0x)
 				var risk = 1.0
 				if cur_item == "itemc":
 					risk = 3.5
@@ -57,19 +62,44 @@ func _physics_process(delta: float) -> void:
 		if alert_label:
 			alert_label.visible = true
 			if spotted_item_type == "itemc":
-				alert_label.text = "!!!"
+				alert_label.text = "AAAAAAAAAAAAAAAAAA"
 				alert_label.modulate = Color(1.0, 0.0, 0.0, 1.0)
 			else:
-				alert_label.text = "!"
+				alert_label.text = "what????"
 				alert_label.modulate = Color(1.0, 0.3, 0.1, 1.0)
 	else:
-		# Permanent: never decays
-		if alert_label:
+		if floor_alert_timer <= 0.0 and alert_label:
 			alert_label.visible = false
 	
 	var hud = get_tree().get_first_node_in_group("hud")
 	if hud and hud.has_method("set_suspicion"):
 		hud.set_suspicion(suspicion, item_spotted)
+
+func alert_floor_crash(item_pos: Vector2, _item_name: String) -> void:
+	# Immediately turn witch toward the fallen item
+	witch_looking = (item_pos.x < global_position.x)
+	sprite.flip_h = witch_looking
+	area.scale.x = -1.0 if witch_looking else 1.0
+	timer.start(randf_range(3.5, 5.0))
+	
+	# Hop in shock
+	var orig_y = position.y
+	var tw = create_tween()
+	tw.tween_property(self, "position:y", orig_y - 24.0, 0.1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_property(self, "position:y", orig_y, 0.15).set_trans(Tween.TRANS_BOUNCE)
+	
+	# Shock alert
+	floor_alert_timer = 2.2
+	if alert_label:
+		alert_label.visible = true
+		alert_label.text = "WHAT WAS THAT?!?!?"
+		alert_label.modulate = Color(1.0, 0.1, 0.1, 1.0)
+	
+	# Heavy suspicion spike (+1.6 stars)
+	suspicion = min(suspicion + 1.6, MAX_SUSPICION)
+	var hud = get_tree().get_first_node_in_group("hud")
+	if hud and hud.has_method("set_suspicion"):
+		hud.set_suspicion(suspicion, true)
 
 func _on_timer_timeout() -> void:
 	witch_looking = !witch_looking

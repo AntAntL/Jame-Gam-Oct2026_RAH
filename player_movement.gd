@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+const TrickPopup = preload("res://trick_popup.gd")
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
@@ -10,7 +12,6 @@ const MAX_CHARGE_TIME: float = 1.0
 @onready var THROWABLE = preload("res://item.tscn")
 @onready var item_holding: Sprite2D = $ItemHolding
 @onready var sprite: Sprite2D = $Sprite2D
-@onready var camera: Camera2D = $Camera2D
 
 var held_item_name: String = ""
 var held_item_texture: Texture2D = null
@@ -157,7 +158,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	# Handle keyboard throw action
+	# Handle keyboard throw action (Hold 'F' / 'throw' action)
 	if held_item_texture != null:
 		if Input.is_action_just_pressed("throw") and not is_charging:
 			start_charging(false, true)
@@ -186,9 +187,6 @@ func update_power_bar(ratio: float) -> void:
 			power_bar_fill.bg_color = lerp(Color(0.2, 0.9, 0.3), Color(0.95, 0.85, 0.2), ratio * 2.0)
 		else:
 			power_bar_fill.bg_color = lerp(Color(0.95, 0.85, 0.2), Color(1.0, 0.2, 0.1), (ratio - 0.5) * 2.0)
-			
-	# too lazy ima just put camera zoom here too
-	camera.zoom = Vector2(1.0 + (ratio / 10), 1.0 + (ratio / 10))
 
 func update_trajectory_arc(ratio: float) -> void:
 	if not trajectory_line:
@@ -210,7 +208,6 @@ func update_trajectory_arc(ratio: float) -> void:
 		var t = i * step
 		var pt = local_start + launch_vel * t + 0.5 * grav * (t * t)
 		points.append(pt)
-		# Cut off if it hits the floor relative to player
 		if pt.y > 48.0:
 			break
 	
@@ -219,9 +216,8 @@ func update_trajectory_arc(ratio: float) -> void:
 func launch_item(power_ratio: float) -> void:
 	if held_item_texture == null:
 		return
-		
-	camera.zoom = Vector2(1, 1)
 
+	var was_airborne = not is_on_floor()
 	var item_instance = THROWABLE.instantiate()
 	var throw_origin = global_position + Vector2(0, -70)
 	var mouse_pos = get_global_mouse_position()
@@ -234,12 +230,25 @@ func launch_item(power_ratio: float) -> void:
 	item_instance.global_position = throw_origin
 	item_instance.linear_velocity = launch_velocity
 	
-	# Spin object while throwing
+	# Give realistic tumbling spin in the direction of throw
 	var spin_dir = 1.0 if launch_velocity.x >= 0 else -1.0
-	item_instance.angular_velocity = spin_dir * randf_range(4.0, 10.0)
+	item_instance.angular_velocity = spin_dir * randf_range(5.0, 12.0)
 
 	if item_instance.has_method("set_item"):
 		item_instance.set_item(held_item_name, held_item_texture)
+
+	# Jump shot detect
+	if was_airborne and "is_jump_shot" in item_instance:
+		item_instance.is_jump_shot = true
+		TrickPopup.spawn(get_parent(), global_position, "no way jump shot?????", Color(0.3, 0.9, 1.0))
+		
+	if velocity.distance_to(Vector2(0, 0)) > 2:
+		TrickPopup.spawn(get_parent(), global_position, "omg running start", Color(0.0, 0.748, 0.307, 1.0))
+
+	# Lock camera onto the flying projectile!
+	var cam = get_tree().get_first_node_in_group("main_camera")
+	if cam and cam.has_method("track_item"):
+		cam.track_item(item_instance)
 
 	# Held item disappears from player
 	clear_held_item()
