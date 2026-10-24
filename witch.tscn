@@ -3,17 +3,11 @@
 [ext_resource type="Script" uid="uid://dgf7abhetk2k8" path="res://witch.gd" id="1_08n5d"]
 [ext_resource type="Texture2D" uid="uid://cvwujvs1c7knm" path="res://Objects/Sprites/Player/Justafish.png" id="1_lf1iu"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_r300x"]
-radius = 63.03174
-
 [node name="Witch" type="CharacterBody2D" unique_id=2099214223]
 script = ExtResource("1_08n5d")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1264992220]
 texture = ExtResource("1_lf1iu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1816925719]
-shape = SubResource("CircleShape2D_r300x")
 
 [node name="Timer" type="Timer" parent="." unique_id=1514402148]
 wait_time = 5.0
