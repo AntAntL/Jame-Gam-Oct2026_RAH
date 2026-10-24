@@ -7,16 +7,24 @@
 [ext_resource type="PackedScene" uid="uid://do4r5yxjuene1" path="res://game_hud.tscn" id="6_hud"]
 [ext_resource type="PackedScene" uid="uid://dfhh0wfxyfc2m" path="res://map.tscn" id="7_pkg7o"]
 [ext_resource type="Script" uid="uid://b0b13m006rpss" path="res://customer_spawner.gd" id="7_spawner"]
-[ext_resource type="Texture2D" uid="uid://dkdnjxrcaglby" path="res://Objects/Sprites/World/Unorganized/orange.png" id="8_gbfbk"]
+[ext_resource type="Texture2D" uid="uid://cweggrihu3g3" path="res://Objects/Sprites/World/Interactable-Main/BlueBottle.png" id="8_cbp6q"]
+[ext_resource type="Texture2D" uid="uid://c6tqebv02vvvl" path="res://Objects/Sprites/World/Interactable-Main/BlueVials.png" id="9_26xuy"]
+[ext_resource type="Texture2D" uid="uid://2l7mwbvmpq83" path="res://Objects/Sprites/World/Interactable-Main/BlueTriBottle.png" id="10_bc84e"]
+[ext_resource type="Texture2D" uid="uid://w14mxi1il8uv" path="res://Objects/Sprites/World/Interactable-Main/GreenBottle.png" id="11_wukud"]
+[ext_resource type="Texture2D" uid="uid://cuxyh8o864jyu" path="res://Objects/Sprites/World/Interactable-Main/GreenTriBottle.png" id="12_il2jm"]
+[ext_resource type="Texture2D" uid="uid://br886isvypmia" path="res://Objects/Sprites/World/Interactable-Main/GreenVial.png" id="13_wjb0r"]
+[ext_resource type="Texture2D" uid="uid://dt6g3x6043lre" path="res://Objects/Sprites/World/Interactable-Main/HealthBottle.png" id="14_mc2jv"]
+[ext_resource type="Texture2D" uid="uid://bn52hmpm0tcuh" path="res://Objects/Sprites/World/Interactable-Main/YellowBottle.png" id="15_bo7i5"]
+[ext_resource type="Texture2D" uid="uid://dwmlwvl74f2kp" path="res://Objects/Sprites/World/Interactable-Main/YellowVial.png" id="16_4h6ng"]
+[ext_resource type="Texture2D" uid="uid://cc04os0nby0xc" path="res://Objects/Sprites/World/Interactable-Main/HealthTriBottle.png" id="17_o3ebs"]
+[ext_resource type="Texture2D" uid="uid://bq4tukp2ab872" path="res://Objects/Sprites/World/Interactable-Main/YellowTriBottle.png" id="18_k83mh"]
+[ext_resource type="Texture2D" uid="uid://dx3nnmr1yrcy5" path="res://Objects/Sprites/World/Interactable-Main/HealthVial.png" id="19_qktwf"]
 [ext_resource type="AudioStream" uid="uid://d27wtqrqy6qvq" path="res://Objects/SFX/Main_BGMusic.wav" id="9_ioo17"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r300x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r300x"]
 size = Vector2(56, 566)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hv83"]
-size = Vector2(25.316462, 5.131447)
 
 [node name="Node2D" type="Node2D" unique_id=784977946]
 
@@ -76,16 +84,357 @@ z_index = -2
 position = Vector2(562, 391)
 scale = Vector2(5.135, 5.135)
 
-[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D2" unique_id=1082163005]
-position = Vector2(-53.94352, -5.452775)
-scale = Vector2(0.1, 0.02)
-texture = ExtResource("8_gbfbk")
+[node name="BlueBottle" type="Sprite2D" parent="." unique_id=297217762]
+position = Vector2(117.99999, 345)
+scale = Vector2(3.32, 3.32)
+texture = ExtResource("8_cbp6q")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2073547703]
-position = Vector2(-53.943523, -5.4868774)
-shape = SubResource("RectangleShape2D_1hv83")
+[node name="BlueBottle2" type="Sprite2D" parent="." unique_id=1698754]
+position = Vector2(563.99994, 144.00002)
+scale = Vector2(3.32, 3.32)
+texture = ExtResource("8_cbp6q")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=665536579]
-stream = ExtResource("9_ioo17")
-volume_db = -11.44
-autoplay = true
+[node name="BlueBottle3" type="Sprite2D" parent="." unique_id=142630923]
+position = Vector2(109.00003, 145)
+scale = Vector2(3.32, 3.32)
+texture = ExtResource("8_cbp6q")
+
+[node name="BlueBottle4" type="Sprite2D" parent="." unique_id=470429143]
+position = Vector2(703, 278)
+scale = Vector2(3.32, 3.32)
+texture = ExtResource("8_cbp6q")
+
+[node name="BlueBottle5" type="Sprite2D" parent="." unique_id=2131290916]
+position = Vector2(381, 345)
+scale = Vector2(3.32, 3.32)
+texture = ExtResource("8_cbp6q")
+
+[node name="BlueBottle6" type="Sprite2D" parent="." unique_id=126011455]
+position = Vector2(64.00003, 214.00002)
+scale = Vector2(3.32, 3.32)
+texture = ExtResource("8_cbp6q")
+
+[node name="BlueBottle7" type="Sprite2D" parent="." unique_id=126499437]
+position = Vector2(29.000004, 300)
+scale = Vector2(3.32, 3.32)
+texture = ExtResource("8_cbp6q")
+
+[node name="BlueVials" type="Sprite2D" parent="." unique_id=1695084046]
+position = Vector2(238, 277)
+scale = Vector2(3.48, 3.48)
+texture = ExtResource("9_26xuy")
+
+[node name="BlueVials2" type="Sprite2D" parent="." unique_id=406803491]
+position = Vector2(517, 142)
+scale = Vector2(3.48, 3.48)
+texture = ExtResource("9_26xuy")
+
+[node name="BlueVials3" type="Sprite2D" parent="." unique_id=1940362244]
+position = Vector2(703, 208)
+scale = Vector2(3.48, 3.48)
+texture = ExtResource("9_26xuy")
+
+[node name="BlueTriBottle" type="Sprite2D" parent="." unique_id=1688607739]
+position = Vector2(118, 281)
+scale = Vector2(2.8954587, 2.8954587)
+texture = ExtResource("10_bc84e")
+
+[node name="BlueTriBottle2" type="Sprite2D" parent="." unique_id=1211720237]
+position = Vector2(639, 145)
+scale = Vector2(2.8954587, 2.8954587)
+texture = ExtResource("10_bc84e")
+
+[node name="BlueTriBottle3" type="Sprite2D" parent="." unique_id=177042577]
+position = Vector2(577, 346)
+scale = Vector2(2.8954587, 2.8954587)
+texture = ExtResource("10_bc84e")
+
+[node name="GreenBottle" type="Sprite2D" parent="." unique_id=1425907721]
+position = Vector2(230, 143)
+scale = Vector2(3.584916, 3.584916)
+texture = ExtResource("11_wukud")
+
+[node name="GreenBottle2" type="Sprite2D" parent="." unique_id=1047239690]
+position = Vector2(665, 208.99998)
+scale = Vector2(3.584916, 3.584916)
+texture = ExtResource("11_wukud")
+
+[node name="GreenBottle3" type="Sprite2D" parent="." unique_id=877811481]
+position = Vector2(608, 340)
+scale = Vector2(3.584916, 3.584916)
+texture = ExtResource("11_wukud")
+
+[node name="GreenBottle4" type="Sprite2D" parent="." unique_id=1382418847]
+position = Vector2(480, 141)
+scale = Vector2(3.584916, 3.584916)
+texture = ExtResource("11_wukud")
+
+[node name="GreenBottle5" type="Sprite2D" parent="." unique_id=581824616]
+position = Vector2(31, 230)
+scale = Vector2(3.584916, 3.584916)
+texture = ExtResource("11_wukud")
+
+[node name="GreenTriBottle" type="Sprite2D" parent="." unique_id=2075034206]
+position = Vector2(415, 343)
+scale = Vector2(3.683063, 3.683063)
+texture = ExtResource("12_il2jm")
+
+[node name="GreenTriBottle2" type="Sprite2D" parent="." unique_id=1275926636]
+position = Vector2(185.99994, 142.99997)
+scale = Vector2(3.683063, 3.683063)
+texture = ExtResource("12_il2jm")
+
+[node name="GreenTriBottle3" type="Sprite2D" parent="." unique_id=143389649]
+position = Vector2(270, 209)
+scale = Vector2(3.683063, 3.683063)
+texture = ExtResource("12_il2jm")
+
+[node name="GreenTriBottle5" type="Sprite2D" parent="." unique_id=428758839]
+position = Vector2(440, 212.99998)
+scale = Vector2(3.683063, 3.683063)
+texture = ExtResource("12_il2jm")
+
+[node name="GreenTriBottle6" type="Sprite2D" parent="." unique_id=1623803008]
+position = Vector2(444.99997, 280)
+scale = Vector2(3.683063, 3.683063)
+texture = ExtResource("12_il2jm")
+
+[node name="GreenTriBottle4" type="Sprite2D" parent="." unique_id=367853703]
+position = Vector2(597, 143.99997)
+scale = Vector2(3.683063, 3.683063)
+texture = ExtResource("12_il2jm")
+
+[node name="GreenVial" type="Sprite2D" parent="." unique_id=952146347]
+position = Vector2(333.00003, 279)
+scale = Vector2(3.4181938, 3.4181938)
+texture = ExtResource("13_wjb0r")
+
+[node name="GreenVial4" type="Sprite2D" parent="." unique_id=597760983]
+position = Vector2(275, 346)
+scale = Vector2(3.4181938, 3.4181938)
+texture = ExtResource("13_wjb0r")
+
+[node name="GreenVial5" type="Sprite2D" parent="." unique_id=214821597]
+position = Vector2(409.00003, 280)
+scale = Vector2(3.4181938, 3.4181938)
+texture = ExtResource("13_wjb0r")
+
+[node name="GreenVial6" type="Sprite2D" parent="." unique_id=817362650]
+position = Vector2(474, 216.00003)
+scale = Vector2(3.4181938, 3.4181938)
+texture = ExtResource("13_wjb0r")
+
+[node name="GreenVial7" type="Sprite2D" parent="." unique_id=659421218]
+position = Vector2(407, 143)
+scale = Vector2(3.4181938, 3.4181938)
+texture = ExtResource("13_wjb0r")
+
+[node name="GreenVial8" type="Sprite2D" parent="." unique_id=294298849]
+position = Vector2(507, 341)
+scale = Vector2(3.4181938, 3.4181938)
+texture = ExtResource("13_wjb0r")
+
+[node name="GreenVial2" type="Sprite2D" parent="." unique_id=622072615]
+position = Vector2(143, 280)
+scale = Vector2(3.4181938, 3.4181938)
+texture = ExtResource("13_wjb0r")
+
+[node name="GreenVial3" type="Sprite2D" parent="." unique_id=477891596]
+position = Vector2(558, 278.00003)
+scale = Vector2(3.4181938, 3.4181938)
+texture = ExtResource("13_wjb0r")
+
+[node name="HealthBottle" type="Sprite2D" parent="." unique_id=106692066]
+position = Vector2(145.00002, 346)
+scale = Vector2(3.2419927, 3.2419927)
+texture = ExtResource("14_mc2jv")
+
+[node name="HealthBottle2" type="Sprite2D" parent="." unique_id=1179765845]
+position = Vector2(170.00002, 280.00003)
+scale = Vector2(3.2419927, 3.2419927)
+texture = ExtResource("14_mc2jv")
+
+[node name="HealthBottle3" type="Sprite2D" parent="." unique_id=110408453]
+position = Vector2(664, 146.00002)
+scale = Vector2(3.2419927, 3.2419927)
+texture = ExtResource("14_mc2jv")
+
+[node name="HealthBottle4" type="Sprite2D" parent="." unique_id=921344975]
+position = Vector2(143.00006, 146.00002)
+scale = Vector2(3.2419927, 3.2419927)
+texture = ExtResource("14_mc2jv")
+
+[node name="HealthBottle5" type="Sprite2D" parent="." unique_id=69243696]
+position = Vector2(237, 214)
+scale = Vector2(3.2419927, 3.2419927)
+texture = ExtResource("14_mc2jv")
+
+[node name="HealthBottle6" type="Sprite2D" parent="." unique_id=1447203788]
+position = Vector2(641, 347)
+scale = Vector2(3.2419927, 3.2419927)
+texture = ExtResource("14_mc2jv")
+
+[node name="HealthBottle7" type="Sprite2D" parent="." unique_id=1428280227]
+position = Vector2(56.000122, 144.00002)
+scale = Vector2(3.2419927, 3.2419927)
+texture = ExtResource("14_mc2jv")
+
+[node name="YellowBottle" type="Sprite2D" parent="." unique_id=1019615317]
+position = Vector2(181, 342.00003)
+scale = Vector2(3.4448822, 3.4448822)
+texture = ExtResource("15_bo7i5")
+
+[node name="YellowBottle2" type="Sprite2D" parent="." unique_id=1210123442]
+position = Vector2(121.000015, 210)
+scale = Vector2(3.4448822, 3.4448822)
+texture = ExtResource("15_bo7i5")
+
+[node name="YellowBottle3" type="Sprite2D" parent="." unique_id=1921243553]
+position = Vector2(700, 141.00002)
+scale = Vector2(3.4448822, 3.4448822)
+texture = ExtResource("15_bo7i5")
+
+[node name="YellowBottle4" type="Sprite2D" parent="." unique_id=971601583]
+position = Vector2(688.00006, 339)
+scale = Vector2(3.4448822, 3.4448822)
+texture = ExtResource("15_bo7i5")
+
+[node name="YellowBottle5" type="Sprite2D" parent="." unique_id=451375824]
+position = Vector2(447.00006, 140)
+scale = Vector2(3.4448822, 3.4448822)
+texture = ExtResource("15_bo7i5")
+
+[node name="YellowBottle6" type="Sprite2D" parent="." unique_id=1686878421]
+position = Vector2(65, 279)
+scale = Vector2(3.4448822, 3.4448822)
+texture = ExtResource("15_bo7i5")
+
+[node name="YellowBottle7" type="Sprite2D" parent="." unique_id=590362744]
+position = Vector2(33, 367.00003)
+scale = Vector2(3.4448822, 3.4448822)
+texture = ExtResource("15_bo7i5")
+
+[node name="YellowVial" type="Sprite2D" parent="." unique_id=2125856235]
+position = Vector2(267, 273)
+scale = Vector2(3.3200011, 3.3200011)
+texture = ExtResource("16_4h6ng")
+
+[node name="YellowVial2" type="Sprite2D" parent="." unique_id=190667978]
+position = Vector2(638, 209)
+scale = Vector2(3.3200011, 3.3200011)
+texture = ExtResource("16_4h6ng")
+
+[node name="YellowVial3" type="Sprite2D" parent="." unique_id=1523782736]
+position = Vector2(32, 151)
+scale = Vector2(3.3200011, 3.3200011)
+texture = ExtResource("16_4h6ng")
+
+[node name="YellowVial4" type="Sprite2D" parent="." unique_id=1219948275]
+position = Vector2(273, 139)
+scale = Vector2(3.3200011, 3.3200011)
+texture = ExtResource("16_4h6ng")
+
+[node name="YellowVial5" type="Sprite2D" parent="." unique_id=1095265584]
+position = Vector2(378, 210)
+scale = Vector2(3.3200011, 3.3200011)
+texture = ExtResource("16_4h6ng")
+
+[node name="HealthTriBottle" type="Sprite2D" parent="." unique_id=1320204717]
+position = Vector2(512, 210.99998)
+scale = Vector2(3.3702307, 3.3702307)
+texture = ExtResource("17_o3ebs")
+
+[node name="YellowTriBottle" type="Sprite2D" parent="." unique_id=2113103143]
+position = Vector2(239.00002, 342)
+scale = Vector2(3.4361122, 3.4361122)
+texture = ExtResource("18_k83mh")
+
+[node name="YellowTriBottle6" type="Sprite2D" parent="." unique_id=830767907]
+position = Vector2(320, 343)
+scale = Vector2(3.4361122, 3.4361122)
+texture = ExtResource("18_k83mh")
+
+[node name="YellowTriBottle7" type="Sprite2D" parent="." unique_id=189961681]
+position = Vector2(484, 278)
+scale = Vector2(3.4361122, 3.4361122)
+texture = ExtResource("18_k83mh")
+
+[node name="YellowTriBottle8" type="Sprite2D" parent="." unique_id=1168052921]
+position = Vector2(484, 339)
+scale = Vector2(3.4361122, 3.4361122)
+texture = ExtResource("18_k83mh")
+
+[node name="YellowTriBottle2" type="Sprite2D" parent="." unique_id=542571194]
+position = Vector2(563, 209)
+scale = Vector2(3.4361122, 3.4361122)
+texture = ExtResource("18_k83mh")
+
+[node name="YellowTriBottle3" type="Sprite2D" parent="." unique_id=6302287]
+position = Vector2(669, 278)
+scale = Vector2(3.4361122, 3.4361122)
+texture = ExtResource("18_k83mh")
+
+[node name="YellowTriBottle4" type="Sprite2D" parent="." unique_id=1008310440]
+position = Vector2(634, 276)
+scale = Vector2(3.4361122, 3.4361122)
+texture = ExtResource("18_k83mh")
+
+[node name="YellowTriBottle5" type="Sprite2D" parent="." unique_id=860743320]
+position = Vector2(321, 213)
+scale = Vector2(3.4361122, 3.4361122)
+texture = ExtResource("18_k83mh")
+
+[node name="HealthVial" type="Sprite2D" parent="." unique_id=2136565916]
+position = Vector2(592, 280)
+scale = Vector2(3.383789, 3.383789)
+texture = ExtResource("19_qktwf")
+
+[node name="HealthVial2" type="Sprite2D" parent="." unique_id=823783019]
+position = Vector2(597.00006, 216.00003)
+scale = Vector2(3.383789, 3.383789)
+texture = ExtResource("19_qktwf")
+
+[node name="HealthVial8" type="Sprite2D" parent="." unique_id=170961538]
+position = Vector2(59.00006, 356)
+scale = Vector2(3.383789, 3.383789)
+texture = ExtResource("19_qktwf")
+
+[node name="HealthVial3" type="Sprite2D" parent="." unique_id=641367750]
+position = Vector2(376, 281)
+scale = Vector2(3.383789, 3.383789)
+texture = ExtResource("19_qktwf")
+
+[node name="HealthVial4" type="Sprite2D" parent="." unique_id=801726067]
+position = Vector2(453.00003, 343.00003)
+scale = Vector2(3.383789, 3.383789)
+texture = ExtResource("19_qktwf")
+
+[node name="HealthVial5" type="Sprite2D" parent="." unique_id=1194622062]
+position = Vector2(299, 278.00003)
+scale = Vector2(3.383789, 3.383789)
+texture = ExtResource("19_qktwf")
+
+[node name="HealthVial6" type="Sprite2D" parent="." unique_id=788601135]
+position = Vector2(150.00005, 216)
+scale = Vector2(3.383789, 3.383789)
+texture = ExtResource("19_qktwf")
+
+[node name="HealthVial7" type="Sprite2D" parent="." unique_id=1260958386]
+position = Vector2(370, 145)
+scale = Vector2(3.383789, 3.383789)
+texture = ExtResource("19_qktwf")
+
+[node name="BlueTriBottle4" type="Sprite2D" parent="." unique_id=1782485474]
+position = Vector2(408, 211)
+scale = Vector2(3.424197, 3.424197)
+texture = ExtResource("10_bc84e")
+
+[node name="BlueTriBottle5" type="Sprite2D" parent="." unique_id=1768424277]
+position = Vector2(186.99997, 212.99998)
+scale = Vector2(3.424197, 3.424197)
+texture = ExtResource("10_bc84e")
+
+[node name="BlueTriBottle6" type="Sprite2D" parent="." unique_id=1415018392]
+position = Vector2(516, 278)
+scale = Vector2(3.424197, 3.424197)
+texture = ExtResource("10_bc84e")
