@@ -103,7 +103,7 @@ func alert_floor_crash(item_pos: Vector2, _item_name: String) -> void:
 		alert_label.modulate = Color(1.0, 0.1, 0.1, 1.0)
 	
 	# Big sus
-	suspicion = min(suspicion + 1.6, MAX_SUSPICION)
+	suspicion = min(suspicion + 0.5, MAX_SUSPICION)
 	if suspicion >= MAX_SUSPICION:
 		game_over_triggered = true
 		if alert_label:
