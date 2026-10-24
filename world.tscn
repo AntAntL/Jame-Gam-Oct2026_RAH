@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://b0b13m006rpss" path="res://customer_spawner.gd" id="7_spawner"]
 [ext_resource type="Texture2D" uid="uid://cweggrihu3g3" path="res://Objects/Sprites/World/Interactable-Main/BlueBottle.png" id="8_cbp6q"]
 [ext_resource type="Texture2D" uid="uid://c6tqebv02vvvl" path="res://Objects/Sprites/World/Interactable-Main/BlueVials.png" id="9_26xuy"]
+[ext_resource type="AudioStream" uid="uid://d27wtqrqy6qvq" path="res://Objects/SFX/Main_BGMusic.wav" id="9_ioo17"]
 [ext_resource type="Texture2D" uid="uid://2l7mwbvmpq83" path="res://Objects/Sprites/World/Interactable-Main/BlueTriBottle.png" id="10_bc84e"]
 [ext_resource type="Texture2D" uid="uid://w14mxi1il8uv" path="res://Objects/Sprites/World/Interactable-Main/GreenBottle.png" id="11_wukud"]
 [ext_resource type="Texture2D" uid="uid://cuxyh8o864jyu" path="res://Objects/Sprites/World/Interactable-Main/GreenTriBottle.png" id="12_il2jm"]
@@ -19,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://cc04os0nby0xc" path="res://Objects/Sprites/World/Interactable-Main/HealthTriBottle.png" id="17_o3ebs"]
 [ext_resource type="Texture2D" uid="uid://bq4tukp2ab872" path="res://Objects/Sprites/World/Interactable-Main/YellowTriBottle.png" id="18_k83mh"]
 [ext_resource type="Texture2D" uid="uid://dx3nnmr1yrcy5" path="res://Objects/Sprites/World/Interactable-Main/HealthVial.png" id="19_qktwf"]
-[ext_resource type="AudioStream" uid="uid://d27wtqrqy6qvq" path="res://Objects/SFX/Main_BGMusic.wav" id="9_ioo17"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r300x"]
 
@@ -29,6 +29,7 @@ size = Vector2(56, 566)
 [node name="Node2D" type="Node2D" unique_id=784977946]
 
 [node name="Player" parent="." unique_id=789483730 instance=ExtResource("1_f3sb7")]
+z_index = 5
 position = Vector2(488, 315)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=900511250]
@@ -39,7 +40,7 @@ position = Vector2(0, 97)
 shape = SubResource("WorldBoundaryShape2D_r300x")
 
 [node name="Cauldron" parent="." unique_id=922759971 instance=ExtResource("2_fj7yv")]
-position = Vector2(928, 483)
+position = Vector2(968, 492)
 scale = Vector2(2, 2)
 
 [node name="Shelf" parent="." unique_id=1933029903 instance=ExtResource("3_shelf")]
@@ -49,7 +50,7 @@ offset_right = 461.0
 offset_bottom = 311.0
 
 [node name="Witch" parent="." unique_id=2099214223 instance=ExtResource("4_aqk2v")]
-position = Vector2(823, 368)
+position = Vector2(863, 377)
 
 [node name="CustomerSpawner" type="Node2D" parent="." unique_id=1086228455]
 position = Vector2(-20, 470)
@@ -438,3 +439,8 @@ texture = ExtResource("10_bc84e")
 position = Vector2(516, 278)
 scale = Vector2(3.424197, 3.424197)
 texture = ExtResource("10_bc84e")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=233533534]
+stream = ExtResource("9_ioo17")
+volume_db = -10.0
+autoplay = true

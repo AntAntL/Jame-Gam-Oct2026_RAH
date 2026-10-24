@@ -211,7 +211,6 @@ func trigger_game_over() -> void:
 		end_screen.visible = true
 		end_screen.mouse_filter = Control.MOUSE_FILTER_STOP
 		red_overlay.color = Color(0.65, 0.04, 0.04, 0.0)
-		end_content.modulate.a = 0.0
 		
 		# Simple red screen fade-in
 		var t = create_tween()

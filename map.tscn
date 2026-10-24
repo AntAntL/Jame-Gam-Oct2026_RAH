@@ -5,7 +5,7 @@
 [node name="StaticBody2D" type="StaticBody2D" unique_id=319056030]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=759475686]
-polygon = PackedVector2Array(-103, 5, -91, 5, -92, 11, -79, 11, -77, 14, -78, 17, 34, 16, 36, 21, 35, 24, 35, 47, -111, 47, -109, 20, -105, 20, -103, 12)
+polygon = PackedVector2Array(-103, 5, -91, 5, -92, 9, -92, 11, -78, 11, -77, 15, 34, 16, 36, 21, 36, 24, -110, 25, -110, 21, -105, 18, -104, 13, -102, 11)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1375958977]
 texture = ExtResource("1_c7s6e")
