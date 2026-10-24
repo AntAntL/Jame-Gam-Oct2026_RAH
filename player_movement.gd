@@ -78,10 +78,6 @@ func throw_item() -> void:
 	# 4. Configure thrown item visuals and data
 	if item_instance.has_method("set_item"):
 		item_instance.set_item(held_item_name, held_item_texture)
-	elif item_instance.has_node("Sprite2D"):
-		var spr: Sprite2D = item_instance.get_node("Sprite2D")
-		spr.texture = held_item_texture
-		spr.scale = Vector2(0.195, 0.195)
 
 	# 5. Held item disappears!
 	clear_held_item()

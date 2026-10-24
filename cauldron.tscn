@@ -9,6 +9,7 @@ radius = 48.04165
 [node name="Cauldron" type="StaticBody2D" unique_id=922759971]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1964690642]
+z_index = 2
 scale = Vector2(3.033, 3)
 texture = ExtResource("1_5qdwy")
 
@@ -16,6 +17,11 @@ texture = ExtResource("1_5qdwy")
 polygon = PackedVector2Array(-52, -55, -55, -43, -46, -34, -66, -8, -64, 15, -58, 25, -54, 38, -58, 50, -54, 59, -37, 64, -27, 64, -23, 53, -14, 57, -5, 61, 8, 60, 19, 54, 25, 57, 31, 64, 48, 59, 56, 56, 55, 45, 53, 39, 53, 32, 59, 23, 63, 11, 64, -4, 61, -14, 55, -25, 49, -34, 48, -41, 54, -46, 52, -52, 46, -56, 41, -59, 34, -59, 34, -51, 38, -49, 40, -45, 37, -39, 44, -24, 48, 4, 39, 35, 36, 38, 1, 41, -35, 38, -45, 17, -50, -5, -38, -21, -33, -31, -38, -43, -46, -53)
 
 [node name="ItemArea" type="Area2D" parent="." unique_id=401426888]
+position = Vector2(0, -11)
+gravity_space_override = 3
+gravity = 100.0
+linear_damp_space_override = 3
+linear_damp = 10.0
 script = ExtResource("2_0t22i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ItemArea" unique_id=172171088]
