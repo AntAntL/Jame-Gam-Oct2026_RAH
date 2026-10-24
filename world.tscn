@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cc04os0nby0xc" path="res://Objects/Sprites/World/Interactable-Main/HealthTriBottle.png" id="17_o3ebs"]
 [ext_resource type="Texture2D" uid="uid://bq4tukp2ab872" path="res://Objects/Sprites/World/Interactable-Main/YellowTriBottle.png" id="18_k83mh"]
 [ext_resource type="Texture2D" uid="uid://dx3nnmr1yrcy5" path="res://Objects/Sprites/World/Interactable-Main/HealthVial.png" id="19_qktwf"]
+[ext_resource type="Script" uid="uid://ceyavkyupk4go" path="res://audio_stream_player.gd" id="21_bc84e"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r300x"]
 
@@ -444,3 +445,4 @@ texture = ExtResource("10_bc84e")
 stream = ExtResource("9_ioo17")
 volume_db = -10.0
 autoplay = true
+script = ExtResource("21_bc84e")
