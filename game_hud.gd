@@ -10,6 +10,19 @@ const TrickPopup = preload("res://trick_popup.gd")
 @onready var review_stars: Label = $TopRight/ReviewPanel/MarginContainer/VBoxContainer/StarsLabel
 @onready var review_loss: Label = $TopRight/ReviewPanel/MarginContainer/VBoxContainer/LossLabel
 
+# End Screen elements
+@onready var end_screen: Control = $EndScreen
+@onready var red_overlay: ColorRect = $EndScreen/RedOverlay
+@onready var end_content: VBoxContainer = $EndScreen/CenterContainer/Content
+@onready var final_score_label: Label = $EndScreen/CenterContainer/Content/ScoreBox/Margin/VBox/FinalScoreLabel
+@onready var best_score_label: Label = $EndScreen/CenterContainer/Content/ScoreBox/Margin/VBox/BestScoreLabel
+@onready var new_best_label: Label = $EndScreen/CenterContainer/Content/ScoreBox/Margin/VBox/NewBestLabel
+@onready var replay_button: Button = $EndScreen/CenterContainer/Content/ReplayButton
+
+const BEST_SCORE_FILE: String = "user://best_score.dat"
+var is_game_over: bool = false
+var game_over_queued: bool = false
+
 var total_profit_lost: int = 0
 var displayed_profit: int = 0
 var profit_roll_tween: Tween = null
@@ -40,15 +53,14 @@ func _ready() -> void:
 	
 	if review_panel:
 		review_panel.modulate.a = 0.0
+	
+	if end_screen:
+		end_screen.visible = false
+	if replay_button:
+		replay_button.pressed.connect(_on_replay_pressed)
 
 func _process(_delta: float) -> void:
-	# Danger vibration on NoticeBar when max suspicion (5 stars)
-	if current_suspicion >= 5.0:
-		var player = get_tree().get_first_node_in_group("player")
-		if player and player.has_node("NoticeBar"):
-			var p_bar: Label = player.get_node("NoticeBar")
-			var shake_offset = Vector2(randf_range(-3.0, 3.0), randf_range(-3.0, 3.0))
-			p_bar.position = Vector2(56.0, -312.0) + shake_offset
+	pass
 
 func add_profit_lost(amount: int) -> void:
 	total_profit_lost += amount
@@ -91,6 +103,10 @@ func set_suspicion(score: float, is_active: bool) -> void:
 	current_suspicion = score
 	update_detect_display(score)
 	
+	if score >= 5.0 and not game_over_queued and not is_game_over:
+		game_over_queued = true
+		get_tree().create_timer(0.45, true, false, true).timeout.connect(trigger_game_over)
+	
 	# Red screen edge effect
 	var normalized = clamp(score / 5.0, 0.0, 1.0)
 	var target_alpha = normalized * 0.75
@@ -114,21 +130,13 @@ func update_detect_display(score: float) -> void:
 		var p_bar: Label = player.get_node("NoticeBar")
 		p_bar.text = stars_text if star_count > 0 else ""
 		
-		# Star gained punch tween
+		# Subtle star gained bump
 		if star_count > prev_star_count:
 			p_bar.pivot_offset = p_bar.size * 0.5
-			var punch_scale = base_notice_scale * 1.55
+			var punch_scale = base_notice_scale * 1.12
 			var t = create_tween()
-			t.parallel().tween_property(p_bar, "scale", punch_scale, 0.12).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-			t.parallel().tween_property(p_bar, "rotation", randf_range(-0.25, 0.25), 0.12)
-			t.parallel().tween_property(p_bar, "modulate", Color(2.5, 0.3, 0.3, 1.0), 0.12)
-			t.parallel().tween_property(p_bar, "scale", base_notice_scale, 0.3).set_delay(0.12).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
-			t.parallel().tween_property(p_bar, "rotation", 0.0, 0.25).set_delay(0.12)
-			t.parallel().tween_property(p_bar, "modulate", Color.WHITE, 0.3).set_delay(0.12)
-			
-			var cam = get_tree().get_first_node_in_group("main_camera")
-			if cam and cam.has_method("add_shake"):
-				cam.add_shake(0.28)
+			t.tween_property(p_bar, "scale", punch_scale, 0.08).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+			t.tween_property(p_bar, "scale", base_notice_scale, 0.12).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	
 	prev_star_count = star_count
 
@@ -149,13 +157,13 @@ func show_review(star_rating: int, loss: int) -> void:
 			review_loss.text = "-$" + str(loss) + " Profit Lost"
 			review_loss.modulate = Color(1.0, 0.35, 0.35, 1.0)
 		else:
-			review_loss.text = "Clean Potion (No Loss)"
+			review_loss.text = "Clean Potion"
 			review_loss.modulate = Color(0.4, 0.9, 0.4, 1.0)
 	
 	if review_tween and review_tween.is_valid():
 		review_tween.kill()
 	
-	# Clean & simple fade + slight slide
+	# Fade
 	review_panel.scale = Vector2.ONE
 	review_panel.rotation = 0.0
 	review_panel.position = Vector2(0.0, -15.0)
@@ -166,3 +174,53 @@ func show_review(star_rating: int, loss: int) -> void:
 	review_tween.parallel().tween_property(review_panel, "position:y", 0.0, 0.25).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	review_tween.tween_interval(3.2)
 	review_tween.tween_property(review_panel, "modulate:a", 0.0, 0.35)
+
+func load_best_score() -> int:
+	if not FileAccess.file_exists(BEST_SCORE_FILE):
+		return 0
+	var file = FileAccess.open(BEST_SCORE_FILE, FileAccess.READ)
+	if file:
+		var text = file.get_as_text().strip_edges()
+		return text.to_int()
+	return 0
+
+func save_best_score(score: int) -> void:
+	var file = FileAccess.open(BEST_SCORE_FILE, FileAccess.WRITE)
+	if file:
+		file.store_string(str(score))
+
+func trigger_game_over() -> void:
+	if is_game_over:
+		return
+	is_game_over = true
+	
+	var best_score = load_best_score()
+	var is_new_best = total_profit_lost > best_score
+	if is_new_best:
+		best_score = total_profit_lost
+		save_best_score(best_score)
+	
+	if final_score_label:
+		final_score_label.text = "Profit Lost: -$" + str(total_profit_lost)
+	if best_score_label:
+		best_score_label.text = "Best Sabotage: -$" + str(best_score)
+	if new_best_label:
+		new_best_label.visible = is_new_best
+	
+	if end_screen and red_overlay and end_content:
+		end_screen.visible = true
+		end_screen.mouse_filter = Control.MOUSE_FILTER_STOP
+		red_overlay.color = Color(0.65, 0.04, 0.04, 0.0)
+		end_content.modulate.a = 0.0
+		
+		# Simple red screen fade-in
+		var t = create_tween()
+		t.parallel().tween_property(red_overlay, "color:a", 0.88, 0.6).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		t.tween_callback(func():
+			if replay_button:
+				replay_button.grab_focus()
+		)
+
+func _on_replay_pressed() -> void:
+	Engine.time_scale = 1.0
+	get_tree().reload_current_scene()

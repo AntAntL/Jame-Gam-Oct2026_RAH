@@ -110,7 +110,7 @@ func _physics_process(delta: float) -> void:
 		if abs(global_position.x - 639.0) < 65.0 and global_position.y < 350.0:
 			if not passed_over_witch:
 				passed_over_witch = true
-				TrickPopup.spawn(get_parent(), global_position, "over omg", Color(0.8, 0.4, 1.0))
+				TrickPopup.spawn(get_parent(), global_position, "over", Color(0.8, 0.4, 1.0))
 				add_combo()
 		
 		# Update motion trail
@@ -162,9 +162,9 @@ func _on_body_entered(body: Node) -> void:
 	add_combo()
 	
 	# Text on bounce
-	var bounce_text = "BOUNCE!"
+	var bounce_text = "bounce"
 	if bounce_count == 2:
-		bounce_text = "DOUBLE BOUNCE!"
+		bounce_text = "bounce again"
 	elif bounce_count >= 3:
 		bounce_text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 	

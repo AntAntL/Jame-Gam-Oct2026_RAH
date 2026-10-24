@@ -10,6 +10,7 @@ var suspicion: float = 0.0 # 0.0 to 5.0 (permanent, never decreases)
 const MAX_SUSPICION: float = 5.0
 const BASE_DETECTION_RATE: float = 0.4
 var floor_alert_timer: float = 0.0
+var game_over_triggered: bool = false
 
 func _ready() -> void:
 	add_to_group("witch")
@@ -24,6 +25,8 @@ func _ready() -> void:
 	add_child(alert_label)
 
 func _physics_process(delta: float) -> void:
+	if game_over_triggered:
+		return
 	var item_spotted = false
 	var highest_risk: float = 0.0
 	var spotted_item_type = ""
@@ -35,7 +38,7 @@ func _physics_process(delta: float) -> void:
 	
 	var bodies = area.get_overlapping_bodies()
 	for body in bodies:
-		if body.is_in_group("item") and !body.is_in_group("inside_cauldron"):
+		if (body.is_in_group("item") or body.is_in_group("player")) and !body.is_in_group("inside_cauldron"):
 			var cur_item = ""
 			if body.is_in_group("player"):
 				if body.get("held_item_texture") != null:
@@ -61,7 +64,11 @@ func _physics_process(delta: float) -> void:
 		suspicion = min(suspicion + delta * BASE_DETECTION_RATE * highest_risk, MAX_SUSPICION)
 		if alert_label:
 			alert_label.visible = true
-			if spotted_item_type == "itemc":
+			if suspicion >= MAX_SUSPICION:
+				game_over_triggered = true
+				alert_label.text = "I SEE YOU"
+				alert_label.modulate = Color(1.0, 0.0, 0.0, 1.0)
+			elif spotted_item_type == "itemc":
 				alert_label.text = "AAAAAAAAAAAAAAAAAA"
 				alert_label.modulate = Color(1.0, 0.0, 0.0, 1.0)
 			else:
@@ -92,11 +99,15 @@ func alert_floor_crash(item_pos: Vector2, _item_name: String) -> void:
 	floor_alert_timer = 2.2
 	if alert_label:
 		alert_label.visible = true
-		alert_label.text = "WHAT WAS THAT?!?!?"
+		alert_label.text = "?!?!?!?!?!?!?!"
 		alert_label.modulate = Color(1.0, 0.1, 0.1, 1.0)
 	
-	# Heavy suspicion spike (+1.6 stars)
+	# Big sus
 	suspicion = min(suspicion + 1.6, MAX_SUSPICION)
+	if suspicion >= MAX_SUSPICION:
+		game_over_triggered = true
+		if alert_label:
+			alert_label.text = "i see"
 	var hud = get_tree().get_first_node_in_group("hud")
 	if hud and hud.has_method("set_suspicion"):
 		hud.set_suspicion(suspicion, true)

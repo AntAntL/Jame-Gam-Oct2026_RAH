@@ -5,9 +5,14 @@ const TrickPopup = preload("res://trick_popup.gd")
 signal ingredient_added(item_name: String)
 
 var ingredients: Array[String] = []
+var cauldron_base_scale: Vector2 = Vector2.ONE
+var cauldron_tween: Tween = null
 
 func _ready() -> void:
 	add_to_group("cauldron")
+	var parent_node = get_parent() as Node2D
+	if parent_node:
+		cauldron_base_scale = parent_node.scale
 
 func _on_body_entered(body: Node2D) -> void:
 	if (!body.is_in_group("item")):
@@ -41,11 +46,11 @@ func _on_body_entered(body: Node2D) -> void:
 		
 	if bool(trick_data.get("passed_over_witch", false)):
 		bonus_loss += 60
-		trick_titles.append("over the witch lol")
+		trick_titles.append("over?")
 		
 	if bool(trick_data.get("is_swish", false)):
 		bonus_loss += 50
-		trick_titles.append("swish clean")
+		trick_titles.append("thrown")
 	
 	# Score bonus & trigger popups
 	var world_root = get_tree().current_scene
@@ -59,26 +64,26 @@ func _on_body_entered(body: Node2D) -> void:
 	else:
 		TrickPopup.spawn(world_root, global_position + Vector2(0, -55), "dunked", Color(0.4, 1.0, 0.5))
 	
-	# Screen shake
+	# Gentle screen shake on trick shots
 	var cam = get_tree().get_first_node_in_group("main_camera")
 	if cam:
-		cam.add_shake(0.6 if bonus_loss > 0 else 0.3)
-		# Delay camera return so player watches the landing
-		get_tree().create_timer(0.45).timeout.connect(cam.return_to_player)
+		if bonus_loss > 0:
+			cam.add_shake(0.2)
+		get_tree().create_timer(0.35).timeout.connect(cam.return_to_player)
 	
-	# Hitstop / Micro-pause for juicy impact
+	# Subtle hitstop on trick impact
 	if bonus_loss > 0:
-		Engine.time_scale = 0.15
-		get_tree().create_timer(0.08, true, false, true).timeout.connect(func(): Engine.time_scale = 1.0)
+		Engine.time_scale = 0.3
+		get_tree().create_timer(0.05, true, false, true).timeout.connect(func(): Engine.time_scale = 1.0)
 	
-	# Cauldron Squash & Stretch bounce animation
+	# Gentle cauldron dip animation
 	var parent_node = get_parent() as Node2D
 	if parent_node:
-		var orig_scale = parent_node.scale
-		var tw = create_tween()
-		tw.tween_property(parent_node, "scale", orig_scale * Vector2(1.3, 0.7), 0.08)
-		tw.tween_property(parent_node, "scale", orig_scale * Vector2(0.85, 1.25), 0.12)
-		tw.tween_property(parent_node, "scale", orig_scale, 0.15)
+		if cauldron_tween and cauldron_tween.is_valid():
+			cauldron_tween.kill()
+		cauldron_tween = create_tween()
+		cauldron_tween.tween_property(parent_node, "scale", cauldron_base_scale * Vector2(1.05, 0.95), 0.07).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		cauldron_tween.tween_property(parent_node, "scale", cauldron_base_scale, 0.12).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	
 	ingredients.append(item_name)
 	ingredient_added.emit(item_name)

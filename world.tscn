@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dfhh0wfxyfc2m" path="res://map.tscn" id="7_pkg7o"]
 [ext_resource type="Script" uid="uid://b0b13m006rpss" path="res://customer_spawner.gd" id="7_spawner"]
 [ext_resource type="Texture2D" uid="uid://dkdnjxrcaglby" path="res://Objects/Sprites/World/Unorganized/orange.png" id="8_gbfbk"]
+[ext_resource type="AudioStream" uid="uid://d27wtqrqy6qvq" path="res://Objects/SFX/Main_BGMusic.wav" id="9_ioo17"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r300x"]
 
@@ -56,8 +57,8 @@ position = Vector2(19, 98)
 shape = SubResource("RectangleShape2D_r300x")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=75955965]
-position = Vector2(362, 7)
-rotation = 1.5707964
+position = Vector2(1043, -98.00003)
+rotation = 2.8536134
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=286890419]
 position = Vector2(19, 98)
@@ -83,3 +84,8 @@ texture = ExtResource("8_gbfbk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2073547703]
 position = Vector2(-53.943523, -5.4868774)
 shape = SubResource("RectangleShape2D_1hv83")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=665536579]
+stream = ExtResource("9_ioo17")
+volume_db = -11.44
+autoplay = true

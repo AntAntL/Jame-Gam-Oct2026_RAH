@@ -99,6 +99,9 @@ func clear_held_item() -> void:
 	cancel_charging()
 
 func _unhandled_input(event: InputEvent) -> void:
+	var hud = get_tree().get_first_node_in_group("hud")
+	if hud and hud.get("is_game_over"):
+		return
 	if held_item_texture == null:
 		return
 	
@@ -138,6 +141,16 @@ func finish_charging_and_throw() -> void:
 	launch_item(ratio)
 
 func _physics_process(delta: float) -> void:
+	var hud = get_tree().get_first_node_in_group("hud")
+	if hud and hud.get("is_game_over"):
+		if is_charging:
+			cancel_charging()
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		if not is_on_floor():
+			velocity += get_gravity() * delta
+		move_and_slide()
+		return
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -158,7 +171,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	# Handle keyboard throw action (Hold 'F' / 'throw' action)
+	# Handle keyboard throw action
 	if held_item_texture != null:
 		if Input.is_action_just_pressed("throw") and not is_charging:
 			start_charging(false, true)
@@ -230,7 +243,7 @@ func launch_item(power_ratio: float) -> void:
 	item_instance.global_position = throw_origin
 	item_instance.linear_velocity = launch_velocity
 	
-	# Give realistic tumbling spin in the direction of throw
+	# Spin
 	var spin_dir = 1.0 if launch_velocity.x >= 0 else -1.0
 	item_instance.angular_velocity = spin_dir * randf_range(5.0, 12.0)
 
@@ -245,11 +258,11 @@ func launch_item(power_ratio: float) -> void:
 			item_instance.add_combo()
 		
 	if velocity.distance_to(Vector2(0, 0)) > 2:
-		TrickPopup.spawn(get_parent(), global_position, "omg running start", Color(0.0, 0.748, 0.307, 1.0))
+		TrickPopup.spawn(get_parent(), global_position, "running start wow", Color(0.0, 0.748, 0.307, 1.0))
 		if item_instance.has_method("add_combo"):
 			item_instance.add_combo()
 
-	# Lock camera onto the flying projectile!
+	# Lock camera onto the flying projectile
 	var cam = get_tree().get_first_node_in_group("main_camera")
 	if cam and cam.has_method("track_item"):
 		cam.track_item(item_instance)
