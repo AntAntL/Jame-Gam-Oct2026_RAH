@@ -25,7 +25,7 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r300x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r300x"]
-size = Vector2(56, 566)
+size = Vector2(56, 765.0282)
 
 [node name="Node2D" type="Node2D" unique_id=784977946]
 
@@ -72,6 +72,11 @@ rotation = 2.8536134
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=286890419]
 position = Vector2(19, 98)
+shape = SubResource("RectangleShape2D_r300x")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D5" unique_id=920934239]
+position = Vector2(723.12836, 84.983246)
+rotation = -1.2838635
 shape = SubResource("RectangleShape2D_r300x")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=668876691]

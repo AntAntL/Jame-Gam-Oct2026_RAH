@@ -107,7 +107,6 @@ _data = {
 script = ExtResource("1_08n5d")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1264992220]
-z_index = 4
 position = Vector2(-55, -49.999996)
 scale = Vector2(5.025, 5.025)
 texture = ExtResource("2_tv1uk")
@@ -134,6 +133,7 @@ frame = 1
 frame_progress = 0.13005926
 
 [node name="WitchBody" type="Sprite2D" parent="." unique_id=496280296]
+z_index = -1
 position = Vector2(33, 38)
 scale = Vector2(4.34, 4.34)
 texture = ExtResource("4_tv1uk")
