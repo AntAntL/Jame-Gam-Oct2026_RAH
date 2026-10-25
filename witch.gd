@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var timer: Timer = $Timer
 @onready var area: Area2D = $Area2D
+@onready var ap: AnimationPlayer = $MixingAnimation/AnimationPlayer
 
 var alert_label: Label
 var witch_looking: bool = false
@@ -23,6 +24,7 @@ func _ready() -> void:
 	alert_label.add_theme_font_size_override("font_size", 30)
 	alert_label.modulate = Color(1.0, 0.15, 0.15, 1.0)
 	add_child(alert_label)
+	ap.play("Mixing")
 
 func _physics_process(delta: float) -> void:
 	if game_over_triggered:
@@ -120,3 +122,4 @@ func _on_timer_timeout() -> void:
 	area.scale.x = -1.0 if witch_looking else 1.0
 	
 	timer.wait_time = randf_range(2.0, 4.5)
+	
