@@ -31,7 +31,7 @@ size = Vector2(56, 765.0282)
 
 [node name="Player" parent="." unique_id=789483730 instance=ExtResource("1_f3sb7")]
 z_index = 5
-position = Vector2(488, 315)
+position = Vector2(244, 427)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=900511250]
 position = Vector2(96, 538)
@@ -109,6 +109,11 @@ texture = ExtResource("8_cbp6q")
 
 [node name="BlueBottle4" type="Sprite2D" parent="." unique_id=470429143]
 position = Vector2(703, 278)
+scale = Vector2(3.32, 3.32)
+texture = ExtResource("8_cbp6q")
+
+[node name="BlueBottle8" type="Sprite2D" parent="." unique_id=1278784151]
+position = Vector2(319.00003, 142.00002)
 scale = Vector2(3.32, 3.32)
 texture = ExtResource("8_cbp6q")
 
