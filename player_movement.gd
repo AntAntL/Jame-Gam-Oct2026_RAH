@@ -11,7 +11,7 @@ const MAX_CHARGE_TIME: float = 1.0
 
 @onready var THROWABLE = preload("res://item.tscn")
 @onready var item_holding: Sprite2D = $ItemHolding
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var held_item_name: String = ""
 var held_item_texture: Texture2D = null
@@ -171,6 +171,11 @@ func _physics_process(delta: float) -> void:
 			sprite.flip_h = (direction < 0)
 	else:
 		velocity.x = move_toward(velocity.x, 0, move_speed)
+		
+	if velocity.length() > 2.0:
+		sprite.animation = "walking"
+	else:
+		sprite.animation = "default"
 
 	move_and_slide()
 	

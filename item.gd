@@ -116,7 +116,7 @@ func _physics_process(delta: float) -> void:
 	if is_in_flight:
 		air_time += delta
 		
-		# Check if flew over the witch (witch is at X ~639)
+		# Check if flew over
 		if abs(global_position.x - 639.0) < 65.0 and global_position.y < 350.0:
 			if not passed_over_witch:
 				passed_over_witch = true
@@ -149,7 +149,7 @@ func _physics_process(delta: float) -> void:
 			
 			play_sound(ERROR)
 	
-	# Proximity pickup: if player is close (< 80px) and presses E
+	# Proximity pickup
 	var player = get_tree().get_first_node_in_group("player")
 	if player and global_position.distance_to(player.global_position) < 80.0:
 		if Input.is_key_pressed(KEY_E):

@@ -1,13 +1,102 @@
 [gd_scene format=3 uid="uid://dejipl18cd7jk"]
 
 [ext_resource type="Script" uid="uid://b7bwmdidqpsnt" path="res://player_movement.gd" id="1_4flbx"]
-[ext_resource type="Texture2D" uid="uid://b0qoo45pj83d0" path="res://Objects/Sprites/World/Unorganized/Littleman.png" id="2_onrkg"]
-[ext_resource type="Texture2D" uid="uid://cs7di2q7cdnbe" path="res://Objects/Sprites/World/Unorganized/itema.png" id="3_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://mbc8aq664sbx" path="res://Objects/Sprites/World/Unorganized/Littleman_Sprite_Sheet.png" id="3_i3pqv"]
 [ext_resource type="Script" uid="uid://i8l6n7psmycw" path="res://camera_follow.gd" id="4_cam"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kg5e7"]
 radius = 20.0
 height = 78.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
+atlas = ExtResource("3_i3pqv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
+atlas = ExtResource("3_i3pqv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
+atlas = ExtResource("3_i3pqv")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jxqw"]
+atlas = ExtResource("3_i3pqv")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw050"]
+atlas = ExtResource("3_i3pqv")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b26j0"]
+atlas = ExtResource("3_i3pqv")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7ghd"]
+atlas = ExtResource("3_i3pqv")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvl01"]
+atlas = ExtResource("3_i3pqv")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivps1"]
+atlas = ExtResource("3_i3pqv")
+region = Rect2(192, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
+atlas = ExtResource("3_i3pqv")
+region = Rect2(224, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
+atlas = ExtResource("3_i3pqv")
+region = Rect2(256, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r300x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqtel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sweqy")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hs0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jxqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw050")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b26j0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7ghd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvl01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivps1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urp6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwjto")
+}],
+"loop": 1,
+"name": &"walking",
+"speed": 15.0
+}]
 
 [node name="Player" type="CharacterBody2D" unique_id=789483730]
 script = ExtResource("1_4flbx")
@@ -16,14 +105,9 @@ script = ExtResource("1_4flbx")
 position = Vector2(0, 5)
 shape = SubResource("CapsuleShape2D_kg5e7")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1522373810]
-scale = Vector2(2.9893937, 3)
-texture = ExtResource("2_onrkg")
-
 [node name="ItemHolding" type="Sprite2D" parent="." unique_id=916026964]
 position = Vector2(0, -82)
 scale = Vector2(0.195, 0.195)
-texture = ExtResource("3_i3pqv")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1065660191]
 script = ExtResource("4_cam")
@@ -35,3 +119,9 @@ offset_right = 135.0
 offset_bottom = -88.0
 scale = Vector2(4.6422424, 4.650992)
 text = "⭐"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1752663002]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_r300x")
+autoplay = "default"
+frame_progress = 0.92553866

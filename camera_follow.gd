@@ -34,7 +34,7 @@ func _process(delta: float) -> void:
 	if target_node and is_instance_valid(target_node):
 		var target_pos = target_node.global_position
 		# Smooth camera follow
-		global_position = global_position.lerp(target_pos, delta * 8.5)
+		global_position = global_position.lerp(target_pos + Vector2(0, -50), delta * 8.5)
 	
 	# Smooth zoom
 	zoom = zoom.lerp(target_zoom, delta * 5.0)

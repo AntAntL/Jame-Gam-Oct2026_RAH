@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b5vy8tu5uoy40"]
+
+[ext_resource type="Texture2D" uid="uid://dkdnjxrcaglby" path="res://Objects/Sprites/World/Unorganized/orange.png" id="1_omot2"]
+[ext_resource type="Script" uid="uid://c256ulmpb1kh2" path="res://tutorial_thing.gd" id="2_fsrhl"]
+
+[node name="TutorialText" type="Sprite2D" unique_id=895328632]
+visible = false
+texture = ExtResource("1_omot2")
+script = ExtResource("2_fsrhl")
+
+[node name="Timer" type="Timer" parent="." unique_id=1487856662]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
