@@ -6,13 +6,14 @@
 [ext_resource type="Script" uid="uid://i8l6n7psmycw" path="res://camera_follow.gd" id="4_cam"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kg5e7"]
-radius = 31.0
-height = 92.0
+radius = 20.0
+height = 78.0
 
 [node name="Player" type="CharacterBody2D" unique_id=789483730]
 script = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1042798291]
+position = Vector2(0, 5)
 shape = SubResource("CapsuleShape2D_kg5e7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1522373810]
