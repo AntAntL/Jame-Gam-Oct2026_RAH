@@ -68,6 +68,7 @@ position = Vector2(733, 506)
 [node name="CustomerSpawner" type="Node2D" parent="." unique_id=1086228455]
 position = Vector2(-20, 470)
 script = ExtResource("7_spawner")
+spawn_position = Vector2(-30, 610)
 
 [node name="GameHUD" parent="." unique_id=1901929353 instance=ExtResource("6_hud")]
 
