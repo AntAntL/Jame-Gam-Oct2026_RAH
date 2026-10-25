@@ -28,36 +28,38 @@
 [ext_resource type="Texture2D" uid="uid://cl4a6oi7gwvt2" path="res://Objects/Sprites/Tutorial/control_throw (1) (1).png" id="25_bo7i5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r300x"]
+distance = -111.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r300x"]
-size = Vector2(56, 765.0282)
+size = Vector2(56, 821.4658)
 
 [node name="Node2D" type="Node2D" unique_id=784977946]
 
 [node name="Player" parent="." unique_id=789483730 instance=ExtResource("1_f3sb7")]
 z_index = 5
-position = Vector2(244, 427)
+position = Vector2(-333, 705)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=900511250]
-position = Vector2(96, 538)
+position = Vector2(96, 540)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=128889590]
 position = Vector2(0, 97)
 shape = SubResource("WorldBoundaryShape2D_r300x")
 
 [node name="Cauldron" parent="." unique_id=922759971 instance=ExtResource("2_fj7yv")]
-position = Vector2(968, 492)
+position = Vector2(754, 629)
 scale = Vector2(2, 2)
 
 [node name="Shelf" parent="." unique_id=1933029903 instance=ExtResource("3_shelf")]
 z_index = 1
-offset_left = 355.0
-offset_top = 90.0
-offset_right = 535.0
-offset_bottom = 390.0
+offset_left = 237.0
+offset_top = 348.0
+offset_right = 417.0
+offset_bottom = 648.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Witch" parent="." unique_id=2099214223 instance=ExtResource("4_aqk2v")]
-position = Vector2(926, 374)
+position = Vector2(733, 506)
 
 [node name="CustomerSpawner" type="Node2D" parent="." unique_id=1086228455]
 position = Vector2(-20, 470)
@@ -69,7 +71,7 @@ script = ExtResource("7_spawner")
 position = Vector2(-50, 240)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=2010083711]
-position = Vector2(19, 98)
+position = Vector2(-371, 261)
 shape = SubResource("RectangleShape2D_r300x")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=75955965]
@@ -77,16 +79,22 @@ position = Vector2(1043, -98.00003)
 rotation = 2.8536134
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=286890419]
-position = Vector2(19, 98)
+position = Vector2(399.1017, -90.37054)
+rotation = -0.72608346
 shape = SubResource("RectangleShape2D_r300x")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1800609000]
-position = Vector2(174.66545, 290.57352)
+position = Vector2(443.16486, 296.05728)
 rotation = 0.6057903
 shape = SubResource("RectangleShape2D_r300x")
 
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1703781202]
+position = Vector2(1386.7502, 110.40472)
+rotation = 1.2637054
+shape = SubResource("RectangleShape2D_r300x")
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D5" unique_id=920934239]
-position = Vector2(723.12836, 84.983246)
+position = Vector2(1044.6649, 77.9399)
 rotation = -1.2838635
 shape = SubResource("RectangleShape2D_r300x")
 
@@ -94,371 +102,336 @@ shape = SubResource("RectangleShape2D_r300x")
 position = Vector2(1051, 240)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=2070837312]
-position = Vector2(19, 98)
+position = Vector2(-140, 117)
 shape = SubResource("RectangleShape2D_r300x")
 
 [node name="StaticBody2D2" parent="." unique_id=319056030 instance=ExtResource("7_pkg7o")]
 z_index = -2
-position = Vector2(562, 391)
+position = Vector2(251.00002, 430)
 scale = Vector2(5.135, 5.135)
 
 [node name="BlueBottle" type="Sprite2D" parent="." unique_id=297217762]
-position = Vector2(117.99999, 345)
+position = Vector2(-114.99999, 484)
 scale = Vector2(3.32, 3.32)
 texture = ExtResource("8_cbp6q")
 
 [node name="BlueBottle2" type="Sprite2D" parent="." unique_id=1698754]
-position = Vector2(563.99994, 144.00002)
-scale = Vector2(3.32, 3.32)
-texture = ExtResource("8_cbp6q")
-
-[node name="BlueBottle3" type="Sprite2D" parent="." unique_id=142630923]
-position = Vector2(109.00003, 145)
+position = Vector2(-324.99994, 407)
 scale = Vector2(3.32, 3.32)
 texture = ExtResource("8_cbp6q")
 
 [node name="BlueBottle4" type="Sprite2D" parent="." unique_id=470429143]
-position = Vector2(703, 278)
-scale = Vector2(3.32, 3.32)
-texture = ExtResource("8_cbp6q")
-
-[node name="BlueBottle8" type="Sprite2D" parent="." unique_id=1278784151]
-position = Vector2(319.00003, 142.00002)
+position = Vector2(97.00006, 564)
 scale = Vector2(3.32, 3.32)
 texture = ExtResource("8_cbp6q")
 
 [node name="BlueBottle5" type="Sprite2D" parent="." unique_id=2131290916]
-position = Vector2(381, 345)
+position = Vector2(116.00003, 487)
 scale = Vector2(3.32, 3.32)
 texture = ExtResource("8_cbp6q")
 
 [node name="BlueBottle6" type="Sprite2D" parent="." unique_id=126011455]
-position = Vector2(64.00003, 214.00002)
+position = Vector2(29.000004, 403)
 scale = Vector2(3.32, 3.32)
 texture = ExtResource("8_cbp6q")
 
 [node name="BlueBottle7" type="Sprite2D" parent="." unique_id=126499437]
-position = Vector2(29.000004, 300)
+position = Vector2(60, 402)
 scale = Vector2(3.32, 3.32)
 texture = ExtResource("8_cbp6q")
 
 [node name="BlueVials" type="Sprite2D" parent="." unique_id=1695084046]
-position = Vector2(238, 277)
+position = Vector2(-358, 567)
 scale = Vector2(3.48, 3.48)
 texture = ExtResource("9_26xuy")
 
 [node name="BlueVials2" type="Sprite2D" parent="." unique_id=406803491]
-position = Vector2(517, 142)
+position = Vector2(-354, 406)
 scale = Vector2(3.48, 3.48)
 texture = ExtResource("9_26xuy")
 
 [node name="BlueVials3" type="Sprite2D" parent="." unique_id=1940362244]
-position = Vector2(703, 208)
+position = Vector2(125, 320)
 scale = Vector2(3.48, 3.48)
 texture = ExtResource("9_26xuy")
 
 [node name="BlueTriBottle" type="Sprite2D" parent="." unique_id=1688607739]
-position = Vector2(118, 281)
+position = Vector2(-254, 405)
 scale = Vector2(2.8954587, 2.8954587)
 texture = ExtResource("10_bc84e")
 
 [node name="BlueTriBottle2" type="Sprite2D" parent="." unique_id=1211720237]
-position = Vector2(639, 145)
+position = Vector2(-275, 488)
 scale = Vector2(2.8954587, 2.8954587)
 texture = ExtResource("10_bc84e")
 
 [node name="BlueTriBottle3" type="Sprite2D" parent="." unique_id=177042577]
-position = Vector2(577, 346)
+position = Vector2(35, 565)
 scale = Vector2(2.8954587, 2.8954587)
 texture = ExtResource("10_bc84e")
 
 [node name="GreenBottle" type="Sprite2D" parent="." unique_id=1425907721]
-position = Vector2(230, 143)
+position = Vector2(90, 321)
 scale = Vector2(3.584916, 3.584916)
 texture = ExtResource("11_wukud")
 
 [node name="GreenBottle2" type="Sprite2D" parent="." unique_id=1047239690]
-position = Vector2(665, 208.99998)
+position = Vector2(159, 321)
 scale = Vector2(3.584916, 3.584916)
 texture = ExtResource("11_wukud")
 
 [node name="GreenBottle3" type="Sprite2D" parent="." unique_id=877811481]
-position = Vector2(608, 340)
+position = Vector2(54, 485)
 scale = Vector2(3.584916, 3.584916)
 texture = ExtResource("11_wukud")
 
 [node name="GreenBottle4" type="Sprite2D" parent="." unique_id=1382418847]
-position = Vector2(480, 141)
-scale = Vector2(3.584916, 3.584916)
-texture = ExtResource("11_wukud")
-
-[node name="GreenBottle5" type="Sprite2D" parent="." unique_id=581824616]
-position = Vector2(31, 230)
+position = Vector2(-353.99997, 489)
 scale = Vector2(3.584916, 3.584916)
 texture = ExtResource("11_wukud")
 
 [node name="GreenTriBottle" type="Sprite2D" parent="." unique_id=2075034206]
-position = Vector2(415, 343)
+position = Vector2(178.99994, 486)
 scale = Vector2(3.683063, 3.683063)
 texture = ExtResource("12_il2jm")
 
 [node name="GreenTriBottle2" type="Sprite2D" parent="." unique_id=1275926636]
-position = Vector2(185.99994, 142.99997)
-scale = Vector2(3.683063, 3.683063)
-texture = ExtResource("12_il2jm")
-
-[node name="GreenTriBottle3" type="Sprite2D" parent="." unique_id=143389649]
-position = Vector2(270, 209)
+position = Vector2(-273.00006, 321)
 scale = Vector2(3.683063, 3.683063)
 texture = ExtResource("12_il2jm")
 
 [node name="GreenTriBottle5" type="Sprite2D" parent="." unique_id=428758839]
-position = Vector2(440, 212.99998)
+position = Vector2(-277.00006, 568)
 scale = Vector2(3.683063, 3.683063)
 texture = ExtResource("12_il2jm")
 
 [node name="GreenTriBottle6" type="Sprite2D" parent="." unique_id=1623803008]
-position = Vector2(444.99997, 280)
+position = Vector2(-161.00009, 402)
 scale = Vector2(3.683063, 3.683063)
 texture = ExtResource("12_il2jm")
 
 [node name="GreenTriBottle4" type="Sprite2D" parent="." unique_id=367853703]
-position = Vector2(597, 143.99997)
+position = Vector2(-158.00006, 321)
 scale = Vector2(3.683063, 3.683063)
 texture = ExtResource("12_il2jm")
 
 [node name="GreenVial" type="Sprite2D" parent="." unique_id=952146347]
-position = Vector2(333.00003, 279)
+position = Vector2(-4, 403)
 scale = Vector2(3.4181938, 3.4181938)
 texture = ExtResource("13_wjb0r")
 
 [node name="GreenVial4" type="Sprite2D" parent="." unique_id=597760983]
-position = Vector2(275, 346)
+position = Vector2(189.00003, 558)
 scale = Vector2(3.4181938, 3.4181938)
 texture = ExtResource("13_wjb0r")
 
 [node name="GreenVial5" type="Sprite2D" parent="." unique_id=214821597]
-position = Vector2(409.00003, 280)
+position = Vector2(-183.99997, 487.00003)
 scale = Vector2(3.4181938, 3.4181938)
 texture = ExtResource("13_wjb0r")
 
 [node name="GreenVial6" type="Sprite2D" parent="." unique_id=817362650]
-position = Vector2(474, 216.00003)
+position = Vector2(153, 565)
 scale = Vector2(3.4181938, 3.4181938)
 texture = ExtResource("13_wjb0r")
 
 [node name="GreenVial7" type="Sprite2D" parent="." unique_id=659421218]
-position = Vector2(407, 143)
+position = Vector2(-215, 565)
 scale = Vector2(3.4181938, 3.4181938)
 texture = ExtResource("13_wjb0r")
 
 [node name="GreenVial8" type="Sprite2D" parent="." unique_id=294298849]
-position = Vector2(507, 341)
+position = Vector2(-54, 561)
 scale = Vector2(3.4181938, 3.4181938)
 texture = ExtResource("13_wjb0r")
 
 [node name="GreenVial2" type="Sprite2D" parent="." unique_id=622072615]
-position = Vector2(143, 280)
+position = Vector2(-14, 486.00003)
 scale = Vector2(3.4181938, 3.4181938)
 texture = ExtResource("13_wjb0r")
 
 [node name="GreenVial3" type="Sprite2D" parent="." unique_id=477891596]
-position = Vector2(558, 278.00003)
+position = Vector2(-10, 321)
 scale = Vector2(3.4181938, 3.4181938)
 texture = ExtResource("13_wjb0r")
 
 [node name="HealthBottle" type="Sprite2D" parent="." unique_id=106692066]
-position = Vector2(145.00002, 346)
-scale = Vector2(3.2419927, 3.2419927)
+position = Vector2(150, 400)
+scale = Vector2(3.6191783, 3.6191783)
 texture = ExtResource("14_mc2jv")
 
 [node name="HealthBottle2" type="Sprite2D" parent="." unique_id=1179765845]
-position = Vector2(170.00002, 280.00003)
+position = Vector2(-47.999985, 486)
 scale = Vector2(3.2419927, 3.2419927)
 texture = ExtResource("14_mc2jv")
 
 [node name="HealthBottle3" type="Sprite2D" parent="." unique_id=110408453]
-position = Vector2(664, 146.00002)
-scale = Vector2(3.2419927, 3.2419927)
-texture = ExtResource("14_mc2jv")
-
-[node name="HealthBottle4" type="Sprite2D" parent="." unique_id=921344975]
-position = Vector2(143.00006, 146.00002)
+position = Vector2(-183.99994, 563)
 scale = Vector2(3.2419927, 3.2419927)
 texture = ExtResource("14_mc2jv")
 
 [node name="HealthBottle5" type="Sprite2D" parent="." unique_id=69243696]
-position = Vector2(237, 214)
+position = Vector2(-234.99997, 323)
 scale = Vector2(3.2419927, 3.2419927)
 texture = ExtResource("14_mc2jv")
 
 [node name="HealthBottle6" type="Sprite2D" parent="." unique_id=1447203788]
-position = Vector2(641, 347)
+position = Vector2(-38.999878, 404)
 scale = Vector2(3.2419927, 3.2419927)
 texture = ExtResource("14_mc2jv")
 
 [node name="HealthBottle7" type="Sprite2D" parent="." unique_id=1428280227]
-position = Vector2(56.000122, 144.00002)
+position = Vector2(-312.99997, 322)
 scale = Vector2(3.2419927, 3.2419927)
 texture = ExtResource("14_mc2jv")
 
 [node name="YellowBottle" type="Sprite2D" parent="." unique_id=1019615317]
-position = Vector2(181, 342.00003)
+position = Vector2(24.000015, 484)
 scale = Vector2(3.4448822, 3.4448822)
 texture = ExtResource("15_bo7i5")
 
 [node name="YellowBottle2" type="Sprite2D" parent="." unique_id=1210123442]
-position = Vector2(121.000015, 210)
+position = Vector2(-113.999985, 320)
 scale = Vector2(3.4448822, 3.4448822)
 texture = ExtResource("15_bo7i5")
 
 [node name="YellowBottle3" type="Sprite2D" parent="." unique_id=1921243553]
-position = Vector2(700, 141.00002)
+position = Vector2(-144.99994, 560)
 scale = Vector2(3.4448822, 3.4448822)
 texture = ExtResource("15_bo7i5")
 
 [node name="YellowBottle4" type="Sprite2D" parent="." unique_id=971601583]
-position = Vector2(688.00006, 339)
+position = Vector2(65.00006, 559)
 scale = Vector2(3.4448822, 3.4448822)
 texture = ExtResource("15_bo7i5")
 
 [node name="YellowBottle5" type="Sprite2D" parent="." unique_id=451375824]
-position = Vector2(447.00006, 140)
+position = Vector2(-240.00002, 563)
 scale = Vector2(3.4448822, 3.4448822)
 texture = ExtResource("15_bo7i5")
 
 [node name="YellowBottle6" type="Sprite2D" parent="." unique_id=1686878421]
-position = Vector2(65, 279)
+position = Vector2(-222, 401.00003)
 scale = Vector2(3.4448822, 3.4448822)
 texture = ExtResource("15_bo7i5")
 
 [node name="YellowBottle7" type="Sprite2D" parent="." unique_id=590362744]
-position = Vector2(33, 367.00003)
+position = Vector2(186, 398.00003)
 scale = Vector2(3.4448822, 3.4448822)
 texture = ExtResource("15_bo7i5")
 
-[node name="YellowVial" type="Sprite2D" parent="." unique_id=2125856235]
-position = Vector2(267, 273)
-scale = Vector2(3.3200011, 3.3200011)
-texture = ExtResource("16_4h6ng")
-
 [node name="YellowVial2" type="Sprite2D" parent="." unique_id=190667978]
-position = Vector2(638, 209)
+position = Vector2(127, 561)
 scale = Vector2(3.3200011, 3.3200011)
 texture = ExtResource("16_4h6ng")
 
 [node name="YellowVial3" type="Sprite2D" parent="." unique_id=1523782736]
-position = Vector2(32, 151)
+position = Vector2(-349, 318)
 scale = Vector2(3.3200011, 3.3200011)
 texture = ExtResource("16_4h6ng")
 
 [node name="YellowVial4" type="Sprite2D" parent="." unique_id=1219948275]
-position = Vector2(273, 139)
+position = Vector2(-118, 399)
 scale = Vector2(3.3200011, 3.3200011)
 texture = ExtResource("16_4h6ng")
 
 [node name="YellowVial5" type="Sprite2D" parent="." unique_id=1095265584]
-position = Vector2(378, 210)
+position = Vector2(-245, 486)
 scale = Vector2(3.3200011, 3.3200011)
 texture = ExtResource("16_4h6ng")
 
 [node name="HealthTriBottle" type="Sprite2D" parent="." unique_id=1320204717]
-position = Vector2(512, 210.99998)
-scale = Vector2(3.3702307, 3.3702307)
+position = Vector2(-316.98093, 488)
+scale = Vector2(3.372614, 3.3702307)
 texture = ExtResource("17_o3ebs")
 
 [node name="YellowTriBottle" type="Sprite2D" parent="." unique_id=2113103143]
-position = Vector2(239.00002, 342)
+position = Vector2(123, 399)
 scale = Vector2(3.4361122, 3.4361122)
 texture = ExtResource("18_k83mh")
 
 [node name="YellowTriBottle6" type="Sprite2D" parent="." unique_id=830767907]
-position = Vector2(320, 343)
+position = Vector2(148, 484)
 scale = Vector2(3.4361122, 3.4361122)
 texture = ExtResource("18_k83mh")
 
 [node name="YellowTriBottle7" type="Sprite2D" parent="." unique_id=189961681]
-position = Vector2(484, 278)
+position = Vector2(-288, 402.00003)
 scale = Vector2(3.4361122, 3.4361122)
 texture = ExtResource("18_k83mh")
 
 [node name="YellowTriBottle8" type="Sprite2D" parent="." unique_id=1168052921]
-position = Vector2(484, 339)
+position = Vector2(-21, 556)
 scale = Vector2(3.4361122, 3.4361122)
 texture = ExtResource("18_k83mh")
 
 [node name="YellowTriBottle2" type="Sprite2D" parent="." unique_id=542571194]
-position = Vector2(563, 209)
+position = Vector2(-148, 484)
 scale = Vector2(3.4361122, 3.4361122)
 texture = ExtResource("18_k83mh")
 
 [node name="YellowTriBottle3" type="Sprite2D" parent="." unique_id=6302287]
-position = Vector2(669, 278)
+position = Vector2(-40, 316)
 scale = Vector2(3.4361122, 3.4361122)
 texture = ExtResource("18_k83mh")
 
 [node name="YellowTriBottle4" type="Sprite2D" parent="." unique_id=1008310440]
-position = Vector2(634, 276)
+position = Vector2(58, 318.00003)
 scale = Vector2(3.4361122, 3.4361122)
 texture = ExtResource("18_k83mh")
 
 [node name="YellowTriBottle5" type="Sprite2D" parent="." unique_id=860743320]
-position = Vector2(321, 213)
+position = Vector2(-330, 565)
 scale = Vector2(3.4361122, 3.4361122)
 texture = ExtResource("18_k83mh")
 
 [node name="HealthVial" type="Sprite2D" parent="." unique_id=2136565916]
-position = Vector2(592, 280)
+position = Vector2(190.00009, 320.00003)
 scale = Vector2(3.383789, 3.383789)
 texture = ExtResource("19_qktwf")
 
 [node name="HealthVial2" type="Sprite2D" parent="." unique_id=823783019]
-position = Vector2(597.00006, 216.00003)
+position = Vector2(-118.99994, 563)
 scale = Vector2(3.383789, 3.383789)
 texture = ExtResource("19_qktwf")
 
 [node name="HealthVial8" type="Sprite2D" parent="." unique_id=170961538]
-position = Vector2(59.00006, 356)
-scale = Vector2(3.383789, 3.383789)
-texture = ExtResource("19_qktwf")
-
-[node name="HealthVial3" type="Sprite2D" parent="." unique_id=641367750]
-position = Vector2(376, 281)
+position = Vector2(-195.99998, 404)
 scale = Vector2(3.383789, 3.383789)
 texture = ExtResource("19_qktwf")
 
 [node name="HealthVial4" type="Sprite2D" parent="." unique_id=801726067]
-position = Vector2(453.00003, 343.00003)
+position = Vector2(3.0000305, 562)
 scale = Vector2(3.383789, 3.383789)
 texture = ExtResource("19_qktwf")
 
 [node name="HealthVial5" type="Sprite2D" parent="." unique_id=1194622062]
-position = Vector2(299, 278.00003)
+position = Vector2(83.000046, 487)
 scale = Vector2(3.383789, 3.383789)
 texture = ExtResource("19_qktwf")
 
 [node name="HealthVial6" type="Sprite2D" parent="." unique_id=788601135]
-position = Vector2(150.00005, 216)
+position = Vector2(89.000015, 406)
 scale = Vector2(3.383789, 3.383789)
 texture = ExtResource("19_qktwf")
 
 [node name="HealthVial7" type="Sprite2D" parent="." unique_id=1260958386]
-position = Vector2(370, 145)
+position = Vector2(-305.99994, 569)
 scale = Vector2(3.383789, 3.383789)
 texture = ExtResource("19_qktwf")
 
 [node name="BlueTriBottle4" type="Sprite2D" parent="." unique_id=1782485474]
-position = Vector2(408, 211)
+position = Vector2(-210.00006, 488.00003)
 scale = Vector2(3.424197, 3.424197)
 texture = ExtResource("10_bc84e")
 
 [node name="BlueTriBottle5" type="Sprite2D" parent="." unique_id=1768424277]
-position = Vector2(186.99997, 212.99998)
+position = Vector2(-191.00003, 322)
 scale = Vector2(3.424197, 3.424197)
 texture = ExtResource("10_bc84e")
 
 [node name="BlueTriBottle6" type="Sprite2D" parent="." unique_id=1415018392]
-position = Vector2(516, 278)
+position = Vector2(22.999998, 321)
 scale = Vector2(3.424197, 3.424197)
 texture = ExtResource("10_bc84e")
 

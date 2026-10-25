@@ -109,9 +109,6 @@ shape = SubResource("CapsuleShape2D_kg5e7")
 position = Vector2(0, -82)
 scale = Vector2(0.195, 0.195)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1065660191]
-script = ExtResource("4_cam")
-
 [node name="NoticeBar" type="Label" parent="." unique_id=266159874]
 offset_left = 25.0
 offset_top = -111.0
@@ -125,3 +122,8 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_r300x")
 autoplay = "default"
 frame_progress = 0.92553866
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=446861513]
+position = Vector2(248, 424)
+zoom = Vector2(0.905, 1.075)
+script = ExtResource("4_cam")

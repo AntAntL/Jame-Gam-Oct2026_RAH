@@ -30,16 +30,16 @@ func _process(delta: float) -> void:
 	# If tracking an item that got destroyed or finished, return smoothly to player
 	if target_node == null or not is_instance_valid(target_node):
 		return_to_player()
-	
+
 	if target_node and is_instance_valid(target_node):
 		var target_pos = target_node.global_position
 		# Smooth camera follow
 		global_position = global_position.lerp(target_pos + Vector2(0, -50), delta * 8.5)
-	
-	# Smooth zoom
+
+#Smooth zoom
 	zoom = zoom.lerp(target_zoom, delta * 5.0)
-	
-	# Screen shake
+
+#Screen shake
 	if trauma > 0.0:
 		trauma = max(trauma - delta * 2.8, 0.0)
 		var shake = trauma * trauma * max_shake
