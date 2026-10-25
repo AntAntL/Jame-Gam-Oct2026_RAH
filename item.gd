@@ -63,7 +63,10 @@ func set_item(p_name: String, p_texture: Texture2D) -> void:
 	if has_node("Sprite2D") and p_texture != null:
 		var spr: Sprite2D = $Sprite2D
 		spr.texture = p_texture
-		if p_name == "itemc":
+		if p_texture.get_width() <= 32:
+			spr.scale = Vector2(2.8, 2.8)
+			spr.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+		elif p_name == "itemc":
 			spr.scale = Vector2(0.26, 0.26)
 		elif p_name == "itema":
 			spr.scale = Vector2(0.16, 0.16)
@@ -98,7 +101,9 @@ func play_sound(stream: AudioStream, volume_db: float = 0.0, pitch: float = 1.0)
 	asp.stream = stream
 	asp.volume_db = volume_db
 	asp.pitch_scale = pitch
-	get_tree().current_scene.add_child(asp)
+	var target = get_tree().current_scene if (get_tree() and get_tree().current_scene) else get_parent()
+	if target:
+		target.add_child(asp)
 	asp.play()
 	asp.finished.connect(asp.queue_free)
 

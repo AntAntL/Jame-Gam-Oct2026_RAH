@@ -1,45 +1,152 @@
 [gd_scene format=3 uid="uid://b6us20fif82hq"]
 
 [ext_resource type="Script" uid="uid://dj25ehs2222jm" path="res://shelf.gd" id="1_shelf"]
-[ext_resource type="Texture2D" uid="uid://cs7di2q7cdnbe" path="res://Objects/Sprites/World/Unorganized/itema.png" id="2_itema"]
-[ext_resource type="Texture2D" uid="uid://d6gw7r4fgulx" path="res://Objects/Sprites/World/Unorganized/itemb.png" id="3_itemb"]
-[ext_resource type="Texture2D" uid="uid://chsmkpx32wvg6" path="res://Objects/Sprites/World/Unorganized/itemc.png" id="4_itemc"]
+[ext_resource type="Texture2D" uid="uid://cweggrihu3g3" path="res://Objects/Sprites/World/Interactable-Main/BlueBottle.png" id="2_bbott"]
+[ext_resource type="Texture2D" uid="uid://2l7mwbvmpq83" path="res://Objects/Sprites/World/Interactable-Main/BlueTriBottle.png" id="3_btrib"]
+[ext_resource type="Texture2D" uid="uid://c6tqebv02vvvl" path="res://Objects/Sprites/World/Interactable-Main/BlueVials.png" id="4_bvial"]
+[ext_resource type="Texture2D" uid="uid://w14mxi1il8uv" path="res://Objects/Sprites/World/Interactable-Main/GreenBottle.png" id="5_gbott"]
+[ext_resource type="Texture2D" uid="uid://cuxyh8o864jyu" path="res://Objects/Sprites/World/Interactable-Main/GreenTriBottle.png" id="6_gtrib"]
+[ext_resource type="Texture2D" uid="uid://br886isvypmia" path="res://Objects/Sprites/World/Interactable-Main/GreenVial.png" id="7_gvial"]
+[ext_resource type="Texture2D" uid="uid://dt6g3x6043lre" path="res://Objects/Sprites/World/Interactable-Main/HealthBottle.png" id="8_hbott"]
+[ext_resource type="Texture2D" uid="uid://cc04os0nby0xc" path="res://Objects/Sprites/World/Interactable-Main/HealthTriBottle.png" id="9_htrib"]
+[ext_resource type="Texture2D" uid="uid://dx3nnmr1yrcy5" path="res://Objects/Sprites/World/Interactable-Main/HealthVial.png" id="10_hvial"]
+[ext_resource type="Texture2D" uid="uid://bn52hmpm0tcuh" path="res://Objects/Sprites/World/Interactable-Main/YellowBottle.png" id="11_ybott"]
+[ext_resource type="Texture2D" uid="uid://bq4tukp2ab872" path="res://Objects/Sprites/World/Interactable-Main/YellowTriBottle.png" id="12_ytrib"]
+[ext_resource type="Texture2D" uid="uid://dwmlwvl74f2kp" path="res://Objects/Sprites/World/Interactable-Main/YellowVial.png" id="13_yvial"]
 
 [node name="MarginContainer" type="MarginContainer" unique_id=1211330278]
 offset_left = -73.0
 offset_top = -99.0
 offset_right = 107.0
 offset_bottom = 201.0
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
 script = ExtResource("1_shelf")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=479100406]
+[node name="GridContainer" type="GridContainer" parent="." unique_id=479100406]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 3
 
-[node name="ItemA" type="Button" parent="VBoxContainer" unique_id=1579815460]
-custom_minimum_size = Vector2(0, 56)
+[node name="BlueBottle" type="Button" parent="GridContainer" unique_id=1579815460]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 52)
 layout_mode = 2
 focus_mode = 0
-text = " Item A"
-icon = ExtResource("2_itema")
+tooltip_text = "Blue Bottle"
+icon = ExtResource("2_bbott")
+icon_alignment = 1
 expand_icon = true
 
-[node name="ItemB" type="Button" parent="VBoxContainer" unique_id=1001790055]
-custom_minimum_size = Vector2(0, 56)
+[node name="BlueTriBottle" type="Button" parent="GridContainer" unique_id=1001790055]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 52)
 layout_mode = 2
 focus_mode = 0
-text = " Item B"
-icon = ExtResource("3_itemb")
+tooltip_text = "Blue Tri-Bottle"
+icon = ExtResource("3_btrib")
+icon_alignment = 1
 expand_icon = true
 
-[node name="ItemC" type="Button" parent="VBoxContainer" unique_id=1274951238]
-custom_minimum_size = Vector2(0, 56)
+[node name="BlueVials" type="Button" parent="GridContainer" unique_id=1274951238]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 52)
 layout_mode = 2
 focus_mode = 0
-text = " Item C"
-icon = ExtResource("4_itemc")
+tooltip_text = "Blue Vials"
+icon = ExtResource("4_bvial")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GreenBottle" type="Button" parent="GridContainer" unique_id=1274951239]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 52)
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Green Bottle"
+icon = ExtResource("5_gbott")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GreenTriBottle" type="Button" parent="GridContainer" unique_id=1274951240]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 52)
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Green Tri-Bottle"
+icon = ExtResource("6_gtrib")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GreenVial" type="Button" parent="GridContainer" unique_id=1274951241]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 52)
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Green Vial"
+icon = ExtResource("7_gvial")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HealthBottle" type="Button" parent="GridContainer" unique_id=1274951242]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 52)
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Health Bottle"
+icon = ExtResource("8_hbott")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HealthTriBottle" type="Button" parent="GridContainer" unique_id=1274951243]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 52)
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Health Tri-Bottle"
+icon = ExtResource("9_htrib")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HealthVial" type="Button" parent="GridContainer" unique_id=1274951244]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 52)
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Health Vial"
+icon = ExtResource("10_hvial")
+icon_alignment = 1
+expand_icon = true
+
+[node name="YellowBottle" type="Button" parent="GridContainer" unique_id=1274951245]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 52)
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Yellow Bottle"
+icon = ExtResource("11_ybott")
+icon_alignment = 1
+expand_icon = true
+
+[node name="YellowTriBottle" type="Button" parent="GridContainer" unique_id=1274951246]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 52)
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Yellow Tri-Bottle"
+icon = ExtResource("12_ytrib")
+icon_alignment = 1
+expand_icon = true
+
+[node name="YellowVial" type="Button" parent="GridContainer" unique_id=1274951247]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 52)
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Yellow Vial"
+icon = ExtResource("13_yvial")
+icon_alignment = 1
 expand_icon = true

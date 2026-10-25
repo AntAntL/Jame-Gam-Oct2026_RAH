@@ -56,19 +56,16 @@ func serve_potion() -> void:
 	var loss: int = 0
 	
 	for item in ingredients:
-		match item:
-			"itema":
-				contamination_score += 1
-				loss += 15
-			"itemb":
-				contamination_score += 3
-				loss += 45
-			"itemc":
-				contamination_score += 8
-				loss += 140
-			_:
-				contamination_score += 1
-				loss += 15
+		var lower_item = item.to_lower()
+		if lower_item == "itemc" or lower_item.contains("tri"):
+			contamination_score += 8
+			loss += 140
+		elif lower_item == "itemb" or lower_item.contains("vial"):
+			contamination_score += 3
+			loss += 45
+		else:
+			contamination_score += 1
+			loss += 15
 	
 	# Star rating based on contamination (8 pts is 1 star)
 	var rating: int = 5

@@ -51,11 +51,12 @@ func _physics_process(delta: float) -> void:
 			if cur_item != "":
 				item_spotted = true
 				var risk = 1.0
-				if cur_item == "itemc":
+				var lower_item = cur_item.to_lower()
+				if lower_item == "itemc" or lower_item.contains("tri"):
 					risk = 3.5
-				elif cur_item == "itema":
+				elif lower_item == "itema" or lower_item.contains("bottle"):
 					risk = 0.5
-				elif cur_item == "itemb":
+				elif lower_item == "itemb" or lower_item.contains("vial"):
 					risk = 1.0
 				
 				if risk > highest_risk:
@@ -70,7 +71,7 @@ func _physics_process(delta: float) -> void:
 				game_over_triggered = true
 				alert_label.text = "I SEE YOU"
 				alert_label.modulate = Color(1.0, 0.0, 0.0, 1.0)
-			elif spotted_item_type == "itemc":
+			elif spotted_item_type == "itemc" or spotted_item_type.to_lower().contains("tri"):
 				alert_label.text = "AAAAAAAAAAAAAAAAAA"
 				alert_label.modulate = Color(1.0, 0.0, 0.0, 1.0)
 			else:

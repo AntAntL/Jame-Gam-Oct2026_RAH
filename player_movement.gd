@@ -80,7 +80,10 @@ func set_held_item(item_name: String, texture: Texture2D) -> void:
 	held_item_texture = texture
 	if item_holding:
 		item_holding.texture = texture
-		if item_name == "itemc":
+		if texture != null and texture.get_width() <= 32:
+			item_holding.scale = Vector2(2.6, 2.6)
+			item_holding.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+		elif item_name == "itemc":
 			item_holding.scale = Vector2(0.26, 0.26)
 		elif item_name == "itema":
 			item_holding.scale = Vector2(0.16, 0.16)
