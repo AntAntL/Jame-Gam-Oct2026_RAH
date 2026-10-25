@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bk5veg4ru1mah"]
 
 [ext_resource type="Script" uid="uid://mcnf7eu76vh8" path="res://mainmenubutton.gd" id="1_cmhrf"]
+[ext_resource type="Texture2D" uid="uid://c1w8m1k6aqfir" path="res://Objects/Title+OtherUI/TitleScreen.png" id="2_wgsso"]
+[ext_resource type="Texture2D" uid="uid://dlt8enp8uf3jw" path="res://Objects/Title+OtherUI/PlayButton.png" id="3_igs2m"]
 
 [node name="Control" type="Control" unique_id=905747437]
 layout_mode = 3
@@ -10,22 +12,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="." unique_id=1675082349]
-layout_mode = 0
-offset_left = 410.0
-offset_top = 57.0
-offset_right = 775.0
-offset_bottom = 245.0
-theme_override_font_sizes/font_size = 137
-text = "game"
-
 [node name="Button" type="Button" parent="." unique_id=1936500792]
 layout_mode = 0
-offset_left = 508.0
-offset_top = 287.0
-offset_right = 596.0
-offset_bottom = 318.0
-text = "play game"
+offset_left = 386.0
+offset_top = 403.1384
+offset_right = 474.0
+offset_bottom = 434.1384
+scale = Vector2(4.8634543, 4.879134)
+text = "
+"
 script = ExtResource("1_cmhrf")
+
+[node name="TitleScreen" type="Sprite2D" parent="." unique_id=94670793]
+position = Vector2(582.8274, 171.00003)
+scale = Vector2(10.388118, 10.577885)
+texture = ExtResource("2_wgsso")
+
+[node name="PlayButton" type="Sprite2D" parent="." unique_id=2087041033]
+position = Vector2(599.00006, 472)
+scale = Vector2(4.863457, 4.879137)
+texture = ExtResource("3_igs2m")
 
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

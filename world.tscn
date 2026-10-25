@@ -51,7 +51,7 @@ offset_right = 461.0
 offset_bottom = 311.0
 
 [node name="Witch" parent="." unique_id=2099214223 instance=ExtResource("4_aqk2v")]
-position = Vector2(863, 377)
+position = Vector2(926, 374)
 
 [node name="CustomerSpawner" type="Node2D" parent="." unique_id=1086228455]
 position = Vector2(-20, 470)
