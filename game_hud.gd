@@ -37,7 +37,7 @@ func _ready() -> void:
 	update_profit_display()
 	update_detect_display(0.0)
 	
-	# Programmatic radial red vignette for screen edges
+	# Red thing
 	var gradient_tex = GradientTexture2D.new()
 	var gradient = Gradient.new()
 	gradient.set_color(0, Color(0.85, 0.05, 0.05, 0.0))

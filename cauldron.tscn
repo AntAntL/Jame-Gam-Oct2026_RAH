@@ -73,10 +73,6 @@ script = ExtResource("2_0t22i")
 scale = Vector2(1, 1.0344832)
 shape = SubResource("CircleShape2D_r300x")
 
-[node name="WaterCauldTimer" type="Timer" parent="ItemArea" unique_id=1885551018]
-wait_time = 0.1
-autostart = true
-
 [node name="WaterSplash" type="AnimatedSprite2D" parent="." unique_id=253614026]
 visible = false
 z_index = 5
@@ -96,5 +92,4 @@ scale = Vector2(2.995, 4.35)
 texture = ExtResource("4_a7jlv")
 
 [connection signal="body_entered" from="ItemArea" to="ItemArea" method="_on_body_entered"]
-[connection signal="timeout" from="ItemArea/WaterCauldTimer" to="ItemArea" method="_on_water_cauld_timer_timeout"]
 [connection signal="timeout" from="WaterSplash/Timer" to="ItemArea" method="_on_timer_timeout"]

@@ -99,7 +99,7 @@ func _on_body_entered(body: Node2D) -> void:
 	ingredient_added.emit(item_name)
 	print("Cauldron accepted ingredient: ", item_name, " (Total in brew: ", ingredients.size(), ")")
 	
-	# Dissolve item smoothly into brew
+	# Dissolve item
 	if body is RigidBody2D:
 		body.freeze = true
 	var tween = create_tween()
