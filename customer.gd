@@ -7,7 +7,7 @@ enum State { WALKING_IN, AT_COUNTER, WALKING_OUT }
 var current_state: State = State.WALKING_IN
 var target_x: float = 540.0
 
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 const TINTS = [
 	Color(0.5, 0.8, 1.0),
@@ -42,6 +42,7 @@ func arrive_at_counter() -> void:
 	current_state = State.AT_COUNTER
 	
 	# Wait brief moment at counter while purchasing
+	sprite.pause()
 	await get_tree().create_timer(1.8).timeout
 	serve_potion()
 
@@ -94,6 +95,7 @@ func serve_potion() -> void:
 	leave_shop()
 
 func leave_shop() -> void:
+	sprite.play()
 	current_state = State.WALKING_OUT
 	if sprite:
 		sprite.flip_h = true

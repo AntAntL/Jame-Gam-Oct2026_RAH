@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chy51r2vmw22k"
-path="res://.godot/imported/control_throw (1).png-31100d5615ce451f1d599336c2f0b518.ctex"
+uid="uid://cl4a6oi7gwvt2"
+path="res://.godot/imported/control_throw (1) (1).png-63d798f5da800fab0cc450f0396816e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Sprites/Tutorial/control_throw (1).png"
-dest_files=["res://.godot/imported/control_throw (1).png-31100d5615ce451f1d599336c2f0b518.ctex"]
+source_file="res://Objects/Sprites/Tutorial/control_throw (1) (1).png"
+dest_files=["res://.godot/imported/control_throw (1) (1).png-63d798f5da800fab0cc450f0396816e6.ctex"]
 
 [params]
 

@@ -1,12 +1,15 @@
 extends Node2D
 
 @export var customer_scene: PackedScene = preload("res://customer.tscn")
-@export var spawn_position: Vector2 = Vector2(-30, 470)
+@export var spawn_position: Vector2 = Vector2(-30, 560)
 
 var current_customer: Node = null
 var spawn_timer: Timer
 
 func _ready() -> void:
+	# Initially wait so player can read tutorial
+	await get_tree().create_timer(8).timeout
+	
 	spawn_timer = Timer.new()
 	spawn_timer.one_shot = true
 	spawn_timer.timeout.connect(_on_spawn_timer_timeout)

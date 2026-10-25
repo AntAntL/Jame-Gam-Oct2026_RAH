@@ -4,6 +4,8 @@ const TrickPopup = preload("res://trick_popup.gd")
 
 @onready var WaterSplash: AnimatedSprite2D = $"../WaterSplash"
 @onready var WaterSplashTimer: Timer = $"../WaterSplash/Timer"
+@onready var WaterCauld: Sprite2D = $"../WaterCauld"
+@onready var WaterCauldTimer: Timer = $"../WaterCauldTimer"
 
 signal ingredient_added(item_name: String)
 
@@ -60,7 +62,7 @@ func _on_body_entered(body: Node2D) -> void:
 		bonus_loss += 50
 		trick_titles.append("thrown")
 	
-	# Score bonus & trigger popups
+	# Popup
 	var world_root = get_tree().current_scene
 	if bonus_loss > 0:
 		var hud = get_tree().get_first_node_in_group("hud")
@@ -72,19 +74,19 @@ func _on_body_entered(body: Node2D) -> void:
 	else:
 		TrickPopup.spawn(world_root, global_position + Vector2(0, -55), "dunked", Color(0.4, 1.0, 0.5))
 	
-	# Gentle screen shake on trick shots
+	# Screen shake
 	var cam = get_tree().get_first_node_in_group("main_camera")
 	if cam:
 		if bonus_loss > 0:
 			cam.add_shake(0.2)
 		get_tree().create_timer(0.35).timeout.connect(cam.return_to_player)
 	
-	# Subtle hitstop on trick impact
+	# Thing
 	if bonus_loss > 0:
 		Engine.time_scale = 0.3
 		get_tree().create_timer(0.05, true, false, true).timeout.connect(func(): Engine.time_scale = 1.0)
 	
-	# Gentle cauldron dip animation
+	# Animation
 	var parent_node = get_parent() as Node2D
 	if parent_node:
 		if cauldron_tween and cauldron_tween.is_valid():
@@ -116,3 +118,9 @@ func get_ingredient_count() -> int:
 
 func _on_timer_timeout() -> void:
 	WaterSplash.visible = false
+
+
+func _on_water_cauld_timer_timeout() -> void:
+	var redden_speed = 0.2 * get_ingredient_count()
+	WaterCauld.modulate.g = move_toward(modulate.g, 0.0, redden_speed)
+	WaterCauld.modulate.b = move_toward(modulate.b, 0.0, redden_speed)
