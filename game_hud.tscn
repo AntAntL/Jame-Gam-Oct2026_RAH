@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://do4r5yxjuene1"]
 
 [ext_resource type="Script" uid="uid://d3i0ekx5llnra" path="res://game_hud.gd" id="1_hud"]
+[ext_resource type="FontFile" uid="uid://brhii4bosrwxy" path="res://NotoColorEmoji-Regular.ttf" id="2_og655"]
 
 [node name="GameHUD" type="CanvasLayer" unique_id=695055891]
 process_mode = 3
@@ -79,6 +80,7 @@ horizontal_alignment = 1
 
 [node name="StarsLabel" type="Label" parent="TopRight/ReviewPanel/MarginContainer/VBoxContainer" unique_id=1261316644]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_og655")
 theme_override_font_sizes/font_size = 20
 text = "⭐⭐☆☆☆"
 horizontal_alignment = 1

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dejipl18cd7jk"]
 
 [ext_resource type="Script" uid="uid://b7bwmdidqpsnt" path="res://player_movement.gd" id="1_4flbx"]
+[ext_resource type="FontFile" uid="uid://brhii4bosrwxy" path="res://NotoColorEmoji-Regular.ttf" id="2_hqtel"]
 [ext_resource type="Texture2D" uid="uid://mbc8aq664sbx" path="res://Objects/Sprites/World/Unorganized/Littleman_Sprite_Sheet.png" id="3_i3pqv"]
 [ext_resource type="Script" uid="uid://i8l6n7psmycw" path="res://camera_follow.gd" id="4_cam"]
 
@@ -115,6 +116,7 @@ offset_top = -111.0
 offset_right = 135.0
 offset_bottom = -88.0
 scale = Vector2(4.6422424, 4.650992)
+theme_override_fonts/font = ExtResource("2_hqtel")
 text = "⭐"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1752663002]
