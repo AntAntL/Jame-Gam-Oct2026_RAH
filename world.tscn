@@ -103,6 +103,9 @@ position = Vector2(1044.6649, 77.9399)
 rotation = -1.2838635
 shape = SubResource("RectangleShape2D_r300x")
 
+[node name="Node2D" type="Node2D" parent="StaticBody2D5" unique_id=775628119]
+position = Vector2(259.94464, -416.31577)
+
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=668876691]
 position = Vector2(1051, 240)
 
@@ -447,24 +450,24 @@ autoplay = true
 script = ExtResource("21_bc84e")
 
 [node name="TutorialText" parent="." unique_id=895328632 instance=ExtResource("22_wukud")]
-position = Vector2(958, 171)
+position = Vector2(681, 315)
 TutorialImage = ExtResource("23_il2jm")
 ShowTime = 7
 
 [node name="TutorialText4" parent="." unique_id=1667174542 instance=ExtResource("22_wukud")]
-position = Vector2(952, 175)
+position = Vector2(745, 346)
 TutorialImage = ExtResource("24_bo7i5")
 StartTime = 8
 ShowTime = 15
 
 [node name="TutorialText3" parent="." unique_id=1086619522 instance=ExtResource("22_wukud")]
-position = Vector2(339, 502)
+position = Vector2(-96, 647)
 TutorialImage = ExtResource("25_bo7i5")
 StartTime = 8
 ShowTime = 15
 
 [node name="TutorialText2" parent="." unique_id=849462435 instance=ExtResource("22_wukud")]
-position = Vector2(592, 441)
+position = Vector2(172, 702)
 TutorialImage = ExtResource("24_wjb0r")
 ShowTime = 15
 

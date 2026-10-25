@@ -124,7 +124,10 @@ autoplay = "default"
 frame_progress = 0.92553866
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=446861513]
-position = Vector2(248, 424)
-zoom = Vector2(0.905, 1.075)
+position = Vector2(248, 426)
+zoom = Vector2(1.05, 1.05)
 script = ExtResource("4_cam")
-Cameraoffset = -80.0
+level_limit_left = -390
+level_limit_top = -1500
+level_limit_right = 880
+level_limit_bottom = 760
