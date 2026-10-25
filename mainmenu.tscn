@@ -4,7 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://c1w8m1k6aqfir" path="res://Objects/Title+OtherUI/TitleScreen.png" id="2_wgsso"]
 [ext_resource type="Texture2D" uid="uid://dlt8enp8uf3jw" path="res://Objects/Title+OtherUI/PlayButton.png" id="3_igs2m"]
 [ext_resource type="PackedScene" uid="uid://rndk1r11mn5h" path="res://cauldron.tscn" id="4_3pujl"]
-[ext_resource type="PackedScene" uid="uid://b5rdmkmxxjjvu" path="res://customer.tscn" id="5_7uvds"]
+[ext_resource type="PackedScene" uid="uid://ujbbpqxivfeb" path="res://witch.tscn" id="5_at6rn"]
+[ext_resource type="PackedScene" uid="uid://dfhh0wfxyfc2m" path="res://map.tscn" id="7_rqglp"]
+[ext_resource type="Texture2D" uid="uid://cweggrihu3g3" path="res://Objects/Sprites/World/Interactable-Main/BlueBottle.png" id="8_qrn07"]
+[ext_resource type="Texture2D" uid="uid://bq4tukp2ab872" path="res://Objects/Sprites/World/Interactable-Main/YellowTriBottle.png" id="9_lidg2"]
+[ext_resource type="Texture2D" uid="uid://dx3nnmr1yrcy5" path="res://Objects/Sprites/World/Interactable-Main/HealthVial.png" id="10_raimv"]
+[ext_resource type="Texture2D" uid="uid://br886isvypmia" path="res://Objects/Sprites/World/Interactable-Main/GreenVial.png" id="11_qy7ti"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0y70q"]
+distance = -111.0
 
 [node name="Control" type="Control" unique_id=905747437]
 layout_mode = 3
@@ -36,11 +44,77 @@ position = Vector2(599.00006, 472)
 scale = Vector2(4.863457, 4.879137)
 texture = ExtResource("3_igs2m")
 
-[node name="Cauldron" parent="." unique_id=922759971 instance=ExtResource("4_3pujl")]
-position = Vector2(967, 504)
-scale = Vector2(1.2661335, 2.0353785)
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=438495863]
+position = Vector2(292.72498, 587.6135)
+scale = Vector2(1.9461336, 2.0353785)
 
-[node name="Customer" parent="." unique_id=1063727133 instance=ExtResource("5_7uvds")]
-position = Vector2(93, 520)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1623719274]
+position = Vector2(0, 97)
+shape = SubResource("WorldBoundaryShape2D_0y70q")
+
+[node name="Cauldron2" parent="." unique_id=922759971 instance=ExtResource("4_3pujl")]
+position = Vector2(982, 537)
+scale = Vector2(2.4465919, 2.5480826)
+
+[node name="Witch" parent="." unique_id=2099214223 instance=ExtResource("5_at6rn")]
+position = Vector2(960.00006, 384.00003)
+scale = Vector2(1.2760088, 1.3289407)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=754739648]
+position = Vector2(8.589478, -23)
+scale = Vector2(1.9461336, 2.0353785)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=2006042362]
+position = Vector2(2151.2827, -23)
+scale = Vector2(1.9461336, 2.0268638)
+
+[node name="StaticBody2D2" parent="." unique_id=319056030 instance=ExtResource("7_rqglp")]
+z_index = -2
+position = Vector2(623, 351)
+scale = Vector2(5.300621, 5.520503)
+
+[node name="BlueBottle7" type="Sprite2D" parent="." unique_id=211234630]
+z_index = -1
+position = Vector2(325, 223.00002)
+scale = Vector2(3.32, 3.32)
+texture = ExtResource("8_qrn07")
+
+[node name="YellowTriBottle" type="Sprite2D" parent="." unique_id=2110849055]
+position = Vector2(22, 320.00003)
+scale = Vector2(3.4361122, 3.4361122)
+texture = ExtResource("9_lidg2")
+
+[node name="YellowTriBottle2" type="Sprite2D" parent="." unique_id=886274585]
+position = Vector2(329, 402)
+scale = Vector2(4.405556, 4.405556)
+texture = ExtResource("9_lidg2")
+
+[node name="YellowTriBottle3" type="Sprite2D" parent="." unique_id=370789975]
+position = Vector2(1137.0001, 446.00003)
+rotation = 0.7859364
+scale = Vector2(5.487192, 5.487192)
+texture = ExtResource("9_lidg2")
+
+[node name="HealthVial6" type="Sprite2D" parent="." unique_id=1143266515]
+position = Vector2(70, 505)
+scale = Vector2(3.383789, 3.383789)
+texture = ExtResource("10_raimv")
+
+[node name="HealthVial7" type="Sprite2D" parent="." unique_id=1878844823]
+position = Vector2(238.99998, 411.00003)
+scale = Vector2(3.383789, 3.383789)
+texture = ExtResource("10_raimv")
+
+[node name="HealthVial8" type="Sprite2D" parent="." unique_id=1724066033]
+position = Vector2(750, 670)
+rotation = 1.5596349
+scale = Vector2(5.6593337, 5.6593337)
+texture = ExtResource("10_raimv")
+
+[node name="GreenVial3" type="Sprite2D" parent="." unique_id=1411834293]
+z_index = -1
+position = Vector2(547, 230)
+scale = Vector2(5.2726884, 5.2726884)
+texture = ExtResource("11_qy7ti")
 
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

@@ -33,11 +33,15 @@ distance = -111.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r300x"]
 size = Vector2(56, 821.4658)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(703, 20)
+
 [node name="Node2D" type="Node2D" unique_id=784977946]
 
 [node name="Player" parent="." unique_id=789483730 instance=ExtResource("1_f3sb7")]
 z_index = 5
 position = Vector2(-333, 705)
+collision_mask = 3
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=900511250]
 position = Vector2(96, 540)
@@ -462,3 +466,12 @@ ShowTime = 15
 position = Vector2(592, 441)
 TutorialImage = ExtResource("24_wjb0r")
 ShowTime = 15
+
+[node name="Platform" type="StaticBody2D" parent="." unique_id=1711913244]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform" unique_id=2098377651]
+position = Vector2(-43, 598)
+shape = SubResource("RectangleShape2D_yf5fn")
+one_way_collision = true
+one_way_collision_margin = 8.0

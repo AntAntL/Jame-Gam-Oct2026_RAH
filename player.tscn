@@ -127,3 +127,4 @@ frame_progress = 0.92553866
 position = Vector2(248, 424)
 zoom = Vector2(0.905, 1.075)
 script = ExtResource("4_cam")
+Cameraoffset = -80.0

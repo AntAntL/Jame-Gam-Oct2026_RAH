@@ -145,6 +145,7 @@ func finish_charging_and_throw() -> void:
 
 func _physics_process(delta: float) -> void:
 	var hud = get_tree().get_first_node_in_group("hud")
+	
 	if hud and hud.get("is_game_over"):
 		if is_charging:
 			cancel_charging()
@@ -157,7 +158,11 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+		#Platformstuff
+	if Input.is_action_just_pressed("Down") and is_on_floor():
+			set_collision_mask_value(2, false)
+			await get_tree().create_timer(0.2).timeout
+			set_collision_mask_value(2, true)
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
