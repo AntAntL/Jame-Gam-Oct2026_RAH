@@ -1,6 +1,20 @@
+@tool
 extends CharacterBody2D
 
 const TrickPopup = preload("res://trick_popup.gd")
+
+@onready var camera: Camera2D = $Camera2D
+
+@export_group("Limits")
+@export var limits_enabled: bool = true:
+	set(value):
+		limits_enabled = value
+		_apply_bounds()
+
+@export var level_bounds: Rect2i = Rect2i(-10000, -10000, 20000, 20000):
+	set(value):
+		level_bounds = value
+		_apply_bounds()
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
@@ -74,6 +88,23 @@ func _ready() -> void:
 	elif item_holding:
 		item_holding.visible = false
 		remove_from_group("item")
+		
+	_apply_bounds()
+		
+func _apply_bounds() -> void:
+	if not is_node_ready() or not camera:
+		return
+
+	if limits_enabled:
+		camera.limit_left = level_bounds.position.x
+		camera.limit_top = level_bounds.position.y
+		camera.limit_right = level_bounds.end.x
+		camera.limit_bottom = level_bounds.end.y
+	else:
+		camera.limit_left = -10000000
+		camera.limit_top = -10000000
+		camera.limit_right = 10000000
+		camera.limit_bottom = 10000000
 
 func set_held_item(item_name: String, texture: Texture2D) -> void:
 	held_item_name = item_name

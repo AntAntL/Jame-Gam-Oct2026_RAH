@@ -101,6 +101,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" unique_id=789483730]
 script = ExtResource("1_4flbx")
+level_bounds = Rect2i(-390, -1500, 1270, 2260)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1042798291]
 position = Vector2(0, 5)
