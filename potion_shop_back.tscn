@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://duwo5rngau4ad"]
 
 [ext_resource type="Texture2D" uid="uid://48wufcfx4td" path="res://Objects/Sprites/World/Background-Deco/PotionShopBack.png" id="1_mytlc"]
+[ext_resource type="PackedScene" uid="uid://dejipl18cd7jk" path="res://player.tscn" id="2_k0dgc"]
 
 [node name="PotionShopBack" type="Sprite2D" unique_id=1326609474]
 position = Vector2(577.625, 476.75003)
 scale = Vector2(3.605469, 3.605469)
 texture = ExtResource("1_mytlc")
+
+[node name="Player" parent="." unique_id=789483730 instance=ExtResource("2_k0dgc")]
+position = Vector2(-103.3557, 35.570953)
+scale = Vector2(1.0000004, 1.0000004)

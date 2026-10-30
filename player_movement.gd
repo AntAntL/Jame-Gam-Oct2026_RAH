@@ -1,4 +1,3 @@
-@tool
 extends CharacterBody2D
 
 const TrickPopup = preload("res://trick_popup.gd")
