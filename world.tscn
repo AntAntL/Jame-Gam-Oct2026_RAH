@@ -119,331 +119,6 @@ z_index = -2
 position = Vector2(251.00002, 430)
 scale = Vector2(5.135, 5.135)
 
-[node name="BlueBottle" type="Sprite2D" parent="." unique_id=297217762]
-position = Vector2(-114.99999, 484)
-scale = Vector2(3.32, 3.32)
-texture = ExtResource("8_cbp6q")
-
-[node name="BlueBottle2" type="Sprite2D" parent="." unique_id=1698754]
-position = Vector2(-324.99994, 407)
-scale = Vector2(3.32, 3.32)
-texture = ExtResource("8_cbp6q")
-
-[node name="BlueBottle4" type="Sprite2D" parent="." unique_id=470429143]
-position = Vector2(97.00006, 564)
-scale = Vector2(3.32, 3.32)
-texture = ExtResource("8_cbp6q")
-
-[node name="BlueBottle5" type="Sprite2D" parent="." unique_id=2131290916]
-position = Vector2(116.00003, 487)
-scale = Vector2(3.32, 3.32)
-texture = ExtResource("8_cbp6q")
-
-[node name="BlueBottle6" type="Sprite2D" parent="." unique_id=126011455]
-position = Vector2(29.000004, 403)
-scale = Vector2(3.32, 3.32)
-texture = ExtResource("8_cbp6q")
-
-[node name="BlueBottle7" type="Sprite2D" parent="." unique_id=126499437]
-position = Vector2(60, 402)
-scale = Vector2(3.32, 3.32)
-texture = ExtResource("8_cbp6q")
-
-[node name="BlueVials" type="Sprite2D" parent="." unique_id=1695084046]
-position = Vector2(-358, 567)
-scale = Vector2(3.48, 3.48)
-texture = ExtResource("9_26xuy")
-
-[node name="BlueVials2" type="Sprite2D" parent="." unique_id=406803491]
-position = Vector2(-354, 406)
-scale = Vector2(3.48, 3.48)
-texture = ExtResource("9_26xuy")
-
-[node name="BlueVials3" type="Sprite2D" parent="." unique_id=1940362244]
-position = Vector2(125, 320)
-scale = Vector2(3.48, 3.48)
-texture = ExtResource("9_26xuy")
-
-[node name="BlueTriBottle" type="Sprite2D" parent="." unique_id=1688607739]
-position = Vector2(-254, 405)
-scale = Vector2(2.8954587, 2.8954587)
-texture = ExtResource("10_bc84e")
-
-[node name="BlueTriBottle2" type="Sprite2D" parent="." unique_id=1211720237]
-position = Vector2(-275, 488)
-scale = Vector2(2.8954587, 2.8954587)
-texture = ExtResource("10_bc84e")
-
-[node name="BlueTriBottle3" type="Sprite2D" parent="." unique_id=177042577]
-position = Vector2(35, 565)
-scale = Vector2(2.8954587, 2.8954587)
-texture = ExtResource("10_bc84e")
-
-[node name="GreenBottle" type="Sprite2D" parent="." unique_id=1425907721]
-position = Vector2(90, 321)
-scale = Vector2(3.584916, 3.584916)
-texture = ExtResource("11_wukud")
-
-[node name="GreenBottle2" type="Sprite2D" parent="." unique_id=1047239690]
-position = Vector2(159, 321)
-scale = Vector2(3.584916, 3.584916)
-texture = ExtResource("11_wukud")
-
-[node name="GreenBottle3" type="Sprite2D" parent="." unique_id=877811481]
-position = Vector2(54, 485)
-scale = Vector2(3.584916, 3.584916)
-texture = ExtResource("11_wukud")
-
-[node name="GreenBottle4" type="Sprite2D" parent="." unique_id=1382418847]
-position = Vector2(-353.99997, 489)
-scale = Vector2(3.584916, 3.584916)
-texture = ExtResource("11_wukud")
-
-[node name="GreenTriBottle" type="Sprite2D" parent="." unique_id=2075034206]
-position = Vector2(178.99994, 486)
-scale = Vector2(3.683063, 3.683063)
-texture = ExtResource("12_il2jm")
-
-[node name="GreenTriBottle2" type="Sprite2D" parent="." unique_id=1275926636]
-position = Vector2(-273.00006, 321)
-scale = Vector2(3.683063, 3.683063)
-texture = ExtResource("12_il2jm")
-
-[node name="GreenTriBottle5" type="Sprite2D" parent="." unique_id=428758839]
-position = Vector2(-277.00006, 568)
-scale = Vector2(3.683063, 3.683063)
-texture = ExtResource("12_il2jm")
-
-[node name="GreenTriBottle6" type="Sprite2D" parent="." unique_id=1623803008]
-position = Vector2(-161.00009, 402)
-scale = Vector2(3.683063, 3.683063)
-texture = ExtResource("12_il2jm")
-
-[node name="GreenTriBottle4" type="Sprite2D" parent="." unique_id=367853703]
-position = Vector2(-158.00006, 321)
-scale = Vector2(3.683063, 3.683063)
-texture = ExtResource("12_il2jm")
-
-[node name="GreenVial" type="Sprite2D" parent="." unique_id=952146347]
-position = Vector2(-4, 403)
-scale = Vector2(3.4181938, 3.4181938)
-texture = ExtResource("13_wjb0r")
-
-[node name="GreenVial4" type="Sprite2D" parent="." unique_id=597760983]
-position = Vector2(189.00003, 558)
-scale = Vector2(3.4181938, 3.4181938)
-texture = ExtResource("13_wjb0r")
-
-[node name="GreenVial5" type="Sprite2D" parent="." unique_id=214821597]
-position = Vector2(-183.99997, 487.00003)
-scale = Vector2(3.4181938, 3.4181938)
-texture = ExtResource("13_wjb0r")
-
-[node name="GreenVial6" type="Sprite2D" parent="." unique_id=817362650]
-position = Vector2(153, 565)
-scale = Vector2(3.4181938, 3.4181938)
-texture = ExtResource("13_wjb0r")
-
-[node name="GreenVial7" type="Sprite2D" parent="." unique_id=659421218]
-position = Vector2(-215, 565)
-scale = Vector2(3.4181938, 3.4181938)
-texture = ExtResource("13_wjb0r")
-
-[node name="GreenVial8" type="Sprite2D" parent="." unique_id=294298849]
-position = Vector2(-54, 561)
-scale = Vector2(3.4181938, 3.4181938)
-texture = ExtResource("13_wjb0r")
-
-[node name="GreenVial2" type="Sprite2D" parent="." unique_id=622072615]
-position = Vector2(-14, 486.00003)
-scale = Vector2(3.4181938, 3.4181938)
-texture = ExtResource("13_wjb0r")
-
-[node name="GreenVial3" type="Sprite2D" parent="." unique_id=477891596]
-position = Vector2(-10, 321)
-scale = Vector2(3.4181938, 3.4181938)
-texture = ExtResource("13_wjb0r")
-
-[node name="HealthBottle" type="Sprite2D" parent="." unique_id=106692066]
-position = Vector2(150, 400)
-scale = Vector2(3.6191783, 3.6191783)
-texture = ExtResource("14_mc2jv")
-
-[node name="HealthBottle2" type="Sprite2D" parent="." unique_id=1179765845]
-position = Vector2(-47.999985, 486)
-scale = Vector2(3.2419927, 3.2419927)
-texture = ExtResource("14_mc2jv")
-
-[node name="HealthBottle3" type="Sprite2D" parent="." unique_id=110408453]
-position = Vector2(-183.99994, 563)
-scale = Vector2(3.2419927, 3.2419927)
-texture = ExtResource("14_mc2jv")
-
-[node name="HealthBottle5" type="Sprite2D" parent="." unique_id=69243696]
-position = Vector2(-234.99997, 323)
-scale = Vector2(3.2419927, 3.2419927)
-texture = ExtResource("14_mc2jv")
-
-[node name="HealthBottle6" type="Sprite2D" parent="." unique_id=1447203788]
-position = Vector2(-38.999878, 404)
-scale = Vector2(3.2419927, 3.2419927)
-texture = ExtResource("14_mc2jv")
-
-[node name="HealthBottle7" type="Sprite2D" parent="." unique_id=1428280227]
-position = Vector2(-312.99997, 322)
-scale = Vector2(3.2419927, 3.2419927)
-texture = ExtResource("14_mc2jv")
-
-[node name="YellowBottle" type="Sprite2D" parent="." unique_id=1019615317]
-position = Vector2(24.000015, 484)
-scale = Vector2(3.4448822, 3.4448822)
-texture = ExtResource("15_bo7i5")
-
-[node name="YellowBottle2" type="Sprite2D" parent="." unique_id=1210123442]
-position = Vector2(-113.999985, 320)
-scale = Vector2(3.4448822, 3.4448822)
-texture = ExtResource("15_bo7i5")
-
-[node name="YellowBottle3" type="Sprite2D" parent="." unique_id=1921243553]
-position = Vector2(-144.99994, 560)
-scale = Vector2(3.4448822, 3.4448822)
-texture = ExtResource("15_bo7i5")
-
-[node name="YellowBottle4" type="Sprite2D" parent="." unique_id=971601583]
-position = Vector2(65.00006, 559)
-scale = Vector2(3.4448822, 3.4448822)
-texture = ExtResource("15_bo7i5")
-
-[node name="YellowBottle5" type="Sprite2D" parent="." unique_id=451375824]
-position = Vector2(-240.00002, 563)
-scale = Vector2(3.4448822, 3.4448822)
-texture = ExtResource("15_bo7i5")
-
-[node name="YellowBottle6" type="Sprite2D" parent="." unique_id=1686878421]
-position = Vector2(-222, 401.00003)
-scale = Vector2(3.4448822, 3.4448822)
-texture = ExtResource("15_bo7i5")
-
-[node name="YellowBottle7" type="Sprite2D" parent="." unique_id=590362744]
-position = Vector2(186, 398.00003)
-scale = Vector2(3.4448822, 3.4448822)
-texture = ExtResource("15_bo7i5")
-
-[node name="YellowVial2" type="Sprite2D" parent="." unique_id=190667978]
-position = Vector2(127, 561)
-scale = Vector2(3.3200011, 3.3200011)
-texture = ExtResource("16_4h6ng")
-
-[node name="YellowVial3" type="Sprite2D" parent="." unique_id=1523782736]
-position = Vector2(-349, 318)
-scale = Vector2(3.3200011, 3.3200011)
-texture = ExtResource("16_4h6ng")
-
-[node name="YellowVial4" type="Sprite2D" parent="." unique_id=1219948275]
-position = Vector2(-118, 399)
-scale = Vector2(3.3200011, 3.3200011)
-texture = ExtResource("16_4h6ng")
-
-[node name="YellowVial5" type="Sprite2D" parent="." unique_id=1095265584]
-position = Vector2(-245, 486)
-scale = Vector2(3.3200011, 3.3200011)
-texture = ExtResource("16_4h6ng")
-
-[node name="HealthTriBottle" type="Sprite2D" parent="." unique_id=1320204717]
-position = Vector2(-316.98093, 488)
-scale = Vector2(3.372614, 3.3702307)
-texture = ExtResource("17_o3ebs")
-
-[node name="YellowTriBottle" type="Sprite2D" parent="." unique_id=2113103143]
-position = Vector2(123, 399)
-scale = Vector2(3.4361122, 3.4361122)
-texture = ExtResource("18_k83mh")
-
-[node name="YellowTriBottle6" type="Sprite2D" parent="." unique_id=830767907]
-position = Vector2(148, 484)
-scale = Vector2(3.4361122, 3.4361122)
-texture = ExtResource("18_k83mh")
-
-[node name="YellowTriBottle7" type="Sprite2D" parent="." unique_id=189961681]
-position = Vector2(-288, 402.00003)
-scale = Vector2(3.4361122, 3.4361122)
-texture = ExtResource("18_k83mh")
-
-[node name="YellowTriBottle8" type="Sprite2D" parent="." unique_id=1168052921]
-position = Vector2(-21, 556)
-scale = Vector2(3.4361122, 3.4361122)
-texture = ExtResource("18_k83mh")
-
-[node name="YellowTriBottle2" type="Sprite2D" parent="." unique_id=542571194]
-position = Vector2(-148, 484)
-scale = Vector2(3.4361122, 3.4361122)
-texture = ExtResource("18_k83mh")
-
-[node name="YellowTriBottle3" type="Sprite2D" parent="." unique_id=6302287]
-position = Vector2(-40, 316)
-scale = Vector2(3.4361122, 3.4361122)
-texture = ExtResource("18_k83mh")
-
-[node name="YellowTriBottle4" type="Sprite2D" parent="." unique_id=1008310440]
-position = Vector2(58, 318.00003)
-scale = Vector2(3.4361122, 3.4361122)
-texture = ExtResource("18_k83mh")
-
-[node name="YellowTriBottle5" type="Sprite2D" parent="." unique_id=860743320]
-position = Vector2(-330, 565)
-scale = Vector2(3.4361122, 3.4361122)
-texture = ExtResource("18_k83mh")
-
-[node name="HealthVial" type="Sprite2D" parent="." unique_id=2136565916]
-position = Vector2(190.00009, 320.00003)
-scale = Vector2(3.383789, 3.383789)
-texture = ExtResource("19_qktwf")
-
-[node name="HealthVial2" type="Sprite2D" parent="." unique_id=823783019]
-position = Vector2(-118.99994, 563)
-scale = Vector2(3.383789, 3.383789)
-texture = ExtResource("19_qktwf")
-
-[node name="HealthVial8" type="Sprite2D" parent="." unique_id=170961538]
-position = Vector2(-195.99998, 404)
-scale = Vector2(3.383789, 3.383789)
-texture = ExtResource("19_qktwf")
-
-[node name="HealthVial4" type="Sprite2D" parent="." unique_id=801726067]
-position = Vector2(3.0000305, 562)
-scale = Vector2(3.383789, 3.383789)
-texture = ExtResource("19_qktwf")
-
-[node name="HealthVial5" type="Sprite2D" parent="." unique_id=1194622062]
-position = Vector2(83.000046, 487)
-scale = Vector2(3.383789, 3.383789)
-texture = ExtResource("19_qktwf")
-
-[node name="HealthVial6" type="Sprite2D" parent="." unique_id=788601135]
-position = Vector2(89.000015, 406)
-scale = Vector2(3.383789, 3.383789)
-texture = ExtResource("19_qktwf")
-
-[node name="HealthVial7" type="Sprite2D" parent="." unique_id=1260958386]
-position = Vector2(-305.99994, 569)
-scale = Vector2(3.383789, 3.383789)
-texture = ExtResource("19_qktwf")
-
-[node name="BlueTriBottle4" type="Sprite2D" parent="." unique_id=1782485474]
-position = Vector2(-210.00006, 488.00003)
-scale = Vector2(3.424197, 3.424197)
-texture = ExtResource("10_bc84e")
-
-[node name="BlueTriBottle5" type="Sprite2D" parent="." unique_id=1768424277]
-position = Vector2(-191.00003, 322)
-scale = Vector2(3.424197, 3.424197)
-texture = ExtResource("10_bc84e")
-
-[node name="BlueTriBottle6" type="Sprite2D" parent="." unique_id=1415018392]
-position = Vector2(22.999998, 321)
-scale = Vector2(3.424197, 3.424197)
-texture = ExtResource("10_bc84e")
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=233533534]
 stream = ExtResource("9_ioo17")
 volume_db = -10.0
@@ -486,3 +161,1038 @@ position = Vector2(-43, 598)
 shape = SubResource("RectangleShape2D_yf5fn")
 one_way_collision = true
 one_way_collision_margin = 8.0
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=1140871075]
+position = Vector2(5, -93)
+scale = Vector2(0.64790773, 1.0021077)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=636752908]
+position = Vector2(-220.71045, 595.7443)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_yf5fn")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Platform2" unique_id=1762763417]
+position = Vector2(-44.75946, 596.74225)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_yf5fn")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform2" unique_id=1145481261]
+position = Vector2(-219.16702, 511.92102)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_yf5fn")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Platform2" unique_id=1173997649]
+position = Vector2(-43.21603, 512.91895)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_yf5fn")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Platform2" unique_id=1203146498]
+position = Vector2(-220.71043, 436.08087)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_yf5fn")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Platform2" unique_id=1910169528]
+position = Vector2(-44.759438, 437.0788)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_yf5fn")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="Blue_Potion" type="Sprite2D" parent="." unique_id=1408837689]
+position = Vector2(-376, 777)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("8_cbp6q")
+
+[node name="Button" type="Button" parent="Blue_Potion" unique_id=918348359]
+visibility_layer = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+icon_alignment = 1
+
+[node name="Blue_Potion2" type="Sprite2D" parent="." unique_id=805008903]
+position = Vector2(-113, 476)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("8_cbp6q")
+
+[node name="Button" type="Button" parent="Blue_Potion2" unique_id=438002575]
+visibility_layer = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+icon_alignment = 1
+
+[node name="Blue_Potion4" type="Sprite2D" parent="." unique_id=1045136144]
+position = Vector2(-350, 559)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("8_cbp6q")
+
+[node name="Button" type="Button" parent="Blue_Potion4" unique_id=1419195889]
+visibility_layer = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+icon_alignment = 1
+
+[node name="Blue_Potion3" type="Sprite2D" parent="." unique_id=1641940809]
+position = Vector2(188.00002, 475)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("8_cbp6q")
+
+[node name="Button" type="Button" parent="Blue_Potion3" unique_id=2074363052]
+visibility_layer = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+icon_alignment = 1
+
+[node name="Red_Potion" type="Sprite2D" parent="." unique_id=1494989904]
+position = Vector2(-347, 777)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("14_mc2jv")
+
+[node name="Button" type="Button" parent="Red_Potion" unique_id=2013917397]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Red_Potion6" type="Sprite2D" parent="." unique_id=1384777032]
+position = Vector2(91, 560)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("14_mc2jv")
+
+[node name="Button" type="Button" parent="Red_Potion6" unique_id=1310463112]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Red_Potion7" type="Sprite2D" parent="." unique_id=1519654828]
+position = Vector2(-174, 392)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("14_mc2jv")
+
+[node name="Button" type="Button" parent="Red_Potion7" unique_id=1253093490]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Red_Potion8" type="Sprite2D" parent="." unique_id=658687959]
+position = Vector2(-283, 391)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("14_mc2jv")
+
+[node name="Button" type="Button" parent="Red_Potion8" unique_id=186617568]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Red_Potion9" type="Sprite2D" parent="." unique_id=1017364727]
+position = Vector2(189, 392)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("14_mc2jv")
+
+[node name="Button" type="Button" parent="Red_Potion9" unique_id=1924240583]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Red_Potion2" type="Sprite2D" parent="." unique_id=896499331]
+position = Vector2(-48, 558)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("14_mc2jv")
+
+[node name="Button" type="Button" parent="Red_Potion2" unique_id=918125884]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Red_Potion3" type="Sprite2D" parent="." unique_id=565712422]
+position = Vector2(-156, 560)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("14_mc2jv")
+
+[node name="Button" type="Button" parent="Red_Potion3" unique_id=497275084]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Red_Potion4" type="Sprite2D" parent="." unique_id=1745045370]
+position = Vector2(-8, 391)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("14_mc2jv")
+
+[node name="Button" type="Button" parent="Red_Potion4" unique_id=495555113]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Red_Potion5" type="Sprite2D" parent="." unique_id=1980703725]
+position = Vector2(-354, 314)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("14_mc2jv")
+
+[node name="Button" type="Button" parent="Red_Potion5" unique_id=2014079817]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Green_Potion" type="Sprite2D" parent="." unique_id=1841618759]
+position = Vector2(-317, 777)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("11_wukud")
+
+[node name="Button" type="Button" parent="Green_Potion" unique_id=2097903206]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Green_Potion5" type="Sprite2D" parent="." unique_id=1085783070]
+position = Vector2(-194, 559)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("11_wukud")
+
+[node name="Button" type="Button" parent="Green_Potion5" unique_id=1513531092]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Green_Potion6" type="Sprite2D" parent="." unique_id=921593063]
+position = Vector2(-353, 391)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("11_wukud")
+
+[node name="Button" type="Button" parent="Green_Potion6" unique_id=1331752657]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Green_Potion7" type="Sprite2D" parent="." unique_id=1956205858]
+position = Vector2(-216, 314)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("11_wukud")
+
+[node name="Button" type="Button" parent="Green_Potion7" unique_id=599843717]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Green_Potion8" type="Sprite2D" parent="." unique_id=847015820]
+position = Vector2(72, 316)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("11_wukud")
+
+[node name="Button" type="Button" parent="Green_Potion8" unique_id=880787654]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Green_Potion9" type="Sprite2D" parent="." unique_id=382865221]
+position = Vector2(89, 391)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("11_wukud")
+
+[node name="Button" type="Button" parent="Green_Potion9" unique_id=1209930276]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Green_Potion10" type="Sprite2D" parent="." unique_id=1141006471]
+position = Vector2(-6, 476)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("11_wukud")
+
+[node name="Button" type="Button" parent="Green_Potion10" unique_id=1294170472]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Green_Potion2" type="Sprite2D" parent="." unique_id=1419642824]
+position = Vector2(-323, 560)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("11_wukud")
+
+[node name="Button" type="Button" parent="Green_Potion2" unique_id=835324911]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Green_Potion3" type="Sprite2D" parent="." unique_id=412675027]
+position = Vector2(152.00002, 476)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("11_wukud")
+
+[node name="Button" type="Button" parent="Green_Potion3" unique_id=1692971696]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Green_Potion4" type="Sprite2D" parent="." unique_id=1277524634]
+position = Vector2(-51, 315)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("11_wukud")
+
+[node name="Button" type="Button" parent="Green_Potion4" unique_id=1919679927]
+visibility_layer = 0
+offset_left = -2.999621
+offset_top = -4.9084754
+offset_right = 5.000379
+offset_bottom = 5.0915246
+icon_alignment = 1
+
+[node name="Yellow_Potion" type="Sprite2D" parent="." unique_id=777955616]
+position = Vector2(-282, 773)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("15_bo7i5")
+
+[node name="Button" type="Button" parent="Yellow_Potion" unique_id=1134819224]
+visibility_layer = 0
+offset_left = -3.8177
+offset_top = -4.0903964
+offset_right = 4.1823
+offset_bottom = 5.9096036
+icon_alignment = 1
+
+[node name="Yellow_Potion4" type="Sprite2D" parent="." unique_id=727798296]
+position = Vector2(127, 389.00003)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("15_bo7i5")
+
+[node name="Button" type="Button" parent="Yellow_Potion4" unique_id=70678030]
+visibility_layer = 0
+offset_left = -3.8177
+offset_top = -4.0903964
+offset_right = 4.1823
+offset_bottom = 5.9096036
+icon_alignment = 1
+
+[node name="Yellow_Potion5" type="Sprite2D" parent="." unique_id=1977619428]
+position = Vector2(-36, 472)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("15_bo7i5")
+
+[node name="Button" type="Button" parent="Yellow_Potion5" unique_id=392355952]
+visibility_layer = 0
+offset_left = -3.8177
+offset_top = -4.0903964
+offset_right = 4.1823
+offset_bottom = 5.9096036
+icon_alignment = 1
+
+[node name="Yellow_Potion6" type="Sprite2D" parent="." unique_id=255694420]
+position = Vector2(-254, 471.00003)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("15_bo7i5")
+
+[node name="Button" type="Button" parent="Yellow_Potion6" unique_id=1789200014]
+visibility_layer = 0
+offset_left = -3.8177
+offset_top = -4.0903964
+offset_right = 4.1823
+offset_bottom = 5.9096036
+icon_alignment = 1
+
+[node name="Yellow_Potion7" type="Sprite2D" parent="." unique_id=1485856828]
+position = Vector2(-246, 310)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("15_bo7i5")
+
+[node name="Button" type="Button" parent="Yellow_Potion7" unique_id=974490130]
+visibility_layer = 0
+offset_left = -3.8177
+offset_top = -4.0903964
+offset_right = 4.1823
+offset_bottom = 5.9096036
+icon_alignment = 1
+
+[node name="Yellow_Potion8" type="Sprite2D" parent="." unique_id=1859012154]
+position = Vector2(25, 555)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("15_bo7i5")
+
+[node name="Button" type="Button" parent="Yellow_Potion8" unique_id=411150942]
+visibility_layer = 0
+offset_left = -3.8177
+offset_top = -4.0903964
+offset_right = 4.1823
+offset_bottom = 5.9096036
+icon_alignment = 1
+
+[node name="Yellow_Potion9" type="Sprite2D" parent="." unique_id=1237246487]
+position = Vector2(164, 560)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("15_bo7i5")
+
+[node name="Button" type="Button" parent="Yellow_Potion9" unique_id=418220341]
+visibility_layer = 0
+offset_left = -3.8177
+offset_top = -4.0903964
+offset_right = 4.1823
+offset_bottom = 5.9096036
+icon_alignment = 1
+
+[node name="Yellow_Potion2" type="Sprite2D" parent="." unique_id=1408205712]
+position = Vector2(-112, 388)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("15_bo7i5")
+
+[node name="Button" type="Button" parent="Yellow_Potion2" unique_id=362175740]
+visibility_layer = 0
+offset_left = -3.8177
+offset_top = -4.0903964
+offset_right = 4.1823
+offset_bottom = 5.9096036
+icon_alignment = 1
+
+[node name="Yellow_Potion3" type="Sprite2D" parent="." unique_id=1860023747]
+position = Vector2(-152, 311.00003)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("15_bo7i5")
+
+[node name="Button" type="Button" parent="Yellow_Potion3" unique_id=1787818631]
+visibility_layer = 0
+offset_left = -3.8177
+offset_top = -4.0903964
+offset_right = 4.1823
+offset_bottom = 5.9096036
+icon_alignment = 1
+
+[node name="Blue_PotionTri" type="Sprite2D" parent="." unique_id=1669547459]
+position = Vector2(-375.66296, 818.33704)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("10_bc84e")
+
+[node name="Button" type="Button" parent="Blue_PotionTri" unique_id=1023171883]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -5.000383
+offset_right = 4.090393
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Blue_PotionTri5" type="Sprite2D" parent="." unique_id=439777850]
+position = Vector2(-221, 473)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("10_bc84e")
+
+[node name="Button" type="Button" parent="Blue_PotionTri5" unique_id=1168250540]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -5.000383
+offset_right = 4.090393
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Blue_PotionTri6" type="Sprite2D" parent="." unique_id=1218938912]
+position = Vector2(160, 390)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("10_bc84e")
+
+[node name="Button" type="Button" parent="Blue_PotionTri6" unique_id=748668358]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -5.000383
+offset_right = 4.090393
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Blue_PotionTri7" type="Sprite2D" parent="." unique_id=2143604000]
+position = Vector2(-284, 313)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("10_bc84e")
+
+[node name="Button" type="Button" parent="Blue_PotionTri7" unique_id=1835025153]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -5.000383
+offset_right = 4.090393
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Blue_PotionTri8" type="Sprite2D" parent="." unique_id=1020134755]
+position = Vector2(-313.99997, 389)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("10_bc84e")
+
+[node name="Button" type="Button" parent="Blue_PotionTri8" unique_id=1847437089]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -5.000383
+offset_right = 4.090393
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Blue_PotionTri9" type="Sprite2D" parent="." unique_id=1604212805]
+position = Vector2(60, 556)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("10_bc84e")
+
+[node name="Button" type="Button" parent="Blue_PotionTri9" unique_id=1312432815]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -5.000383
+offset_right = 4.090393
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Blue_PotionTri2" type="Sprite2D" parent="." unique_id=89049186]
+position = Vector2(-117, 556)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("10_bc84e")
+
+[node name="Button" type="Button" parent="Blue_PotionTri2" unique_id=728905086]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -5.000383
+offset_right = 4.090393
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Blue_PotionTri3" type="Sprite2D" parent="." unique_id=1992451874]
+position = Vector2(-44, 387)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("10_bc84e")
+
+[node name="Button" type="Button" parent="Blue_PotionTri3" unique_id=538366771]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -5.000383
+offset_right = 4.090393
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Blue_PotionTri4" type="Sprite2D" parent="." unique_id=1181803415]
+position = Vector2(-116, 311)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("10_bc84e")
+
+[node name="Button" type="Button" parent="Blue_PotionTri4" unique_id=725381162]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -5.000383
+offset_right = 4.090393
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Red_PotionTri" type="Sprite2D" parent="." unique_id=482126594]
+position = Vector2(-341.2168, 818.33704)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("17_o3ebs")
+
+[node name="Button" type="Button" parent="Red_PotionTri" unique_id=1148850899]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Red_PotionTri2" type="Sprite2D" parent="." unique_id=778039473]
+position = Vector2(-152, 472.99994)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("17_o3ebs")
+
+[node name="Button" type="Button" parent="Red_PotionTri2" unique_id=1984397901]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Red_PotionTri3" type="Sprite2D" parent="." unique_id=969880367]
+position = Vector2(117, 473.99997)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("17_o3ebs")
+
+[node name="Button" type="Button" parent="Red_PotionTri3" unique_id=368012666]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Red_PotionTri4" type="Sprite2D" parent="." unique_id=544608923]
+position = Vector2(-18, 311)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("17_o3ebs")
+
+[node name="Button" type="Button" parent="Red_PotionTri4" unique_id=832255461]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Green_PotionTri" type="Sprite2D" parent="." unique_id=516015686]
+position = Vector2(-302.2168, 818.33704)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("12_il2jm")
+
+[node name="Button" type="Button" parent="Green_PotionTri" unique_id=1554445322]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Green_PotionTri5" type="Sprite2D" parent="." unique_id=2104567483]
+position = Vector2(-248.99998, 389)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("12_il2jm")
+
+[node name="Button" type="Button" parent="Green_PotionTri5" unique_id=894141750]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Green_PotionTri2" type="Sprite2D" parent="." unique_id=677588748]
+position = Vector2(-189.99998, 472)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("12_il2jm")
+
+[node name="Button" type="Button" parent="Green_PotionTri2" unique_id=1162315823]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Green_PotionTri3" type="Sprite2D" parent="." unique_id=1294144355]
+position = Vector2(-13.999985, 556)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("12_il2jm")
+
+[node name="Button" type="Button" parent="Green_PotionTri3" unique_id=418225609]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Green_PotionTri4" type="Sprite2D" parent="." unique_id=1107002702]
+position = Vector2(182, 310.99997)
+scale = Vector2(4.3478994, 4.3478994)
+texture = ExtResource("12_il2jm")
+
+[node name="Button" type="Button" parent="Green_PotionTri4" unique_id=1973473715]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Yellow_PotionTri" type="Sprite2D" parent="." unique_id=936068095]
+position = Vector2(-259, 814.00006)
+scale = Vector2(4.3478947, 4.3478947)
+texture = ExtResource("18_k83mh")
+
+[node name="Button" type="Button" parent="Yellow_PotionTri" unique_id=1643993936]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -4.182304
+offset_right = 4.090393
+offset_bottom = 5.817696
+icon_alignment = 1
+
+[node name="Yellow_PotionTri2" type="Sprite2D" parent="." unique_id=1109030039]
+position = Vector2(31.000002, 383.00003)
+scale = Vector2(4.3478947, 4.3478947)
+texture = ExtResource("18_k83mh")
+
+[node name="Button" type="Button" parent="Yellow_PotionTri2" unique_id=30803884]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -4.182304
+offset_right = 4.090393
+offset_bottom = 5.817696
+icon_alignment = 1
+
+[node name="Yellow_PotionTri3" type="Sprite2D" parent="." unique_id=1725701664]
+position = Vector2(85, 470.00003)
+scale = Vector2(4.3478947, 4.3478947)
+texture = ExtResource("18_k83mh")
+
+[node name="Button" type="Button" parent="Yellow_PotionTri3" unique_id=1545875196]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -4.182304
+offset_right = 4.090393
+offset_bottom = 5.817696
+icon_alignment = 1
+
+[node name="Yellow_PotionTri4" type="Sprite2D" parent="." unique_id=1183825779]
+position = Vector2(-283, 552)
+scale = Vector2(4.3478947, 4.3478947)
+texture = ExtResource("18_k83mh")
+
+[node name="Button" type="Button" parent="Yellow_PotionTri4" unique_id=1276141667]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -4.182304
+offset_right = 4.090393
+offset_bottom = 5.817696
+icon_alignment = 1
+
+[node name="Yellow_PotionTri5" type="Sprite2D" parent="." unique_id=161365664]
+position = Vector2(-345, 467)
+scale = Vector2(4.3478947, 4.3478947)
+texture = ExtResource("18_k83mh")
+
+[node name="Button" type="Button" parent="Yellow_PotionTri5" unique_id=98385157]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -4.182304
+offset_right = 4.090393
+offset_bottom = 5.817696
+icon_alignment = 1
+
+[node name="Yellow_PotionTri6" type="Sprite2D" parent="." unique_id=644698767]
+position = Vector2(145.99997, 307.00003)
+scale = Vector2(4.3478947, 4.3478947)
+texture = ExtResource("18_k83mh")
+
+[node name="Button" type="Button" parent="Yellow_PotionTri6" unique_id=968139561]
+visibility_layer = 0
+offset_left = -3.9096072
+offset_top = -4.182304
+offset_right = 4.090393
+offset_bottom = 5.817696
+icon_alignment = 1
+
+[node name="Blue_PotionVial" type="Sprite2D" parent="." unique_id=899043856]
+position = Vector2(-376, 868.00006)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("9_26xuy")
+
+[node name="Button" type="Button" parent="Blue_PotionVial" unique_id=1026446820]
+visibility_layer = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+icon_alignment = 1
+
+[node name="Blue_PotionVial2" type="Sprite2D" parent="." unique_id=1205687921]
+position = Vector2(-249, 561)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("9_26xuy")
+
+[node name="Button" type="Button" parent="Blue_PotionVial2" unique_id=766224788]
+visibility_layer = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+icon_alignment = 1
+
+[node name="Blue_PotionVial3" type="Sprite2D" parent="." unique_id=1653822917]
+position = Vector2(52, 477)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("9_26xuy")
+
+[node name="Button" type="Button" parent="Blue_PotionVial3" unique_id=280579487]
+visibility_layer = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+icon_alignment = 1
+
+[node name="Blue_PotionVial4" type="Sprite2D" parent="." unique_id=776758067]
+position = Vector2(20, 315.00003)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("9_26xuy")
+
+[node name="Button" type="Button" parent="Blue_PotionVial4" unique_id=1300771539]
+visibility_layer = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+icon_alignment = 1
+
+[node name="Blue_PotionVial5" type="Sprite2D" parent="." unique_id=1323661376]
+position = Vector2(-142, 394.00003)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("9_26xuy")
+
+[node name="Button" type="Button" parent="Blue_PotionVial5" unique_id=1619817302]
+visibility_layer = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+icon_alignment = 1
+
+[node name="Blue_PotionVial6" type="Sprite2D" parent="." unique_id=581921656]
+position = Vector2(-311, 476)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("9_26xuy")
+
+[node name="Button" type="Button" parent="Blue_PotionVial6" unique_id=818723572]
+visibility_layer = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+icon_alignment = 1
+
+[node name="Blue_PotionVial7" type="Sprite2D" parent="." unique_id=621559647]
+position = Vector2(-183, 316.00003)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("9_26xuy")
+
+[node name="Button" type="Button" parent="Blue_PotionVial7" unique_id=1608387588]
+visibility_layer = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+icon_alignment = 1
+
+[node name="Red_PotionVial" type="Sprite2D" parent="." unique_id=1117175213]
+position = Vector2(-346.66296, 867.33704)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("19_qktwf")
+
+[node name="Button" type="Button" parent="Red_PotionVial" unique_id=2038436084]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Red_PotionVial2" type="Sprite2D" parent="." unique_id=907967513]
+position = Vector2(-226, 560)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("19_qktwf")
+
+[node name="Button" type="Button" parent="Red_PotionVial2" unique_id=1037115618]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Red_PotionVial3" type="Sprite2D" parent="." unique_id=377259651]
+position = Vector2(22, 476)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("19_qktwf")
+
+[node name="Button" type="Button" parent="Red_PotionVial3" unique_id=1527432365]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Red_PotionVial4" type="Sprite2D" parent="." unique_id=2136829017]
+position = Vector2(58, 391.00003)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("19_qktwf")
+
+[node name="Button" type="Button" parent="Red_PotionVial4" unique_id=865052474]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Red_PotionVial5" type="Sprite2D" parent="." unique_id=1170047591]
+position = Vector2(110, 317)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("19_qktwf")
+
+[node name="Button" type="Button" parent="Red_PotionVial5" unique_id=571372244]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Red_PotionVial6" type="Sprite2D" parent="." unique_id=1347588699]
+position = Vector2(-286, 475)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("19_qktwf")
+
+[node name="Button" type="Button" parent="Red_PotionVial6" unique_id=1391066521]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Red_PotionVial7" type="Sprite2D" parent="." unique_id=802823013]
+position = Vector2(-322, 316)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("19_qktwf")
+
+[node name="Button" type="Button" parent="Red_PotionVial7" unique_id=1827816184]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Green_PotionVial" type="Sprite2D" parent="." unique_id=268387204]
+position = Vector2(-316.66296, 867.33704)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("13_wjb0r")
+
+[node name="Button" type="Button" parent="Green_PotionVial" unique_id=1953304884]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Green_PotionVial2" type="Sprite2D" parent="." unique_id=555579802]
+position = Vector2(189, 561.00006)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("13_wjb0r")
+
+[node name="Button" type="Button" parent="Green_PotionVial2" unique_id=1830941712]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Green_PotionVial3" type="Sprite2D" parent="." unique_id=1363942963]
+position = Vector2(42, 316)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("13_wjb0r")
+
+[node name="Button" type="Button" parent="Green_PotionVial3" unique_id=1320087821]
+visibility_layer = 0
+offset_left = -3.0915284
+offset_top = -5.000383
+offset_right = 4.9084716
+offset_bottom = 4.999617
+icon_alignment = 1
+
+[node name="Yellow_PotionVial" type="Sprite2D" parent="." unique_id=958179205]
+position = Vector2(-282, 863)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("16_4h6ng")
+
+[node name="Button" type="Button" parent="Yellow_PotionVial" unique_id=1962484070]
+visibility_layer = 0
+offset_left = -3.8177
+offset_top = -3.8177035
+offset_right = 4.1823
+offset_bottom = 6.1822968
+icon_alignment = 1
+
+[node name="Yellow_PotionVial2" type="Sprite2D" parent="." unique_id=1772617623]
+position = Vector2(133, 559)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("16_4h6ng")
+
+[node name="Button" type="Button" parent="Yellow_PotionVial2" unique_id=1922818664]
+visibility_layer = 0
+offset_left = -3.8177
+offset_top = -3.8177035
+offset_right = 4.1823
+offset_bottom = 6.1822968
+icon_alignment = 1
+
+[node name="Yellow_PotionVial3" type="Sprite2D" parent="." unique_id=2021286708]
+position = Vector2(-200, 388)
+scale = Vector2(3.6671278, 3.6671278)
+texture = ExtResource("16_4h6ng")
+
+[node name="Button" type="Button" parent="Yellow_PotionVial3" unique_id=1300059156]
+visibility_layer = 0
+offset_left = -3.8177
+offset_top = -3.8177035
+offset_right = 4.1823
+offset_bottom = 6.1822968
+icon_alignment = 1

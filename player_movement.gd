@@ -221,6 +221,7 @@ func _physics_process(delta: float) -> void:
 			start_charging(false, true)
 		elif Input.is_action_just_released("throw") and is_charging and charging_with_action:
 			finish_charging_and_throw()
+		
 
 	# Process charging & update visual arc
 	if is_charging:
