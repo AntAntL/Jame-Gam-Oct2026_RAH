@@ -1,6 +1,7 @@
 extends Node2D
+pass
 var potionmulti = 0
-var potioncost = {
+var potionscost = {
 	"redB":  {"name": "Red Potion","price": 10},
 	"redL": {"name": "Blue Potion","price": 15},
 	"redV": {"name": "Blue Potion","price": 12},
@@ -15,6 +16,7 @@ var potioncost = {
 	"yellowV": {"name": "Blue Potion","price": 25},
 }
 func _ready() -> void:
+	pass
 	print ("upTest")
 	Globalevents.pricemult.connect(increasepotionmult)
 func increasepotionmult():

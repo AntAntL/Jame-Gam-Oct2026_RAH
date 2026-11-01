@@ -1,5 +1,5 @@
 extends Area2D
-@export var potiontype: String = "red"
+@export var potiontype: String = "blueB"
 
 
 func _ready() -> void:
@@ -13,5 +13,4 @@ func pickup (_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 			print ("fullinv")
 			
 func price() -> int:
-	var check = get_parent().potioncost
-	return check[potiontype]["price"] * Globalevents.potionmulti
+		return Globalevents.potionscost[potiontype]["price"] * Globalevents.potionmulti

@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://n3dau5csgric"]
 
-[ext_resource type="Script" uid="uid://cvjl25yl71uoa" path="res://PotionStuff.gd" id="1_onnah"]
 [ext_resource type="Script" uid="uid://btmyos8v3hlw1" path="res://PotionPickup.gd" id="2_iid4k"]
 [ext_resource type="Texture2D" uid="uid://dt6g3x6043lre" path="res://Objects/Sprites/World/Interactable-Main/HealthBottle.png" id="2_pwuje"]
 [ext_resource type="Texture2D" uid="uid://cjibsvkbh1vi1" path="res://Objects/Sprites/World/Background-Deco/BlueBottle.png" id="3_pwuje"]
@@ -9,24 +8,25 @@
 size = Vector2(9, 11)
 
 [node name="Node2D" type="Node2D" unique_id=770572554]
-script = ExtResource("1_onnah")
 
-[node name="Red_Bottle" type="Area2D" parent="." unique_id=190421314]
+[node name="redB" type="Area2D" parent="." unique_id=190421314]
 script = ExtResource("2_iid4k")
+potiontype = "redB"
 
-[node name="Sprite2D" type="Sprite2D" parent="Red_Bottle" unique_id=60020800]
+[node name="Sprite2D" type="Sprite2D" parent="redB" unique_id=60020800]
 texture = ExtResource("2_pwuje")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Red_Bottle" unique_id=1925608710]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="redB" unique_id=1925608710]
 position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_lidg2")
 
-[node name="Red_Bottle2" type="Area2D" parent="." unique_id=103058806]
+[node name="blueB" type="Area2D" parent="." unique_id=103058806]
+script = ExtResource("2_iid4k")
 
-[node name="Sprite2D" type="Sprite2D" parent="Red_Bottle2" unique_id=17505276]
+[node name="Sprite2D" type="Sprite2D" parent="blueB" unique_id=17505276]
 position = Vector2(11, 0)
 texture = ExtResource("3_pwuje")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Red_Bottle2" unique_id=606381515]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blueB" unique_id=606381515]
 position = Vector2(11, 0)
 shape = SubResource("RectangleShape2D_lidg2")
