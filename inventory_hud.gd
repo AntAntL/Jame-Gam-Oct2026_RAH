@@ -1,7 +1,18 @@
 extends CanvasLayer
 
+const potionslot = preload("res://Potionslots.tscn")
 
-# Called when the node enters the scene tree for the first time.
+var potionicon = {
+	"red": preload("res://Objects/Sprites/World/Interactable-Main/HealthBottle.png")
+	"red": preload("res://Objects/Sprites/World/Interactable-Main/HealthBottle.png")
+	"red": preload("res://Objects/Sprites/World/Interactable-Main/HealthBottle.png")
+	"red": preload("res://Objects/Sprites/World/Interactable-Main/HealthBottle.png")
+	"red": preload("res://Objects/Sprites/World/Interactable-Main/HealthBottle.png")
+	"red": preload("res://Objects/Sprites/World/Interactable-Main/HealthBottle.png")
+	"red": preload("res://Objects/Sprites/World/Interactable-Main/HealthBottle.png")
+	"red": preload("res://Objects/Sprites/World/Interactable-Main/HealthBottle.png")
+	"red": preload("res://Objects/Sprites/World/Interactable-Main/HealthBottle.png")
+}
 func _ready() -> void:
 	pass # Replace with function body.
 
