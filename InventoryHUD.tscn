@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://c0mcnnbiw3gp"]
 
+[ext_resource type="Script" uid="uid://doyqg2pqwd10s" path="res://inventory_hud.gd" id="1_slqwx"]
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=2065245117]
+script = ExtResource("1_slqwx")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=514544338]
 offset_right = 40.0

@@ -6,10 +6,12 @@ func _ready() -> void:
 	input_event.connect(pickup)
 
 func pickup (_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.pressed and event.button.index == MOUSE_BUTTON_LEFT:
-		if Inventory.add(self):
-			hide()
-			input_pickable = false
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if Inventory.add(potiontype):
+			queue_free()
+		else:
+			print ("fullinv")
+			
 func price() -> int:
 	var check = get_parent().potioncost
 	return check[potiontype]["price"] * Globalevents.potionmulti

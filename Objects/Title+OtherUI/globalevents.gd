@@ -1,5 +1,5 @@
 extends Node
-signal pricemulti
+signal pricemult
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
