@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://xh2urt8ilvgy"]
+
+[ext_resource type="Script" uid="uid://c53umquay7frq" path="res://Teleport.gd" id="1_yfe4j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qicl7"]
+size = Vector2(20, 334.08212)
+
+[node name="Node2D" type="Node2D" unique_id=1945161039]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=994971159]
+scale = Vector2(21.48588, 6.4458814)
+script = ExtResource("1_yfe4j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1543538106]
+position = Vector2(0, 0.077568896)
+scale = Vector2(0.051275805, -0.012966363)
+shape = SubResource("RectangleShape2D_qicl7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=669730807]

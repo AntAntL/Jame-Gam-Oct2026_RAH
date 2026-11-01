@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cweggrihu3g3" path="res://Objects/Sprites/World/Interactable-Main/BlueBottle.png" id="8_qrn07"]
 [ext_resource type="Texture2D" uid="uid://bq4tukp2ab872" path="res://Objects/Sprites/World/Interactable-Main/YellowTriBottle.png" id="9_lidg2"]
 [ext_resource type="Texture2D" uid="uid://dx3nnmr1yrcy5" path="res://Objects/Sprites/World/Interactable-Main/HealthVial.png" id="10_raimv"]
+[ext_resource type="Texture2D" uid="uid://dt7axhi3s8140" path="res://Objects/Sprites/World/Unorganized/WASDArrow.png" id="11_qrn07"]
 [ext_resource type="Texture2D" uid="uid://br886isvypmia" path="res://Objects/Sprites/World/Interactable-Main/GreenVial.png" id="11_qy7ti"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0y70q"]
@@ -116,5 +117,10 @@ z_index = -1
 position = Vector2(547, 230)
 scale = Vector2(5.2726884, 5.2726884)
 texture = ExtResource("11_qy7ti")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=38366498]
+position = Vector2(174.00002, 630)
+scale = Vector2(1.734375, 1.734375)
+texture = ExtResource("11_qrn07")
 
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

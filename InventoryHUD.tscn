@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c0mcnnbiw3gp"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=2065245117]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=514544338]
+offset_right = 40.0
+offset_bottom = 40.0

@@ -27,6 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://dhrryv2xomvvg" path="res://Objects/Sprites/Tutorial/throw_indicator (1).png" id="24_bo7i5"]
 [ext_resource type="Texture2D" uid="uid://d3hw8qrm3rg5k" path="res://Objects/Sprites/Tutorial/controls (1).png" id="24_wjb0r"]
 [ext_resource type="Texture2D" uid="uid://cl4a6oi7gwvt2" path="res://Objects/Sprites/Tutorial/control_throw (1) (1).png" id="25_bo7i5"]
+[ext_resource type="PackedScene" uid="uid://xh2urt8ilvgy" path="res://Teleport.tscn" id="28_o3ebs"]
+[ext_resource type="PackedScene" uid="uid://n3dau5csgric" path="res://Potions.tscn" id="29_k83mh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r300x"]
 distance = -111.0
@@ -1196,3 +1198,10 @@ offset_top = -3.8177035
 offset_right = 4.1823
 offset_bottom = 6.1822968
 icon_alignment = 1
+
+[node name="Node2D" parent="." unique_id=1945161039 instance=ExtResource("28_o3ebs")]
+position = Vector2(337, 679.00006)
+scale = Vector2(4.721784, 4.721784)
+
+[node name="Node2D2" parent="." unique_id=770572554 instance=ExtResource("29_k83mh")]
+position = Vector2(605, 794)

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://4q78gmr5t5vr"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=61529652]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=1476061143]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1394374151]
+layout_mode = 2
