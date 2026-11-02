@@ -2,12 +2,23 @@
 
 [ext_resource type="Script" uid="uid://btmyos8v3hlw1" path="res://PotionPickup.gd" id="2_iid4k"]
 [ext_resource type="Texture2D" uid="uid://dt6g3x6043lre" path="res://Objects/Sprites/World/Interactable-Main/HealthBottle.png" id="2_pwuje"]
+[ext_resource type="Texture2D" uid="uid://dx3nnmr1yrcy5" path="res://Objects/Sprites/World/Interactable-Main/HealthVial.png" id="3_lx5vl"]
 [ext_resource type="Texture2D" uid="uid://cjibsvkbh1vi1" path="res://Objects/Sprites/World/Background-Deco/BlueBottle.png" id="3_pwuje"]
+[ext_resource type="Texture2D" uid="uid://cc04os0nby0xc" path="res://Objects/Sprites/World/Interactable-Main/HealthTriBottle.png" id="4_asybt"]
+[ext_resource type="Texture2D" uid="uid://c6tqebv02vvvl" path="res://Objects/Sprites/World/Interactable-Main/BlueVials.png" id="6_8h0pc"]
+[ext_resource type="Texture2D" uid="uid://2l7mwbvmpq83" path="res://Objects/Sprites/World/Interactable-Main/BlueTriBottle.png" id="7_qooe6"]
+[ext_resource type="Texture2D" uid="uid://bn52hmpm0tcuh" path="res://Objects/Sprites/World/Interactable-Main/YellowBottle.png" id="8_p3nry"]
+[ext_resource type="Texture2D" uid="uid://dwmlwvl74f2kp" path="res://Objects/Sprites/World/Interactable-Main/YellowVial.png" id="9_3gav7"]
+[ext_resource type="Texture2D" uid="uid://bq4tukp2ab872" path="res://Objects/Sprites/World/Interactable-Main/YellowTriBottle.png" id="10_d1max"]
+[ext_resource type="Texture2D" uid="uid://w14mxi1il8uv" path="res://Objects/Sprites/World/Interactable-Main/GreenBottle.png" id="11_8mrmx"]
+[ext_resource type="Texture2D" uid="uid://br886isvypmia" path="res://Objects/Sprites/World/Interactable-Main/GreenVial.png" id="12_yj36x"]
+[ext_resource type="Texture2D" uid="uid://cuxyh8o864jyu" path="res://Objects/Sprites/World/Interactable-Main/GreenTriBottle.png" id="13_3m62q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lidg2"]
 size = Vector2(9, 11)
 
 [node name="Node2D" type="Node2D" unique_id=770572554]
+position = Vector2(-183, -221)
 
 [node name="redB" type="Area2D" parent="." unique_id=190421314]
 script = ExtResource("2_iid4k")
@@ -20,6 +31,30 @@ texture = ExtResource("2_pwuje")
 position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_lidg2")
 
+[node name="redV" type="Area2D" parent="." unique_id=1959816512]
+position = Vector2(0, 12)
+script = ExtResource("2_iid4k")
+potiontype = "redV"
+
+[node name="Sprite2D" type="Sprite2D" parent="redV" unique_id=1949125568]
+texture = ExtResource("3_lx5vl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="redV" unique_id=290088371]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_lidg2")
+
+[node name="redF" type="Area2D" parent="." unique_id=362173392]
+position = Vector2(0, 24)
+script = ExtResource("2_iid4k")
+potiontype = "redF"
+
+[node name="Sprite2D" type="Sprite2D" parent="redF" unique_id=767427906]
+texture = ExtResource("4_asybt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="redF" unique_id=732893294]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_lidg2")
+
 [node name="blueB" type="Area2D" parent="." unique_id=103058806]
 script = ExtResource("2_iid4k")
 
@@ -29,4 +64,107 @@ texture = ExtResource("3_pwuje")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="blueB" unique_id=606381515]
 position = Vector2(11, 0)
+shape = SubResource("RectangleShape2D_lidg2")
+
+[node name="blueV" type="Area2D" parent="." unique_id=639670953]
+position = Vector2(0, 12)
+script = ExtResource("2_iid4k")
+potiontype = "blueV"
+
+[node name="Sprite2D" type="Sprite2D" parent="blueV" unique_id=2003764944]
+position = Vector2(11, 0)
+texture = ExtResource("6_8h0pc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blueV" unique_id=335748508]
+position = Vector2(11, 0)
+shape = SubResource("RectangleShape2D_lidg2")
+
+[node name="blueF" type="Area2D" parent="." unique_id=333635614]
+position = Vector2(0, 24)
+script = ExtResource("2_iid4k")
+potiontype = "blueF"
+
+[node name="Sprite2D" type="Sprite2D" parent="blueF" unique_id=1093353607]
+position = Vector2(11, 0)
+texture = ExtResource("7_qooe6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blueF" unique_id=1169805978]
+position = Vector2(11, 0)
+shape = SubResource("RectangleShape2D_lidg2")
+
+[node name="yellowB" type="Area2D" parent="." unique_id=723743180]
+script = ExtResource("2_iid4k")
+potiontype = "yellowB"
+
+[node name="Sprite2D" type="Sprite2D" parent="yellowB" unique_id=878118820]
+position = Vector2(21, -1)
+texture = ExtResource("8_p3nry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="yellowB" unique_id=132033193]
+position = Vector2(21, 0)
+shape = SubResource("RectangleShape2D_lidg2")
+
+[node name="yellowV" type="Area2D" parent="." unique_id=1624917537]
+position = Vector2(0, 12)
+script = ExtResource("2_iid4k")
+potiontype = "yellowV"
+
+[node name="Sprite2D" type="Sprite2D" parent="yellowV" unique_id=1492741570]
+position = Vector2(21, -1)
+texture = ExtResource("9_3gav7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="yellowV" unique_id=2108159113]
+position = Vector2(21, 0)
+shape = SubResource("RectangleShape2D_lidg2")
+
+[node name="yellowF" type="Area2D" parent="." unique_id=1800539816]
+position = Vector2(0, 24)
+script = ExtResource("2_iid4k")
+potiontype = "yellowF"
+
+[node name="Sprite2D" type="Sprite2D" parent="yellowF" unique_id=2018745371]
+position = Vector2(21, -1)
+texture = ExtResource("10_d1max")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="yellowF" unique_id=565891963]
+position = Vector2(21, 0)
+shape = SubResource("RectangleShape2D_lidg2")
+
+[node name="greenB" type="Area2D" parent="." unique_id=264256882]
+position = Vector2(10, 0)
+script = ExtResource("2_iid4k")
+potiontype = "greenB"
+
+[node name="Sprite2D" type="Sprite2D" parent="greenB" unique_id=670736358]
+position = Vector2(20, 0)
+texture = ExtResource("11_8mrmx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="greenB" unique_id=1578218555]
+position = Vector2(21, 0)
+shape = SubResource("RectangleShape2D_lidg2")
+
+[node name="greenV" type="Area2D" parent="." unique_id=1496864755]
+position = Vector2(10, 12)
+script = ExtResource("2_iid4k")
+potiontype = "greenV"
+
+[node name="Sprite2D" type="Sprite2D" parent="greenV" unique_id=547381562]
+position = Vector2(20, 0)
+texture = ExtResource("12_yj36x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="greenV" unique_id=83329034]
+position = Vector2(21, 0)
+shape = SubResource("RectangleShape2D_lidg2")
+
+[node name="greenF" type="Area2D" parent="." unique_id=1030089392]
+position = Vector2(10, 24)
+script = ExtResource("2_iid4k")
+potiontype = "greenF"
+
+[node name="Sprite2D" type="Sprite2D" parent="greenF" unique_id=925765171]
+position = Vector2(20, 0)
+texture = ExtResource("13_3m62q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="greenF" unique_id=1055303997]
+position = Vector2(21, 0)
 shape = SubResource("RectangleShape2D_lidg2")
