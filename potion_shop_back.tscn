@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://p50fugwuujtr" path="res://Objects/Sprites/World/Unorganized/Tunnel.png" id="7_8h5vr"]
 [ext_resource type="Texture2D" uid="uid://bc73yx1bgwm8a" path="res://Objects/Sprites/World/Unorganized/2DE_PressSpriteSheet.png" id="8_pvu1i"]
 [ext_resource type="Script" uid="uid://c34wjl11rqvu5" path="res://E_Press.gd" id="9_lyn5r"]
-[ext_resource type="PackedScene" uid="uid://do4r5yxjuene1" path="res://game_hud.tscn" id="8_pvu1i"]
+[ext_resource type="PackedScene" uid="uid://do4r5yxjuene1" path="res://game_hud.tscn" id="10_b3x8w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0dgc"]
 size = Vector2(325.33896, 5.547119)
@@ -182,4 +182,4 @@ libraries/ = SubResource("AnimationLibrary_ydl7r")
 
 [node name="Sprite2D9" type="Sprite2D" parent="." unique_id=684709877]
 
-[node name="GameHUD" parent="." unique_id=695055891 instance=ExtResource("8_pvu1i")]
+[node name="GameHUD" parent="." unique_id=695055891 instance=ExtResource("10_b3x8w")]

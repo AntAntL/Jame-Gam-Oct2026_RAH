@@ -1,11 +1,16 @@
 extends StaticBody2D
 
+var InRange: bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	body_entered.connect(PlayerEntered)
+	body_exited.connect(PlayerExited)
+	
+func PlayerEntered(body:Node) -> void:
+	if body.is_in_group ("player"):
+		InRange = true
+func PlayerExited(body:Node) -> void:
+	if body.is_in_group ("player"):
+		InRange = false
+func _unhandled_input(event: InputEvent) -> void:
+	if InRange and event.is_action_pressed("Interact"):
