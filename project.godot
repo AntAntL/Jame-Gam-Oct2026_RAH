@@ -18,7 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globalevents="*uid://82tdh6y4i7p"
-Potions="uid://n3dau5csgric"
+Potions="*uid://n3dau5csgric"
 Inventory="*uid://cqekrtquwjcsr"
 
 [display]

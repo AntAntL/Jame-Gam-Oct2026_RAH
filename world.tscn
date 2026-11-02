@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://b0b13m006rpss" path="res://customer_spawner.gd" id="7_spawner"]
 [ext_resource type="PackedScene" uid="uid://c0mcnnbiw3gp" path="res://InventoryHUD.tscn" id="8_qktwf"]
 [ext_resource type="AudioStream" uid="uid://d27wtqrqy6qvq" path="res://Objects/SFX/Main_BGMusic.wav" id="9_ioo17"]
+[ext_resource type="Texture2D" uid="uid://cnykwhrt6dpup" path="res://Objects/Sprites/World/Unorganized/Black.png" id="19_cbp6q"]
 [ext_resource type="Script" uid="uid://ceyavkyupk4go" path="res://audio_stream_player.gd" id="21_bc84e"]
 [ext_resource type="PackedScene" uid="uid://b5vy8tu5uoy40" path="res://tutorial_text.tscn" id="22_wukud"]
 [ext_resource type="Texture2D" uid="uid://beho7v1mjcsrg" path="res://Objects/Sprites/Tutorial/game_explanation (1).png" id="23_il2jm"]
@@ -374,6 +375,26 @@ position = Vector2(202.04663, -21.627527)
 
 [node name="greenF" parent="PotionPack4" index="11" unique_id=1030089392]
 position = Vector2(127.48858, -21.627527)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1482500985]
+position = Vector2(200.5314, -161.21974)
+scale = Vector2(2.481635, 2.439462)
+texture = ExtResource("19_cbp6q")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=759147486]
+position = Vector2(1748, 306.17938)
+scale = Vector2(2.481635, 6.6412554)
+texture = ExtResource("19_cbp6q")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=820040860]
+position = Vector2(-1256, 378)
+scale = Vector2(2.481635, 6.6412554)
+texture = ExtResource("19_cbp6q")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=151801152]
+position = Vector2(518.99976, 1495.9999)
+scale = Vector2(5.916923, 6.6412554)
+texture = ExtResource("19_cbp6q")
 
 [editable path="PotionPack"]
 [editable path="PotionPack2"]

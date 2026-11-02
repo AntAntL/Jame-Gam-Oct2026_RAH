@@ -2,8 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://48wufcfx4td" path="res://Objects/Sprites/World/Background-Deco/PotionShopBack.png" id="1_mytlc"]
 [ext_resource type="PackedScene" uid="uid://dejipl18cd7jk" path="res://player.tscn" id="2_k0dgc"]
+[ext_resource type="PackedScene" uid="uid://rndk1r11mn5h" path="res://cauldron.tscn" id="3_6bxw5"]
 [ext_resource type="Script" uid="uid://gy3y56oresqq" path="res://EmitUpgrade.gd" id="3_oajsp"]
 [ext_resource type="Script" uid="uid://c38sw7xlrwyp1" path="res://TeleportBack.gd" id="4_2x1or"]
+[ext_resource type="Texture2D" uid="uid://cnykwhrt6dpup" path="res://Objects/Sprites/World/Unorganized/Black.png" id="6_jd86x"]
+[ext_resource type="Texture2D" uid="uid://p50fugwuujtr" path="res://Objects/Sprites/World/Unorganized/Tunnel.png" id="7_8h5vr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0dgc"]
 size = Vector2(325.33896, 5.547119)
@@ -12,7 +15,7 @@ size = Vector2(325.33896, 5.547119)
 size = Vector2(22.465714, 26.318726)
 
 [node name="PotionShopBack" type="Sprite2D" unique_id=1326609474]
-position = Vector2(136, 481.00003)
+position = Vector2(611, 481.00003)
 scale = Vector2(4.41211, 4.41211)
 
 [node name="Player" parent="." unique_id=789483730 instance=ExtResource("2_k0dgc")]
@@ -23,7 +26,7 @@ scale = Vector2(0.31833085, 0.31833085)
 position = Vector2(0, -6.916777e-06)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1494850926]
-position = Vector2(180.18588, -32.637447)
+position = Vector2(-35.130585, -46.916332)
 rotation = 1.5738075
 scale = Vector2(1.0000005, 1.0000005)
 shape = SubResource("RectangleShape2D_k0dgc")
@@ -57,6 +60,10 @@ z_index = -1
 position = Vector2(38.53032, 1.3598868)
 texture = ExtResource("1_mytlc")
 
+[node name="Cauldron" parent="Sprite2D" unique_id=922759971 instance=ExtResource("3_6bxw5")]
+position = Vector2(-98.36564, 51.222656)
+scale = Vector2(0.18406379, 0.18406379)
+
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=535302058]
 z_index = -1
 position = Vector2(33.317394, -127.15006)
@@ -66,8 +73,9 @@ texture = ExtResource("1_mytlc")
 [node name="Control" type="Control" parent="." unique_id=1664392619]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -104.71181
+offset_right = -64.71181
+offset_bottom = 39.999992
 
 [node name="Container" type="Container" parent="Control" unique_id=1587342040]
 layout_mode = 0
@@ -76,6 +84,7 @@ offset_bottom = 40.0
 
 [node name="Button" type="Button" parent="Control/Container" unique_id=565494007]
 layout_mode = 2
+theme_override_font_sizes/font_size = 5
 text = "UPGRADE!!! TEST"
 script = ExtResource("3_oajsp")
 
@@ -85,3 +94,24 @@ script = ExtResource("4_2x1or")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=834855896]
 position = Vector2(-103.70562, 51.689674)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1692964982]
+position = Vector2(42.83665, 176.55952)
+texture = ExtResource("6_jd86x")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=967623610]
+position = Vector2(293.28372, -4.0796814)
+texture = ExtResource("6_jd86x")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=595339743]
+position = Vector2(-447.17834, -4.079688)
+texture = ExtResource("6_jd86x")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1543453248]
+position = Vector2(-140.74896, -181.31915)
+texture = ExtResource("6_jd86x")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1533085929]
+z_index = -1
+position = Vector2(-104.71181, 45.78308)
+texture = ExtResource("7_8h5vr")
