@@ -169,3 +169,17 @@ texture = ExtResource("6_jd86x")
 z_index = -1
 position = Vector2(-104.71181, 45.78308)
 texture = ExtResource("7_8h5vr")
+
+[node name="E_Press" type="Sprite2D" parent="." unique_id=586598670]
+position = Vector2(-59.15537, 30.144302)
+scale = Vector2(0.44333792, 0.44333792)
+texture = ExtResource("8_pvu1i")
+hframes = 2
+script = ExtResource("9_lyn5r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="E_Press" unique_id=549448287]
+libraries/ = SubResource("AnimationLibrary_ydl7r")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=684709877]
+
+[node name="GameHUD" parent="." unique_id=695055891 instance=ExtResource("8_pvu1i")]
