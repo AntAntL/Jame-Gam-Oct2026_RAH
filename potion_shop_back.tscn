@@ -5,11 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://rndk1r11mn5h" path="res://cauldron.tscn" id="3_6bxw5"]
 [ext_resource type="Script" uid="uid://gy3y56oresqq" path="res://EmitUpgrade.gd" id="3_oajsp"]
 [ext_resource type="Script" uid="uid://c38sw7xlrwyp1" path="res://TeleportBack.gd" id="4_2x1or"]
+[ext_resource type="Script" uid="uid://brb8nj8oedwrf" path="res://PressEUpgrade.gd" id="4_we5nk"]
 [ext_resource type="Texture2D" uid="uid://cnykwhrt6dpup" path="res://Objects/Sprites/World/Unorganized/Black.png" id="6_jd86x"]
 [ext_resource type="Texture2D" uid="uid://p50fugwuujtr" path="res://Objects/Sprites/World/Unorganized/Tunnel.png" id="7_8h5vr"]
 [ext_resource type="Texture2D" uid="uid://bc73yx1bgwm8a" path="res://Objects/Sprites/World/Unorganized/2DE_PressSpriteSheet.png" id="8_pvu1i"]
 [ext_resource type="Script" uid="uid://c34wjl11rqvu5" path="res://E_Press.gd" id="9_lyn5r"]
+[ext_resource type="Texture2D" uid="uid://b668q7y8d0lpk" path="res://Objects/Sprites/World/Unorganized/UpgradeCauldron.png" id="9_we5nk"]
 [ext_resource type="PackedScene" uid="uid://do4r5yxjuene1" path="res://game_hud.tscn" id="10_b3x8w"]
+[ext_resource type="Texture2D" uid="uid://chx5atil3qqn2" path="res://Objects/Sprites/World/Unorganized/UpgradeCauldronSpriteSheet.png" id="10_y0ytk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0dgc"]
 size = Vector2(325.33896, 5.547119)
@@ -54,6 +57,48 @@ _data = {
 &"PressE": SubResource("Animation_lyn5r"),
 &"RESET": SubResource("Animation_b3x8w")
 }
+
+[sub_resource type="Animation" id="Animation_pbpo6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_j4rjw"]
+resource_name = "WaterAnimation"
+length = 3.0000000000000004
+loop_mode = 1
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_10u1r"]
+_data = {
+&"RESET": SubResource("Animation_pbpo6"),
+&"WaterAnimation": SubResource("Animation_j4rjw")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(47.850376, 38.10446)
 
 [node name="PotionShopBack" type="Sprite2D" unique_id=1326609474]
 position = Vector2(611, 481.00003)
@@ -111,36 +156,6 @@ position = Vector2(33.317394, -127.15006)
 rotation = 3.1438608
 texture = ExtResource("1_mytlc")
 
-[node name="Control" type="Control" parent="." unique_id=1664392619]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -116.95085
-offset_top = -8.386018
-offset_right = -76.95085
-offset_bottom = 31.613976
-
-[node name="Container" type="Container" parent="Control" unique_id=1587342040]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Button" type="Button" parent="Control/Container" unique_id=565494007]
-texture_filter = 1
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-text = "Upgrade!"
-script = ExtResource("3_oajsp")
-
-[node name="Label" type="Label" parent="Control" unique_id=294134884]
-layout_mode = 0
-offset_left = 17.225319
-offset_top = -21.531649
-offset_right = 61.22532
-offset_bottom = 5.4683514
-theme_override_font_sizes/font_size = 16
-text = "$100"
-horizontal_alignment = 1
-
 [node name="Area2D" type="Area2D" parent="." unique_id=1708635511]
 script = ExtResource("4_2x1or")
 
@@ -180,6 +195,62 @@ script = ExtResource("9_lyn5r")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="E_Press" unique_id=549448287]
 libraries/ = SubResource("AnimationLibrary_ydl7r")
 
-[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=684709877]
+[node name="UpgradeScreen" type="Sprite2D" parent="." unique_id=684709877]
+visible = false
+z_index = 2
+position = Vector2(-74.56751, 17.678612)
+scale = Vector2(1.5267916, 1.5267916)
+texture = ExtResource("9_we5nk")
+
+[node name="BackGround" type="Sprite2D" parent="UpgradeScreen" unique_id=387208665]
+z_index = -1
+position = Vector2(5.1419992, -26.616146)
+texture = ExtResource("1_mytlc")
+
+[node name="WaterCauld" type="Sprite2D" parent="UpgradeScreen" unique_id=1735331061]
+z_index = -1
+texture = ExtResource("10_y0ytk")
+hframes = 3
+script = ExtResource("9_lyn5r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UpgradeScreen/WaterCauld" unique_id=895231973]
+libraries/ = SubResource("AnimationLibrary_10u1r")
+
+[node name="Control" type="Control" parent="UpgradeScreen" unique_id=1664392619]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -40.080914
+offset_top = -52.105198
+offset_right = -0.08091354
+offset_bottom = -12.105206
+
+[node name="Container" type="Container" parent="UpgradeScreen/Control" unique_id=1587342040]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="UpgradeScreen/Control/Container" unique_id=565494007]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Upgrade!"
+script = ExtResource("3_oajsp")
+
+[node name="Label" type="Label" parent="UpgradeScreen/Control" unique_id=294134884]
+layout_mode = 0
+offset_left = 17.225319
+offset_top = -21.531649
+offset_right = 61.22532
+offset_bottom = 5.4683514
+theme_override_font_sizes/font_size = 16
+text = "$100"
+horizontal_alignment = 1
 
 [node name="GameHUD" parent="." unique_id=695055891 instance=ExtResource("10_b3x8w")]
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=2119753644]
+script = ExtResource("4_we5nk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1267886083]
+position = Vector2(-61.42186, 45.103127)
+shape = SubResource("RectangleShape2D_yf5fn")
