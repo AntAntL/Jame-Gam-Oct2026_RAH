@@ -2,14 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://dejipl18cd7jk" path="res://player.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://rndk1r11mn5h" path="res://cauldron.tscn" id="2_fj7yv"]
-[ext_resource type="PackedScene" uid="uid://b6us20fif82hq" path="res://shelf.tscn" id="3_shelf"]
 [ext_resource type="PackedScene" uid="uid://ujbbpqxivfeb" path="res://witch.tscn" id="4_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://do4r5yxjuene1" path="res://game_hud.tscn" id="6_hud"]
 [ext_resource type="PackedScene" uid="uid://dfhh0wfxyfc2m" path="res://map.tscn" id="7_pkg7o"]
 [ext_resource type="Script" uid="uid://b0b13m006rpss" path="res://customer_spawner.gd" id="7_spawner"]
 [ext_resource type="PackedScene" uid="uid://c0mcnnbiw3gp" path="res://InventoryHUD.tscn" id="8_qktwf"]
 [ext_resource type="AudioStream" uid="uid://d27wtqrqy6qvq" path="res://Objects/SFX/Main_BGMusic.wav" id="9_ioo17"]
+[ext_resource type="Texture2D" uid="uid://bc73yx1bgwm8a" path="res://Objects/Sprites/World/Unorganized/2DE_PressSpriteSheet.png" id="19_26xuy"]
 [ext_resource type="Texture2D" uid="uid://cnykwhrt6dpup" path="res://Objects/Sprites/World/Unorganized/Black.png" id="19_cbp6q"]
+[ext_resource type="Script" uid="uid://c34wjl11rqvu5" path="res://E_Press.gd" id="20_bc84e"]
 [ext_resource type="Script" uid="uid://ceyavkyupk4go" path="res://audio_stream_player.gd" id="21_bc84e"]
 [ext_resource type="PackedScene" uid="uid://b5vy8tu5uoy40" path="res://tutorial_text.tscn" id="22_wukud"]
 [ext_resource type="Texture2D" uid="uid://beho7v1mjcsrg" path="res://Objects/Sprites/Tutorial/game_explanation (1).png" id="23_il2jm"]
@@ -29,6 +30,44 @@ size = Vector2(56, 821.4658)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(703, 20)
 
+[sub_resource type="Animation" id="Animation_lyn5r"]
+resource_name = "PressE"
+length = 1.4666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_b3x8w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wukud"]
+_data = {
+&"PressE": SubResource("Animation_lyn5r"),
+&"RESET": SubResource("Animation_b3x8w")
+}
+
 [node name="Node2D" type="Node2D" unique_id=784977946]
 
 [node name="Player" parent="." unique_id=789483730 instance=ExtResource("1_f3sb7")]
@@ -46,14 +85,6 @@ shape = SubResource("WorldBoundaryShape2D_r300x")
 [node name="Cauldron" parent="." unique_id=922759971 instance=ExtResource("2_fj7yv")]
 position = Vector2(754, 629)
 scale = Vector2(2, 2)
-
-[node name="Shelf" parent="." unique_id=1933029903 instance=ExtResource("3_shelf")]
-z_index = 1
-offset_left = 237.0
-offset_top = 348.0
-offset_right = 417.0
-offset_bottom = 648.0
-metadata/_edit_use_anchors_ = true
 
 [node name="Witch" parent="." unique_id=2099214223 instance=ExtResource("4_aqk2v")]
 position = Vector2(733, 506)
@@ -395,6 +426,16 @@ texture = ExtResource("19_cbp6q")
 position = Vector2(518.99976, 1495.9999)
 scale = Vector2(5.916923, 6.6412554)
 texture = ExtResource("19_cbp6q")
+
+[node name="E_Press" type="Sprite2D" parent="." unique_id=1547451410]
+position = Vector2(340, 642)
+scale = Vector2(1.3786334, 1.3786334)
+texture = ExtResource("19_26xuy")
+hframes = 2
+script = ExtResource("20_bc84e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="E_Press" unique_id=34265981]
+libraries/ = SubResource("AnimationLibrary_wukud")
 
 [editable path="PotionPack"]
 [editable path="PotionPack2"]

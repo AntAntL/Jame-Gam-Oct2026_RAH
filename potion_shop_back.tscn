@@ -7,12 +7,52 @@
 [ext_resource type="Script" uid="uid://c38sw7xlrwyp1" path="res://TeleportBack.gd" id="4_2x1or"]
 [ext_resource type="Texture2D" uid="uid://cnykwhrt6dpup" path="res://Objects/Sprites/World/Unorganized/Black.png" id="6_jd86x"]
 [ext_resource type="Texture2D" uid="uid://p50fugwuujtr" path="res://Objects/Sprites/World/Unorganized/Tunnel.png" id="7_8h5vr"]
+[ext_resource type="Texture2D" uid="uid://bc73yx1bgwm8a" path="res://Objects/Sprites/World/Unorganized/2DE_PressSpriteSheet.png" id="8_pvu1i"]
+[ext_resource type="Script" uid="uid://c34wjl11rqvu5" path="res://E_Press.gd" id="9_lyn5r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0dgc"]
 size = Vector2(325.33896, 5.547119)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(22.465714, 26.318726)
+
+[sub_resource type="Animation" id="Animation_lyn5r"]
+resource_name = "PressE"
+length = 1.4666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_b3x8w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ydl7r"]
+_data = {
+&"PressE": SubResource("Animation_lyn5r"),
+&"RESET": SubResource("Animation_b3x8w")
+}
 
 [node name="PotionShopBack" type="Sprite2D" unique_id=1326609474]
 position = Vector2(611, 481.00003)
@@ -96,7 +136,8 @@ position = Vector2(-103.70562, 51.689674)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1692964982]
-position = Vector2(42.83665, 176.55952)
+position = Vector2(-26.865192, 176.55952)
+scale = Vector2(1.2144672, 1)
 texture = ExtResource("6_jd86x")
 
 [node name="Sprite2D4" type="Sprite2D" parent="." unique_id=967623610]
@@ -115,3 +156,15 @@ texture = ExtResource("6_jd86x")
 z_index = -1
 position = Vector2(-104.71181, 45.78308)
 texture = ExtResource("7_8h5vr")
+
+[node name="E_Press" type="Sprite2D" parent="." unique_id=586598670]
+position = Vector2(-59.15537, 30.144302)
+scale = Vector2(0.44333792, 0.44333792)
+texture = ExtResource("8_pvu1i")
+hframes = 2
+script = ExtResource("9_lyn5r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="E_Press" unique_id=549448287]
+libraries/ = SubResource("AnimationLibrary_ydl7r")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=684709877]
