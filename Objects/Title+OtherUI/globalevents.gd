@@ -1,5 +1,19 @@
 extends Node
 signal pricemult
+var potionicon = {
+	"redB": preload("res://Objects/Sprites/World/Interactable-Main/HealthBottle.png"),
+	"redF": preload("res://Objects/Sprites/World/Interactable-Main/HealthTriBottle.png"),
+	"redV": preload("res://Objects/Sprites/World/Interactable-Main/HealthVial.png"),
+	"blueB": preload("res://Objects/Sprites/World/Interactable-Main/BlueBottle.png"),
+	"blueF": preload("res://Objects/Sprites/World/Interactable-Main/BlueTriBottle.png"),
+	"blueV": preload("res://Objects/Sprites/World/Interactable-Main/BlueVials.png"),
+	"yellowB": preload("res://Objects/Sprites/World/Interactable-Main/YellowBottle.png"),
+	"yellowF": preload("res://Objects/Sprites/World/Interactable-Main/YellowTriBottle.png"),
+	"yellowV": preload("res://Objects/Sprites/World/Interactable-Main/YellowVial.png"),
+	"greenB": preload("res://Objects/Sprites/World/Interactable-Main/GreenBottle.png"),
+	"greenF": preload("res://Objects/Sprites/World/Interactable-Main/GreenTriBottle.png"),
+	"greenV": preload("res://Objects/Sprites/World/Interactable-Main/GreenVial.png"),
+}
 
 var potionmulti = 1
 var potionscost = {

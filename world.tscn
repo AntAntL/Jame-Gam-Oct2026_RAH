@@ -1208,3 +1208,5 @@ scale = Vector2(4.721784, 4.721784)
 
 [node name="Node2D2" parent="." unique_id=770572554 instance=ExtResource("29_k83mh")]
 position = Vector2(605, 794)
+
+[editable path="Node2D2"]

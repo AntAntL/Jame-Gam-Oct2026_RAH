@@ -122,5 +122,5 @@ func _on_timer_timeout() -> void:
 
 func _on_water_cauld_timer_timeout() -> void:
 	var redden_speed = 0.2 * get_ingredient_count()
-	WaterCauld.modulate.g = move_toward(modulate.g, 0.0, redden_speed)
-	WaterCauld.modulate.b = move_toward(modulate.b, 0.0, redden_speed)
+	WaterCauld.modulate.g = move_toward(WaterCauld.modulate.g, 0.0, redden_speed)
+	WaterCauld.modulate.b = move_toward(WaterCauld.modulate.b, 0.0, redden_speed)

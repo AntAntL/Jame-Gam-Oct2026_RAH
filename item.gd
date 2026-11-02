@@ -214,10 +214,15 @@ func try_pickup() -> void:
 	
 	var player = get_tree().get_first_node_in_group("player")
 	if player and player.has_method("set_held_item"):
-		var tex = item_texture
-		if tex == null and has_node("Sprite2D"):
-			tex = $Sprite2D.texture
-		player.set_held_item(item_name, tex)
+		if Globalevents.potionscost.has(item_name):
+			# Potions go back into the bag; if it's full, leave it on the ground
+			if not Inventory.add(item_name):
+				return
+		else:
+			var tex = item_texture
+			if tex == null and has_node("Sprite2D"):
+				tex = $Sprite2D.texture
+			player.set_held_item(item_name, tex)
 		
 		var cam = get_tree().get_first_node_in_group("main_camera")
 		if cam and cam.has_method("return_to_player"):

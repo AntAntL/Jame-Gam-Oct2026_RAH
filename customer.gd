@@ -57,17 +57,15 @@ func serve_potion() -> void:
 	var loss: int = 0
 	
 	for item in ingredients:
-		var lower_item = item.to_lower()
-		if lower_item == "itemc" or lower_item.contains("tri"):
-			contamination_score += 8
-			loss += 140
-		elif lower_item == "itemb" or lower_item.contains("vial"):
-			contamination_score += 3
-			loss += 45
-		else:
-			contamination_score += 1
-			loss += 15
-	
+		var contamination: int = 1
+		if item.ends_with("F"):
+			contamination = 8
+		elif item.ends_with("V"):
+			contamination = 3
+		contamination_score += contamination
+
+		if Globalevents.potionscost.has(item):
+			loss += Globalevents.potionscost[item]["price"] * Globalevents.potionmulti
 	# Star rating based on contamination (8 pts is 1 star)
 	var rating: int = 5
 	if contamination_score == 0:

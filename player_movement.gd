@@ -28,6 +28,7 @@ const MAX_CHARGE_TIME: float = 1.0
 
 var held_item_name: String = ""
 var held_item_texture: Texture2D = null
+var ininventory: bool = false
 
 # Arc throwing state
 var is_charging: bool = false
@@ -38,6 +39,7 @@ var charging_with_action: bool = false
 var trajectory_line: Line2D
 var power_bar: ProgressBar
 var power_bar_fill: StyleBoxFlat
+
 
 func _ready() -> void:
 	add_to_group("player")
@@ -87,9 +89,24 @@ func _ready() -> void:
 	elif item_holding:
 		item_holding.visible = false
 		remove_from_group("item")
-		
+	
 	_apply_bounds()
-		
+
+	Inventory.update.connect(updateinventory)
+	if Inventory.potionheld.size() > 0:
+		updateinventory()
+
+
+func updateinventory() -> void:
+	if Inventory.potionheld.size() > 0:
+		var id = Inventory.potionheld[0]
+		ininventory = true
+		set_held_item(id, Globalevents.potionicon[id])
+	elif ininventory:
+		ininventory = false
+		clear_held_item()
+
+
 func _apply_bounds() -> void:
 	if not is_node_ready() or not camera:
 		return
@@ -312,4 +329,7 @@ func launch_item(power_ratio: float) -> void:
 		cam.track_item(item_instance)
 
 	# Held item disappears from player
-	clear_held_item()
+	if ininventory:
+		Inventory.throw(held_item_name)
+	else:
+		clear_held_item()
