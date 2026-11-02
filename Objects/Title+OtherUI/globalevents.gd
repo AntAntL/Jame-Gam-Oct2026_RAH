@@ -32,7 +32,16 @@ var potionscost = {
 }
 func _ready() -> void:
 	pricemult.connect(increasepotionmult)
+	
 func increasepotionmult():
+	if get_upgrade_cost() > abs(Globals.profit_loss):
+		print("too poor buddy")
+		return
+		
+	Globals.profit_loss -= get_upgrade_cost()
+	
 	potionmulti += 2
 	print ("pmult is", potionmulti)
 	
+func get_upgrade_cost() -> int:
+	return int(100 * ((potionmulti + 1) ** 1.5)) 

@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://c38sw7xlrwyp1" path="res://TeleportBack.gd" id="4_2x1or"]
 [ext_resource type="Texture2D" uid="uid://cnykwhrt6dpup" path="res://Objects/Sprites/World/Unorganized/Black.png" id="6_jd86x"]
 [ext_resource type="Texture2D" uid="uid://p50fugwuujtr" path="res://Objects/Sprites/World/Unorganized/Tunnel.png" id="7_8h5vr"]
+[ext_resource type="PackedScene" uid="uid://do4r5yxjuene1" path="res://game_hud.tscn" id="8_pvu1i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0dgc"]
 size = Vector2(325.33896, 5.547119)
@@ -73,9 +74,10 @@ texture = ExtResource("1_mytlc")
 [node name="Control" type="Control" parent="." unique_id=1664392619]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -104.71181
-offset_right = -64.71181
-offset_bottom = 39.999992
+offset_left = -116.95085
+offset_top = -8.386018
+offset_right = -76.95085
+offset_bottom = 31.613976
 
 [node name="Container" type="Container" parent="Control" unique_id=1587342040]
 layout_mode = 0
@@ -83,10 +85,21 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Button" type="Button" parent="Control/Container" unique_id=565494007]
+texture_filter = 1
 layout_mode = 2
-theme_override_font_sizes/font_size = 5
-text = "UPGRADE!!! TEST"
+theme_override_font_sizes/font_size = 16
+text = "Upgrade!"
 script = ExtResource("3_oajsp")
+
+[node name="Label" type="Label" parent="Control" unique_id=294134884]
+layout_mode = 0
+offset_left = 17.225319
+offset_top = -21.531649
+offset_right = 61.22532
+offset_bottom = 5.4683514
+theme_override_font_sizes/font_size = 16
+text = "$100"
+horizontal_alignment = 1
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1708635511]
 script = ExtResource("4_2x1or")
@@ -115,3 +128,5 @@ texture = ExtResource("6_jd86x")
 z_index = -1
 position = Vector2(-104.71181, 45.78308)
 texture = ExtResource("7_8h5vr")
+
+[node name="GameHUD" parent="." unique_id=695055891 instance=ExtResource("8_pvu1i")]

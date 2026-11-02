@@ -23,7 +23,6 @@ const BEST_SCORE_FILE: String = "user://best_score.dat"
 var is_game_over: bool = false
 var game_over_queued: bool = false
 
-var total_profit_lost: int = 0
 var displayed_profit: int = 0
 var profit_roll_tween: Tween = null
 
@@ -58,12 +57,15 @@ func _ready() -> void:
 		end_screen.visible = false
 	if replay_button:
 		replay_button.pressed.connect(_on_replay_pressed)
+		
+	displayed_profit = Globals.profit_loss
+	update_profit_display()
 
 func _process(_delta: float) -> void:
 	pass
 
 func add_profit_lost(amount: int) -> void:
-	total_profit_lost += amount
+	Globals.profit_loss += amount
 	
 	# Floating damage indicator in HUD
 	if profit_label:
@@ -80,7 +82,7 @@ func add_profit_lost(amount: int) -> void:
 			displayed_profit = val
 			update_profit_display(),
 		displayed_profit,
-		total_profit_lost,
+		Globals.profit_loss,
 		0.55
 	).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 	
@@ -195,13 +197,13 @@ func trigger_game_over() -> void:
 	is_game_over = true
 	
 	var best_score = load_best_score()
-	var is_new_best = total_profit_lost > best_score
+	var is_new_best = Globals.profit_loss > best_score
 	if is_new_best:
-		best_score = total_profit_lost
+		best_score = Globals.profit_loss
 		save_best_score(best_score)
 	
 	if final_score_label:
-		final_score_label.text = "Profit Lost: -$" + str(total_profit_lost)
+		final_score_label.text = "Profit Lost: -$" + str(Globals.profit_loss)
 	if best_score_label:
 		best_score_label.text = "Best Sabotage: -$" + str(best_score)
 	if new_best_label:

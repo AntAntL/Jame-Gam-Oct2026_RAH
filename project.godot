@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Globalevents="*uid://82tdh6y4i7p"
 Potions="*uid://n3dau5csgric"
 Inventory="*uid://cqekrtquwjcsr"
+Globals="*uid://b2wtmwgf6amfy"
 
 [display]
 
